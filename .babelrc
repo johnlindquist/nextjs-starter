@@ -1,0 +1,44 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env"
+    ],
+    [
+      "next/babel"
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta",
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./"
+        ],
+        "alias": {
+          "^@app/(.+)": "./app/\\1",
+          "^@static/(.+)": "./static/\\1",
+          "^@styles/(.+)": "./styles/\\1",
+          "^@Components/(.+)": "./src/Components/\\1",
+          "^@Lib/(.+)": "./src/Lib/\\1",
+          "^@Layout/(.+)": "./src/Layout/\\1",
+          "^@Util/(.+)": "./src/Util/\\1"
+        }
+      }
+    ],
+    "@babel/plugin-proposal-json-strings"
+  ]
+}

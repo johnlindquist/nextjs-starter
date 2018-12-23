@@ -1,0 +1,15 @@
+{
+  "verbose": true,
+  "ignore": [
+    "node_modules",
+    ".next",
+    "dist",
+    "src",
+    "pages"
+  ],
+  "watch": [
+    "app/**/*"
+  ],
+  "delay": "2500",
+  "ext": "js json"
+}
