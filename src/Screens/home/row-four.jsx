@@ -7,6 +7,7 @@ export class RowFour extends Component {
   render() {
     return (
       <div className='w-full bg-grey-lighter'>
+        <style jsx>{ stylesRow4 }</style>
         <div className="max-w-2xl mx-auto py-10">
           <div className="row4 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
             <Row4Item heading={ 'Fresh Veggies & Fruits' } faIcon={ 'fa-leaf' }/>
@@ -19,7 +20,6 @@ export class RowFour extends Component {
             <Row4Item heading={ 'Fresh Air' } faIcon={ 'fa-air-freshener' }/>
           </div>
         </div>
-        <style jsx>{ stylesRow4 }</style>
       </div>
     );
   }

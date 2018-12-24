@@ -10,7 +10,7 @@ export const stylesRow2 = css.global`
 `;
 
 /* language=SCSS */
-export const stylesRow4 = css`
+export const stylesRow4 = css.global`
   div.row4 {
     div.card:last-child {
       margin-right: 0;

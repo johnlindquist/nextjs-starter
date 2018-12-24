@@ -8,6 +8,7 @@ export class RowTwo extends Component {
   render() {
     return (
       <div className='w-full bg-grey-lighter'>
+        <style jsx>{ stylesRow2 }</style>
         <div className="max-w-2xl mx-auto py-10">
           <div className="row2 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
             <Row2Item Image={ <Image src={ require('static/img/example/img_1.jpg') }/> } heading={ 'Organic Dragon Fruit' }/>
@@ -20,7 +21,6 @@ export class RowTwo extends Component {
             <Row2Item Image={ <Image src={ require('static/img/example/img_6.jpg') }/> } heading={ 'Organic Cucumber' }/>
           </div>
         </div>
-        <style jsx>{ stylesRow2 }</style>
       </div>
     );
   }
