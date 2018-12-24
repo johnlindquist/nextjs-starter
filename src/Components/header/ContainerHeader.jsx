@@ -13,7 +13,7 @@ export class ContainerHeader extends PureComponent {
             <style jsx>{ styles }</style>
           </nav>
         </div>
-        <div className="bg-primary h-2"/>
+        <div className="bg-green-dark h-2"/>
       </div>
     );
   }

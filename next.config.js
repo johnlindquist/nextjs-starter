@@ -8,7 +8,6 @@ if (!isLive) {
   withOptimizedImages = require('next-optimized-images');
 }
 
-const withWorkers = require('@zeit/next-workers');
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withOffline = require('next-offline');
@@ -44,8 +43,6 @@ opts.cssLoaderOptions = {
   modules: false,
 };
 
-// workers @ https://github.com/zeit/next-plugins/tree/master/packages/next-workers
-opts.workerLoaderOptions = { inline: true };
 // @ https://github.com/hanford/next-offline
 // opts.dontAutoRegisterSw = true;
 opts.workboxOpts = {
@@ -184,8 +181,7 @@ opts.webpack = (webpackConfig) => {
 
 
 // HOC
-let exportsObj = withWorkers(opts);
-exportsObj = withOffline(exportsObj);
+let exportsObj = withOffline(exportsObj);
 exportsObj = withCSS(exportsObj);
 exportsObj = withSass(exportsObj);
 

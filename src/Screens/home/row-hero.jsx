@@ -1,20 +1,19 @@
 import React from 'react';
-import { Component } from '../../components/framework';
+import { Component } from '@Components/framework';
 
 export class RowHero extends Component {
   render() {
     return (
       <>
-        <div className='bg-white'>
-          <div className='w-full' style={ { background: 'url("static/img/example/slider_2.jpg") bottom center no-repeat', backgroundSize: 'contain' } }>
+        <div className=''>
+          <div className='w-full' style={ { background: 'url("static/img/example/slider_1.jpg") bottom center no-repeat', backgroundSize: 'cover' } }>
             <div className="w-full max-w-2xl mx-auto pt-10">
-              <div className="pb-5 px-4 md:px-2 text-center">
-                <h1 className="text-primary-darker text-2xl font-bold mt-4 mb-6 leading-none md:text-5xl"><span className='bg-white'>Community of Developers</span></h1>
-                <p className="text-black leading-normal mx-auto text-lg max-w-lg md:text-xl">
-                  <span className='bg-white'>A Developer centric community by developers, focused around</span> <span className='bg-yellow-lighter'>open-source</span>, <span className='bg-yellow-lighter'>practical knowledge</span>, <span className='bg-yellow-lighter'>tech culture</span>
-                  , <span className='bg-yellow-lighter'>career growth</span> and <span className='bg-yellow-lighter'>connecting developers
-              together</span>.
+              <div className="pb-5 px-4 md:px-2 text-center" style={ { textShadow: '1px 1px 2px black' } }>
+                <h1 className="text-white text-4xl font-bold mt-4 mb-6 leading-none md:text-6xl uppercase"><span className=''>100% Natural & ORGANIC</span></h1>
+                <p className="text-white leading-normal mx-auto text-lg max-w-lg md:text-2xl">
+                  <span className=''>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</span>
                 </p>
+
               </div>
             </div>
             <div className='hidden md:block md:h-64'/>

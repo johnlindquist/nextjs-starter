@@ -4,7 +4,6 @@ import cookieParser from 'cookie-parser';
 import next from 'next';
 import http from 'http';
 import path from 'path';
-import * as mobxReact from 'mobx-react';
 
 import { getRequestHandler } from './routes';
 import { parse } from 'url';
@@ -18,7 +17,6 @@ import { miscMw } from './mw/misc.mw';
 
 const nextApp = next({ dev: process.env.NODE_ENV !== 'production' });
 const handle = getRequestHandler(nextApp);
-mobxReact.useStaticRendering(true);
 
 const app = express();
 // app.set('trust proxy', '127.0.0.1');

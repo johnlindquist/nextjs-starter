@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Component } from '@Components/framework';
-import { Page } from '@Lib/layout/Page';
-import { Section } from '@Lib/layout/Section';
+import { Page, Section } from 'reactjs-layout-slot';
+import { RowHero } from '../../src/Screens/home/row-hero';
 
 class Home extends Component {
   render() {
@@ -10,8 +10,9 @@ class Home extends Component {
       <>
         <Page layout={ 'OneColumn' }>
           <Section slot="content">
+            <RowHero/>
+
             <div className=''>
-              Welcome Home
             </div>
           </Section>
         </Page>

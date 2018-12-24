@@ -5,12 +5,10 @@ import '@styles/default.scss';
 import './global.scss';
 import { OneColumnLayout } from '@Layout/one-column-layout';
 import { storeLastPageUrl } from '@Util/url';
-import { Provider as MobxProvider } from 'mobx-react';
-import { withMobxStore } from '@Lib/with-mobx.store';
 import { trackPageView } from '@Util/ga';
 import { router } from '@app/routes';
 import { Head } from '@Components/html/Head';
-import { Provider as LayoutProvider } from '@Lib/layout/Provider';
+import { Provider as LayoutProvider } from 'reactjs-layout-slot';
 
 const layouts = {
   OneColumn: OneColumnLayout,
@@ -41,21 +39,19 @@ class App extends NextApp {
   }
 
   render() {
-    const { Component, pageProps, mobxStore } = this.props;
+    const { Component, pageProps } = this.props;
 
     return (
       <Container>
-        <MobxProvider store={ mobxStore }>
-          <LayoutProvider layouts={ layouts }>
-            <Fragment>
-              <Head/>
-              <Component { ...pageProps } />
-            </Fragment>
-          </LayoutProvider>
-        </MobxProvider>
+        <LayoutProvider layouts={ layouts }>
+          <Fragment>
+            <Head/>
+            <Component { ...pageProps } />
+          </Fragment>
+        </LayoutProvider>
       </Container>
     );
   }
 }
 
-export default withMobxStore(App);
+export default App;

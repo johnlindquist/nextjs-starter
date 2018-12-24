@@ -17,3 +17,4 @@ README.md
 .mock
 .docker
 server.build.js
+.next
