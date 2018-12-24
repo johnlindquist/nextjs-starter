@@ -1,12 +1,13 @@
 import React from 'react';
 import { Component } from '@Components/framework';
+import { stylesRow4 } from './styles';
 
 export class RowFour extends Component {
   render() {
     return (
       <div className='w-full bg-grey-lighter'>
         <div className="max-w-2xl mx-auto py-10">
-          <div className="px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
+          <div className="row4 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
             <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
               <div className="px-6 p-6 leading-tight text-center">
                 <div className="text-2xl tracking-wide mb-2 font-bold"><i className='fa fa-leaf text-green'/> Fresh Veggies & Fruits</div>
@@ -41,7 +42,7 @@ export class RowFour extends Component {
               </div>
             </div>
           </div>
-          <div className="px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-0">
+          <div className="row4 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-0">
             <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
               <div className="px-6 p-6 leading-tight text-center">
                 <div className="text-2xl tracking-wide mb-2 font-bold"><i className='fa fa-map text-green'/> From Country Side</div>
@@ -77,6 +78,7 @@ export class RowFour extends Component {
             </div>
           </div>
         </div>
+        <style jsx>{ stylesRow4 }</style>
       </div>
     );
   }

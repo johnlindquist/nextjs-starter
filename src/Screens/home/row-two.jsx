@@ -1,13 +1,14 @@
 import React from 'react';
 import { Component } from '@Components/framework';
-import { Image } from '../../Components/image';
+import { Image } from '@Components/image';
+import { stylesRow2 } from './styles';
 
 export class RowTwo extends Component {
   render() {
     return (
       <div className='w-full bg-grey-lighter'>
         <div className="max-w-2xl mx-auto py-10">
-          <div className="px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
+          <div className="row2 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-6">
             <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
               <Image src={ require('static/img/example/img_1.jpg') }/>
               <div className="px-6 p-6 leading-tight text-center">
@@ -45,7 +46,7 @@ export class RowTwo extends Component {
               </div>
             </div>
           </div>
-          <div className="px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-0">
+          <div className="row2 px-3 md:px-0 md:max-w-2xl md:mx-auto md:flex md:justify-center mb-0">
             <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
               <Image src={ require('static/img/example/img_4.jpg') }/>
               <div className="px-6 p-6 leading-tight text-center">
@@ -84,6 +85,7 @@ export class RowTwo extends Component {
             </div>
           </div>
         </div>
+        <style jsx>{ stylesRow2 }</style>
       </div>
     );
   }
