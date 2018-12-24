@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Component } from '@Components/framework';
 import { Page, Section } from 'reactjs-layout-slot';
-import { RowHero } from '../../src/Screens/home/row-hero';
+import { RowHero } from '@Screens/home/row-hero';
+import { RowTwo } from '@Screens/home/row-two';
+import { RowThree } from '@Screens/home/row-three';
 
 class Home extends Component {
   render() {
@@ -11,9 +13,8 @@ class Home extends Component {
         <Page layout={ 'OneColumn' }>
           <Section slot="content">
             <RowHero/>
-
-            <div className=''>
-            </div>
+            <RowTwo/>
+            <RowThree/>
           </Section>
         </Page>
       </>

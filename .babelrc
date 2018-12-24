@@ -32,6 +32,7 @@
           "^@app/(.+)": "./app/\\1",
           "^@static/(.+)": "./static/\\1",
           "^@styles/(.+)": "./styles/\\1",
+          "^@Screens/(.+)": "./src/Screens/\\1",
           "^@Components/(.+)": "./src/Components/\\1",
           "^@Lib/(.+)": "./src/Lib/\\1",
           "^@Layout/(.+)": "./src/Layout/\\1",
