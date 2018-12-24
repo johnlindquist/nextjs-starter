@@ -181,7 +181,7 @@ opts.webpack = (webpackConfig) => {
 
 
 // HOC
-let exportsObj = withOffline(exportsObj);
+let exportsObj = withOffline(opts);
 exportsObj = withCSS(exportsObj);
 exportsObj = withSass(exportsObj);
 
