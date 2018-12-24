@@ -1,31 +1,31 @@
 const SEO = {
-  title: 'A Developer first and open-source community by developers',
-  titleTemplate: `%s | ME.IO`,
-  description: 'An online community of software engineers, web developers, full-stack developers, ui developers and ui/ux designers',
+  title: 'WEBSTIE_TITLE',
+  titleTemplate: `%s | WEBSITE.COM`,
+  description: 'WEBSTIE_DESCRIPTION',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://me.io/',
-    title: 'A Developer first and open-source community by developers | ME.IO',
-    description: 'An online community of software engineers, web developers, full-stack developers, ui developers and ui/ux designers',
+    url: 'https://website.com/',
+    title: 'WEBSTIE_TITLE | WEBSITE.COM',
+    description: 'WEBSTIE_DESCRIPTION',
     defaultImageWidth: 1200,
     defaultImageHeight: 1200,
     // Multiple Open Graph images is only available in version `7.0.0-canary.0`+ of next (see note top of README.md)
     images: [
       {
-        url: 'https://me.io/static/img/og-image-01.jpg',
+        url: 'https://website.com/static/img/og-image-01.jpg',
         width: 800,
         height: 600,
-        alt: 'A Developer first and open-source community by developers | ME.IO',
+        alt: 'WEBSTIE_TITLE | WEBSITE.COM',
       },
       {
-        url: 'https://me.io/static/img/og-image-02.jpg',
+        url: 'https://website.com/static/img/og-image-02.jpg',
         width: 800,
         height: 600,
-        alt: 'A Developer first and open-source community by developers | ME.IO',
+        alt: 'WEBSTIE_TITLE | WEBSITE.COM',
       }
     ],
-    site_name: 'A Developer first and open-source community by developers | ME.IO',
+    site_name: 'WEBSTIE_TITLE | WEBSITE.COM',
   },
   twitter: {
     handle: '@handle',

@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles';
-import { Component } from '../framework';
+import { styles } from './styles';
+import { PureComponent } from '../framework';
 
-export class ContainerFooter extends Component {
+export class ContainerFooter extends PureComponent {
 
   render() {
     return (
@@ -11,7 +11,6 @@ export class ContainerFooter extends Component {
           <div className="px-4 pb-4 md:pb-0 leading-loose">
             { this.props.children }
             <style jsx>{ styles }</style>
-            <div className="hidden">start date:{ 'TODO' }</div>
           </div>
         </div>
       </div>

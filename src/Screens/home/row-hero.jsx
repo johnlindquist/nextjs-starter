@@ -1,12 +1,12 @@
 import React from 'react';
 import { Component } from '../../components/framework';
 
-class RowHero extends Component {
+export class RowHero extends Component {
   render() {
     return (
       <>
         <div className='bg-white'>
-          <div className='w-full' style={ { background: 'url("static/img/bg_web.jpg") bottom center no-repeat', backgroundSize: 'contain' } }>
+          <div className='w-full' style={ { background: 'url("static/img/example/slider_2.jpg") bottom center no-repeat', backgroundSize: 'contain' } }>
             <div className="w-full max-w-2xl mx-auto pt-10">
               <div className="pb-5 px-4 md:px-2 text-center">
                 <h1 className="text-primary-darker text-2xl font-bold mt-4 mb-6 leading-none md:text-5xl"><span className='bg-white'>Community of Developers</span></h1>
@@ -26,5 +26,3 @@ class RowHero extends Component {
     );
   }
 }
-
-export default RowHero;

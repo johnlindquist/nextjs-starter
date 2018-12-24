@@ -3,8 +3,8 @@ import React, { Fragment } from 'react';
 
 import '@styles/default.scss';
 import './global.scss';
-import OneColumnLayout from '@Layout/one-column-layout';
-import { storeLastPageUrl, storeLastVisitedUrl } from '@Util/url';
+import { OneColumnLayout } from '@Layout/one-column-layout';
+import { storeLastPageUrl } from '@Util/url';
 import { Provider as MobxProvider } from 'mobx-react';
 import { withMobxStore } from '@Lib/with-mobx.store';
 import { trackPageView } from '@Util/ga';
@@ -18,11 +18,9 @@ const layouts = {
 
 class App extends NextApp {
   static async getInitialProps({ Component, ctx }) {
-    // store last visited url in session storage to redirect after login.
-    storeLastVisitedUrl();
+    // store last visited to no track google analytics twice.
     storeLastPageUrl();
 
-    // if tokenJwt set, add user to request data
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);

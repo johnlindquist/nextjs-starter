@@ -1,7 +1,7 @@
 import React from 'react';
-import { Component, PropTypes } from '../framework';
+import { PropTypes, PureComponent } from '../framework';
 
-export class Image extends Component {
+export class Image extends PureComponent {
   static propTypes = {
     src: PropTypes.any.isRequired,
     children: PropTypes.element,

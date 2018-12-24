@@ -10,7 +10,7 @@ export class Favicons extends Component {
         <link rel="manifest" href="/static/favs/manifest.json"/>
         <meta name="mobile-web-app-capable" content="yes"/>
         <meta name="theme-color" content="#fff"/>
-        <meta name="application-name" content="ME.IO"/>
+        <meta name="application-name" content="WEBSITE.COM"/>
         <link rel="apple-touch-icon" sizes="57x57" href="/static/favs/apple-touch-icon-57x57.png"/>
         <link rel="apple-touch-icon" sizes="60x60" href="/static/favs/apple-touch-icon-60x60.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="/static/favs/apple-touch-icon-72x72.png"/>
@@ -24,7 +24,7 @@ export class Favicons extends Component {
         <link rel="apple-touch-icon" sizes="1024x1024" href="/static/favs/apple-touch-icon-1024x1024.png"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-        <meta name="apple-mobile-web-app-title" content="ME.IO"/>
+        <meta name="apple-mobile-web-app-title" content="WEBSITE.COM"/>
         <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/static/favs/apple-touch-startup-image-320x460.png"/>
         <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/static/favs/apple-touch-startup-image-640x920.png"/>
         <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/static/favs/apple-touch-startup-image-640x1096.png"/>

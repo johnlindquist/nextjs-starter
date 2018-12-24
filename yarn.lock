@@ -8008,6 +8008,11 @@ lodash.map@^4.6.0:
   resolved "https://registry.yarnpkg.com/lodash.map/-/lodash.map-4.6.0.tgz#771ec7839e3473d9c4cde28b19394c3562f4f6d3"
   integrity sha1-dx7Hg540c9nEzeKLGTlMNWL09tM=
 
+lodash.max@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.max/-/lodash.max-4.0.1.tgz#8735566c618b35a9f760520b487ae79658af136a"
+  integrity sha1-hzVWbGGLNan3YFILSHrnllivE2o=
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -8022,6 +8027,11 @@ lodash.omit@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
   integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
+
+lodash.range@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.range/-/lodash.range-3.2.0.tgz#f461e588f66683f7eadeade513e38a69a565a15d"
+  integrity sha1-9GHliPZmg/fq3q3lE+OKaaVloV0=
 
 lodash.restparam@^3.0.0:
   version "3.6.1"
@@ -8700,10 +8710,10 @@ next-routes@^1.4.2:
   dependencies:
     path-to-regexp "^2.1.0"
 
-next-seo@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.4.0.tgz#69e1eba2b4a26dca78e7a4c00f9e6c7201d0710a"
-  integrity sha512-FxTCM73tTntNB3uzTZaQqIyrPJvKJFxYlFPLJPmSFPlpNpQzI+XxKGgA2UKsG7vu/hIP49RAYCDCz8KjDxPhmQ==
+next-seo@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.5.0.tgz#deb078c6336e6de045e118de4d7bab6ecf16ffe3"
+  integrity sha512-AGGNoVrbHWQ0LVY76imCIM4fNx/gJNd2I91+cCuJVIYD3odVxGIkRpIgNVrpNQpeLGQMu4m6hTKLD/ijS73r9Q==
 
 next@^7.0.2:
   version "7.0.2"
@@ -12109,17 +12119,19 @@ table@^5.0.2:
     slice-ansi "2.0.0"
     string-width "^2.1.1"
 
-tailwind-heropatterns@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/tailwind-heropatterns/-/tailwind-heropatterns-0.0.7.tgz#99b185c3cd15f71eabb5f4b39011b2c856d592ee"
-  integrity sha512-MoAzXqnfCfmhvxwB7q7R9FdPcYnyg7UEcTqLKasXhNvVsWX/zGkm49Il4avGq+LA/imBgTjva8AUwaXv7vqbYA==
+tailwindcss-js-plugins@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tailwindcss-js-plugins/-/tailwindcss-js-plugins-0.0.3.tgz#e2e994447168e01a9fb76b37f63c1aac30e9d2c7"
+  integrity sha512-NQkCWGdWVJY4GvgWnM0GtklrMQErrXXAMLQQQFhVL8cqZGKVz/hLkO3+rgHNOctUvs6k+AGg1uEkHBi6n9klCg==
   dependencies:
-    lodash "^4.17.11"
-
-tailwindcss-spaced-items@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-spaced-items/-/tailwindcss-spaced-items-0.1.0.tgz#e7f381e5c780a034bcdbc38a6a2cfb31f828a020"
-  integrity sha512-YiT1h89fp13r6I+EBM8wS1RWfsTwzHSi4BAnHoTXXQK1GQ53DUCPeFNmiksYSdx2aQLMdp/DTPvErqBVfTALiQ==
+    lodash.defaults "^4.2.0"
+    lodash.get "^4.4.2"
+    lodash.isfunction "^3.0.9"
+    lodash.isplainobject "^4.0.6"
+    lodash.map "^4.6.0"
+    lodash.max "4.0.1"
+    lodash.omit "^4.5.0"
+    lodash.range "3.2.0"
 
 tailwindcss@^0.7.3:
   version "0.7.3"

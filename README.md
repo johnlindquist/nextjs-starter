@@ -25,10 +25,7 @@
   <sub>Created by <a href="https://www.me.io">me.io</a></sub>
 </div>
 
-
-
 ## About
-
 
 Next.js is a minimalistic React framework that runs in the browser and the server. It offers developers an easy way to get started, and as it uses React.js for templating it is also a straightforward way for developers with React experience to get productive fast.
 
@@ -41,7 +38,6 @@ By the end of setup, you'll have a Next.js project and features which is specifi
 <br/>
 
 ## Features
-
 
 This nextjs starter app includes the latest powerful tools.
 
@@ -71,8 +67,9 @@ This nextjs starter app includes the latest powerful tools.
 
 The starter app will come in multiple flavors
 * **Default** - branch master
+* **With Mobx** - branch mobx-master
 * **With Redux** - branch redux-master
-* **Mobx With JWT Auth / Passport JS** - branch master-jwt
+* **Mobx With JWT Auth / Passport JS** - branch mobx-master-jwt
 * **Redux With JWT Auth / Passport JS** - branch redux-master-jwt
 * **With themes** - branch master-theme
 * **With i18n react-intl** - branch master-react-intl

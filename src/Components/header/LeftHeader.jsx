@@ -1,7 +1,7 @@
 import React from 'react';
-import { Component } from '../framework';
+import { PureComponent } from '../framework';
 
-export class LeftHeader extends Component {
+export class LeftHeader extends PureComponent {
 
   render() {
     return (

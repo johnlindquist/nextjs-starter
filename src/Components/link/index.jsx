@@ -1,10 +1,10 @@
 import React from 'react';
 import { router } from 'app/routes';
-import { Component, PropTypes } from '../framework';
+import { PropTypes, PureComponent } from '../framework';
 
 const RouterLink = router.Link;
 
-export class Link extends Component {
+export class Link extends PureComponent {
   static propTypes = {
     children: PropTypes.any.isRequired,
     route: PropTypes.string.isRequired,

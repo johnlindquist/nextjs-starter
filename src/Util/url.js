@@ -1,5 +1,4 @@
 // internal
-import { router } from 'app/routes';
 import { ContainsAny } from './string';
 import { echo } from './echo';
 import { isClient, isServer } from './cmn';
@@ -8,15 +7,6 @@ import { isClient, isServer } from './cmn';
 export const getWindowPathname = (onlyUrl) => {
   if (isClient) {
     const url = window.location.pathname;
-    return onlyUrl === true ? url.split('?')[0] : url;
-  }
-  return `${ process.env.NODE_SERVER_URL }`;
-};
-
-// return url without query and hash etc..
-export const getWindowUrl = (onlyUrl) => {
-  if (isClient) {
-    const url = window.location.href;
     return onlyUrl === true ? url.split('?')[0] : url;
   }
   return `${ process.env.NODE_SERVER_URL }`;
@@ -50,61 +40,6 @@ export const storeLastPageUrl = (exclude = []) => {
   echo(url);
 
   sessionStorage.setItem('last_page_url', url);
-};
-
-
-// for redirect after login
-export const storeLastVisitedUrl = (exclude = ['/auth', '/signup', '/login', '/forgot-password', '/reset-password']) => {
-  if (!isClient) {
-    return;
-  }
-  const url = getWindowUrl();
-  if (ContainsAny(url, exclude)) {
-    return;
-  }
-  echo(url);
-
-  sessionStorage.setItem('last_url', url);
-};
-
-// for redirect after login
-export const goToLastVisitedUrl = () => {
-  if (!isClient) {
-    return;
-  }
-  let url = sessionStorage.getItem('last_url');
-
-  if (url === window.location.href) {
-    return;
-  }
-
-  echo(url);
-
-  if (!url) {
-    url = '/';
-  }
-  goToUrl(url);
-};
-
-export const goToUrl = (url, params = {}, opt = {}) => {
-  router.Router.pushRoute(url, params, opt);
-};
-
-
-export const upsertQueryParam = (uri, key, value) => {
-  // todo test
-  let hash = uri.split('#')[1] || '';
-  if (hash) {
-    hash = '#' + hash;
-  }
-  uri = uri.split('#')[0];
-  const re = new RegExp('([?&])' + key + '=.*?(&|$)', 'i');
-  const separator = uri.indexOf('?') !== -1 ? '&' : '?';
-  if (uri.match(re)) {
-    return uri.replace(re, '$1' + key + '=' + value + '$2') + hash;
-  } else {
-    return uri + separator + key + '=' + value + hash;
-  }
 };
 
 // only client side

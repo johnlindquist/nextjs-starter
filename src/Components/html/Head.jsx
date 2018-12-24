@@ -10,11 +10,11 @@ export class Head extends Component {
     super(props);
 
     // title template
-    SEO.templateTitle = '%s | ME.IO';
+    SEO.templateTitle = '%s | WEBSITE.COM';
 
     // title for pages
-    SEO.title = 'A Developer first and open-source community by developers';
-    SEO.openGraph.url = 'https://me.io';
+    SEO.title = 'WEBSTIE_TITLE';
+    SEO.openGraph.url = 'https://website.com';
     SEO.openGraph.title = SEO.title;
     SEO.noindex = this.props.noindex;
     // todo add the rest of tags etc..

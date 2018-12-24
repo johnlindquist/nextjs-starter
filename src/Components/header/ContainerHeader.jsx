@@ -1,6 +1,6 @@
 import React from 'react';
 import { PureComponent } from '../framework';
-import styles from './styles';
+import { styles } from './styles';
 
 export class ContainerHeader extends PureComponent {
 
@@ -13,6 +13,7 @@ export class ContainerHeader extends PureComponent {
             <style jsx>{ styles }</style>
           </nav>
         </div>
+        <div className="bg-primary h-2"/>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Component } from '../framework';
+import { PureComponent } from '../framework';
 import { Image } from '../image';
 import { Link } from '../link';
 
-export class LogoHeader extends Component {
+export class LogoHeader extends PureComponent {
 
   render() {
     return (

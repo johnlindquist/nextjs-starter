@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-/* language=CSS */
-export default css`
+/* language=SCSS */
+export const styles = css`
 
 `;

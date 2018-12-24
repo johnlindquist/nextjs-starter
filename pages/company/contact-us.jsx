@@ -4,14 +4,14 @@ import { Component } from '@Components/framework';
 import { Page } from '@Lib/layout/Page';
 import { Section } from '@Lib/layout/Section';
 
-class Home extends Component {
+export default class ContactUs extends Component {
   render() {
     return (
       <>
         <Page layout={ 'OneColumn' }>
           <Section slot="content">
             <div className=''>
-              Welcome Home
+              Contact US
             </div>
           </Section>
         </Page>
@@ -19,5 +19,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

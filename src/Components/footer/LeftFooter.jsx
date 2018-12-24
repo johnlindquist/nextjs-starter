@@ -1,8 +1,8 @@
 import React from 'react';
-import { Component } from '../framework';
+import { PureComponent } from '../framework';
 import { Link } from '../link';
 
-export class LeftFooter extends Component {
+export class LeftFooter extends PureComponent {
   render() {
     return (
       <>
@@ -13,15 +13,6 @@ export class LeftFooter extends Component {
             </div>
             <div className='inline-block'>
               <Link route='contact-us'>Contact Us</Link>
-            </div>
-            <div className='inline-block'>
-              <Link route='faq'>FAQ's</Link>
-            </div>
-            <div className='inline-block'>
-              <Link route='privacy-policy'>Privacy Policy</Link>
-            </div>
-            <div className='inline-block'>
-              <Link route='terms-of-service'>Terms of service</Link>
             </div>
           </div>
         </div>

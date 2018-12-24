@@ -3,7 +3,7 @@ import Link from '../../components/link';
 import SubscribeForm from '../../components/subscribe/subscribe-form';
 import { Component } from '../../components/framework';
 
-class RowThree extends Component {
+export class RowThree extends Component {
   render() {
     return (
       <>
@@ -18,13 +18,13 @@ class RowThree extends Component {
                 <Link route='https://www.meetup.com/ME-IO-DXB/' className='btn bg-grey-lighter' target='_blank'>
                   <i className='fa fa-meetup mr-2'/> Meetup
                 </Link>
-                <Link route='https://me.io/join-whatsapp' className='btn bg-grey-lighter ml-2' target='_blank'>
+                <Link route='https://website.com/join-whatsapp' className='btn bg-grey-lighter ml-2' target='_blank'>
                   <i className='fa fa-whatsapp mr-2'/> WhatsApp
                 </Link>
-                <Link route='https://me.io/join-telegram' className='btn bg-grey-lighter ml-2' target='_blank'>
+                <Link route='https://website.com/join-telegram' className='btn bg-grey-lighter ml-2' target='_blank'>
                   <i className='fa fa-telegram mr-2'/> Telegram
                 </Link>
-                <Link route='https://me.io/twitter' className='btn bg-grey-lighter ml-2' target='_blank'>
+                <Link route='https://website.com/twitter' className='btn bg-grey-lighter ml-2' target='_blank'>
                   <i className='fa fa-twitter mr-2'/> Twitter
                 </Link>
               </div>
@@ -44,5 +44,3 @@ class RowThree extends Component {
     );
   }
 }
-
-export default RowThree;

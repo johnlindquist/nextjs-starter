@@ -20,7 +20,6 @@ export const echo = (...params) => {
       callerName = m[1] || m[2];
     }
     console.log(callerName, ...params);
-    callerName = null;
   } else {
     // log only if cookie exist
     if (typeof document !== 'undefined' && document.cookie.indexOf('__echo=') > -1) {

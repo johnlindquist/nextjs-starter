@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
         }
       ],
     }),
-    autoprefixer,
+    autoprefixer({ browsers: 'last 2 versions' }),
   ];
 }
 

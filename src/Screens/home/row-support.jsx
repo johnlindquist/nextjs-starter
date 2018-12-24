@@ -1,10 +1,10 @@
 import React from 'react';
 import { Component } from '../../components/framework';
 
-class RowSupport extends Component {
+export class RowSupport extends Component {
   sendEmail = (e) => {
     const req = e.target.getAttribute('data-req');
-    const to = 'community@me.io';
+    const to = 'community@website.com';
     let subject = 'Hello there!';
     let body = 'Dear Community, My name is';
     switch (req) {
@@ -90,12 +90,10 @@ class RowSupport extends Component {
             </div>
           </div>
           <p className="text-center mb-12 px-4 text-black text-xl text-grey-dark">
-            For feedback, suggestions and inquiries. Please <a href="mailto:community@me.io" className="text-primary hover:text-white font-bold border-b-2 border-primary pb-1 hover:bg-primary px-2">get in touch!</a>
+            For feedback, suggestions and inquiries. Please <a href="mailto:community@website.com" className="text-primary hover:text-white font-bold border-b-2 border-primary pb-1 hover:bg-primary px-2">get in touch!</a>
           </p>
         </div>
       </>
     );
   }
 }
-
-export default RowSupport;

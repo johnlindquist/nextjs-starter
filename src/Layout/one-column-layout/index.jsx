@@ -13,7 +13,7 @@ import { LogoFooter } from '@Components/footer/LogoFooter';
 import { LeftFooter } from '@Components/footer/LeftFooter';
 import { Component } from '@Components/framework';
 
-class OneColumnLayout extends Component {
+export class OneColumnLayout extends Component {
   static propTypes = {
     sections: PropTypes.object.isRequired,
   };
@@ -24,7 +24,6 @@ class OneColumnLayout extends Component {
     const sections = this.props.sections;
     return (
       <>
-        <div className="bg-primary h-2"/>
         <div className="layout one-column-layout flex flex-col w-screen min-h-screen">
           <Slot sections={ sections } name="header-wrapper" className='layout-header-wrapper'>
             <Slot sections={ sections } name="header" className="layout-header" component="header">
@@ -68,5 +67,3 @@ class OneColumnLayout extends Component {
     );
   }
 }
-
-export default OneColumnLayout;

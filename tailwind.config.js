@@ -24,11 +24,6 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-const spacedItems = require('./tailwind-plugins/spaced-items');
-const buttons = require('./tailwind-plugins/button');
-const card = require('./tailwind-plugins/card');
-const form = require('./tailwind-plugins/form');
-
 /*
 |-------------------------------------------------------------------------------
 | Colors                                    https://tailwindcss.com/docs/colors
@@ -164,7 +159,7 @@ const colors = {
   'danger-dark': '#bf0036'
 };
 
-const config = {
+const tailwindConfig = {
 
   /*
   |-----------------------------------------------------------------------------
@@ -1002,16 +997,36 @@ const config = {
 };
 
 
-config.plugins.push(
+const {
+  spacedItems,
+  buttons,
+  card,
+  form,
+  cssGrid
+} = require('tailwindcss-js-plugins');
+
+tailwindConfig.plugins.push(
   buttons()
 );
-config.plugins.push(
+tailwindConfig.plugins.push(
   form()
 );
-config.plugins.push(
+tailwindConfig.plugins.push(
   card()
 );
-config.plugins.push(
+tailwindConfig.plugins.push(
+  cssGrid({
+    grids: [2, 3, 5, 6, 8, 10, 12],
+    gaps: {
+      0: '0',
+      4: '1rem',
+      8: '2rem',
+    },
+    variants: ['responsive'],
+  })
+);
+
+tailwindConfig.plugins.push(
   spacedItems({
     values: {
       '1': '1px',
@@ -1027,4 +1042,4 @@ config.plugins.push(
   })
 );
 
-module.exports = config;
+module.exports = tailwindConfig;
