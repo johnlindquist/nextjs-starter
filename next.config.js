@@ -1,11 +1,9 @@
 const isProd = process.env.NODE_ENV === 'production';
 const isLive = process.env.NODE_LIVE === 'live';
 let withBundleAnalyzer;
-let withOptimizedImages;
 
 if (!isLive) {
   withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
-  withOptimizedImages = require('next-optimized-images');
 }
 
 const withCSS = require('@zeit/next-css');
@@ -125,31 +123,6 @@ opts.workboxOpts = {
   ]
 };
 
-opts.optimizedImages = {
-  inlineImageLimit: 8192,
-  imagesFolder: 'images',
-  imagesName: '[name]-[hash].[ext]',
-  optimizeImagesInDev: false,
-  mozjpeg: {
-    quality: 90,
-  },
-  optipng: {
-    optimizationLevel: 3,
-  },
-  pngquant: false,
-  gifsicle: {
-    interlaced: true,
-    optimizationLevel: 3,
-  },
-  svgo: {
-    // enable/disable svgo plugins here
-  },
-  webp: {
-    preset: 'default',
-    quality: 90,
-  }
-};
-
 opts.generateEtags = false;
 opts.onDemandEntries = {
   // period (in ms) where the server will keep pages in the buffer
@@ -187,7 +160,6 @@ exportsObj = withSass(exportsObj);
 
 if (!isLive) {
   exportsObj = withBundleAnalyzer(exportsObj);
-  exportsObj = withOptimizedImages(exportsObj);
 }
 
 module.exports = exportsObj;
