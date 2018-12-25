@@ -7,7 +7,7 @@ export class LeftFooter extends PureComponent {
     return (
       <>
         <div className="w-full md:w-5/6 inline-block align-top md:mt-5 text-left md:text-right">
-          <div className='spaced-x-30'>
+          <div className='spd-x-30'>
             <div className='inline-block'>
               <Link route='about-us'>About Us</Link>
             </div>

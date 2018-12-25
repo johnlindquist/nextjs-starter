@@ -16,7 +16,7 @@ export class Row4Item extends Component {
 
   render() {
     return (
-      <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
+      <div className="card rounded-lg">
         <div className="px-6 p-6 leading-tight text-center">
           <div className="text-2xl tracking-wide mb-2 font-bold"><i className={ `fa ${ this.props.faIcon } text-green` }/> { this.props.heading }</div>
         </div>
