@@ -119,48 +119,6 @@ Then open http://localhost:3000/ to see your app.
  
  <br/>
 
-```
-.
-├── app
-│  ├── proxy.js
-│  ├── routes.js
-│  └── server.js
-├── next.config.js
-├── pages
-│  ├── _app.tsx
-│  ├── _document.tsx
-│  ├── home
-│  │  ├── index.scss
-│  │  └── index.tsx
-│  └── index.ts
-├── src
-│  ├── Actions
-│  │  ├── HomeActions.ts
-│  │  └── index.ts
-│  ├── Components
-│  │  ├── Heading
-│  │  │  ├── index.tsx
-│  │  │  └── style.scss
-│  │  └── index.ts
-│  ├── Definations
-│  │  ├── ActionConsts.ts
-│  │  └── index.ts
-│  ├── Interfaces
-│  │  ├── Components
-│  │  │  └── Heading.d.ts
-│  │  ├── index.ts
-│  │  └── Pages
-│  │     ├── App.d.ts
-│  │     └── Home.d.ts
-│  └── Redux
-│     ├── Reducers
-│     │  ├── home.ts
-│     │  └── index.ts
-│     └── store.ts
-├── tsconfig.json
-└── tslint.json
-
-```
 
 ## Contribution
 

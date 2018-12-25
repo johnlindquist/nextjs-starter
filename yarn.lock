@@ -10583,9 +10583,9 @@ react@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-"reactjs-layout-slot@git://github.com/meabed/reactjs-layout-slot.git":
+"reactjs-layout-slot@https://github.com/meabed/reactjs-layout-slot.git":
   version "0.0.1"
-  resolved "git://github.com/meabed/reactjs-layout-slot.git#09d82462739369100291db9e6c08ba9d9791ccb2"
+  resolved "https://github.com/meabed/reactjs-layout-slot.git#53953f93823b9d54b8faa38b6d06607dde4d486b"
   dependencies:
     lodash.isplainobject "4.0.6"
 
