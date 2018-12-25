@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Component } from '@Components/framework';
-import { Page } from 'react-layout-slot';
-import { Section } from 'react-layout-slot';
+import { Page, Section } from 'react-layout-slot';
 
 export default class AboutUs extends Component {
   render() {
