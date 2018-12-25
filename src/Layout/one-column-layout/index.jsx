@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
-import { Slot } from 'reactjs-layout-slot';
+import { Slot } from 'react-layout-slot';
 import { LogoHeader } from '@Components/header/LogoHeader';
 import { LeftHeader } from '@Components/header/LeftHeader';
 import { RightHeader } from '@Components/header/RightHeader';

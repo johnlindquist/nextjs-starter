@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Component } from '@Components/framework';
-import { Page, Section } from 'reactjs-layout-slot';
+import { Page, Section } from 'react-layout-slot';
 
 class Home extends Component {
   render() {
