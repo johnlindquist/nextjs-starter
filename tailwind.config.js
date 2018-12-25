@@ -1002,7 +1002,8 @@ const {
   buttons,
   card,
   form,
-  cssGrid
+  cssGrid,
+  negativePadding
 } = require('tailwindcss-js-plugins');
 
 tailwindConfig.plugins.push(
@@ -1029,12 +1030,8 @@ tailwindConfig.plugins.push(
 tailwindConfig.plugins.push(
   spacedItems({
     values: {
-      '1': '1px',
-      '2': '2px',
       '5': '5px',
-      '8': '8px',
       '10': '10px',
-      '12': '12px',
       '15': '15px',
       '20': '20px',
       '30': '30px',

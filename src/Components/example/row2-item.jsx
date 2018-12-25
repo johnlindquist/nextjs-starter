@@ -18,21 +18,23 @@ export class Row2Item extends Component {
 
   render() {
     return (
-      <div className="card rounded-lg w-full md:mr-6 overflow-hidden flex flex-col">
-        { this.props.Image }
-        <div className="px-6 p-6 leading-tight text-center">
-          <div className="text-2xl tracking-wide mb-2 font-bold">{ this.props.heading }</div>
-        </div>
-        <div className="px-6 flex-grow">
-          <p className='mb-3'>{ this.props.desc1 }</p>
-        </div>
-        <div className="px-6 pb-6 flex-grow">
-          <p className=''>{ this.props.desc2 }</p>
-        </div>
-        <div className="px-6 pb-6 flex-grow">
-          <Link route={ 'https://google.com' } className='btn btn-green' target={ '_blank' }>
-            View Details
-          </Link>
+      <div className='overflow-hidden w-full sm:w-1/2 md:w-1/3 p-0 sm:p-3'>
+        <div className="card rounded-lg h-full">
+          { this.props.Image }
+          <div className="px-6 p-6 leading-tight text-center">
+            <div className="text-2xl tracking-wide mb-2 font-bold">{ this.props.heading }</div>
+          </div>
+          <div className="px-6 flex-grow">
+            <p className='mb-3'>{ this.props.desc1 }</p>
+          </div>
+          <div className="px-6 pb-6 flex-grow">
+            <p className=''>{ this.props.desc2 }</p>
+          </div>
+          <div className="px-6 pb-6 flex-grow">
+            <Link route={ 'https://google.com' } className='btn btn-green' target={ '_blank' }>
+              View Details
+            </Link>
+          </div>
         </div>
       </div>
 

@@ -8685,10 +8685,10 @@ next-routes@^1.4.2:
   dependencies:
     path-to-regexp "^2.1.0"
 
-next-seo@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.5.0.tgz#deb078c6336e6de045e118de4d7bab6ecf16ffe3"
-  integrity sha512-AGGNoVrbHWQ0LVY76imCIM4fNx/gJNd2I91+cCuJVIYD3odVxGIkRpIgNVrpNQpeLGQMu4m6hTKLD/ijS73r9Q==
+next-seo@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.6.0.tgz#c0f2c1e69000e26091fa5adb0462b9c7f23a5583"
+  integrity sha512-ue5vDfuK0pZYPCG/nOZU3ivfbojE3khmcwHmHa+TyNL5GYanwZGPqrFJ6lmhuWazZoIX6DRwH0X4A9SaS1wXTA==
 
 next@^7.0.2:
   version "7.0.2"
@@ -12090,10 +12090,10 @@ table@^5.0.2:
     slice-ansi "2.0.0"
     string-width "^2.1.1"
 
-tailwindcss-js-plugins@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/tailwindcss-js-plugins/-/tailwindcss-js-plugins-0.0.3.tgz#e2e994447168e01a9fb76b37f63c1aac30e9d2c7"
-  integrity sha512-NQkCWGdWVJY4GvgWnM0GtklrMQErrXXAMLQQQFhVL8cqZGKVz/hLkO3+rgHNOctUvs6k+AGg1uEkHBi6n9klCg==
+tailwindcss-js-plugins@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/tailwindcss-js-plugins/-/tailwindcss-js-plugins-0.0.7.tgz#8deba60e138e743bff99f578aacaa8a73804ac50"
+  integrity sha512-Z0P5RNkiHDd0pH8elnixevqbWQqLxuxMI1NTEeKVOBbL2/HuQwZe201qOkejbymq0MZ83kqyz88ZC7Ucin66TA==
   dependencies:
     lodash.defaults "^4.2.0"
     lodash.get "^4.4.2"

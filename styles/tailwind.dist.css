@@ -853,240 +853,6 @@ table {
   padding: 2rem 2.5rem;
 }
 
-.spaced-x-1 > * {
-  margin-right: 1px;
-}
-
-.spaced-x-1 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-1 > * {
-  margin-bottom: 1px;
-}
-
-.spaced-y-1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-1 > * {
-  margin-right: 1px;
-  margin-bottom: 1px;
-}
-
-.spaced-xy-1 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-2 > * {
-  margin-right: 2px;
-}
-
-.spaced-x-2 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-2 > * {
-  margin-bottom: 2px;
-}
-
-.spaced-y-2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-2 > * {
-  margin-right: 2px;
-  margin-bottom: 2px;
-}
-
-.spaced-xy-2 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-5 > * {
-  margin-right: 5px;
-}
-
-.spaced-x-5 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-5 > * {
-  margin-bottom: 5px;
-}
-
-.spaced-y-5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-5 > * {
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-.spaced-xy-5 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-8 > * {
-  margin-right: 8px;
-}
-
-.spaced-x-8 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-8 > * {
-  margin-bottom: 8px;
-}
-
-.spaced-y-8 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-8 > * {
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-
-.spaced-xy-8 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-10 > * {
-  margin-right: 10px;
-}
-
-.spaced-x-10 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-10 > * {
-  margin-bottom: 10px;
-}
-
-.spaced-y-10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-10 > * {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.spaced-xy-10 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-12 > * {
-  margin-right: 12px;
-}
-
-.spaced-x-12 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-12 > * {
-  margin-bottom: 12px;
-}
-
-.spaced-y-12 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-12 > * {
-  margin-right: 12px;
-  margin-bottom: 12px;
-}
-
-.spaced-xy-12 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-15 > * {
-  margin-right: 15px;
-}
-
-.spaced-x-15 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-15 > * {
-  margin-bottom: 15px;
-}
-
-.spaced-y-15 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-15 > * {
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
-
-.spaced-xy-15 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-20 > * {
-  margin-right: 20px;
-}
-
-.spaced-x-20 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-20 > * {
-  margin-bottom: 20px;
-}
-
-.spaced-y-20 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-20 > * {
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.spaced-xy-20 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.spaced-x-30 > * {
-  margin-right: 30px;
-}
-
-.spaced-x-30 > *:last-child {
-  margin-right: 0;
-}
-
-.spaced-y-30 > * {
-  margin-bottom: 30px;
-}
-
-.spaced-y-30 > *:last-child {
-  margin-bottom: 0;
-}
-
-.spaced-xy-30 > * {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.spaced-xy-30 > *:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file. It also injects any utility classes registered by plugins.
@@ -8058,6 +7824,136 @@ table {
   grid-column-end: 13;
 }
 
+.spd-x-5 > * {
+  margin-right: 5px;
+}
+
+.spd-x-5 > *:last-child {
+  margin-right: 0;
+}
+
+.spd-y-5 > * {
+  margin-bottom: 5px;
+}
+
+.spd-y-5 > *:last-child {
+  margin-bottom: 0;
+}
+
+.spd-xy-5 > * {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.spd-xy-5 > *:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.spd-x-10 > * {
+  margin-right: 10px;
+}
+
+.spd-x-10 > *:last-child {
+  margin-right: 0;
+}
+
+.spd-y-10 > * {
+  margin-bottom: 10px;
+}
+
+.spd-y-10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.spd-xy-10 > * {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.spd-xy-10 > *:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.spd-x-15 > * {
+  margin-right: 15px;
+}
+
+.spd-x-15 > *:last-child {
+  margin-right: 0;
+}
+
+.spd-y-15 > * {
+  margin-bottom: 15px;
+}
+
+.spd-y-15 > *:last-child {
+  margin-bottom: 0;
+}
+
+.spd-xy-15 > * {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.spd-xy-15 > *:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.spd-x-20 > * {
+  margin-right: 20px;
+}
+
+.spd-x-20 > *:last-child {
+  margin-right: 0;
+}
+
+.spd-y-20 > * {
+  margin-bottom: 20px;
+}
+
+.spd-y-20 > *:last-child {
+  margin-bottom: 0;
+}
+
+.spd-xy-20 > * {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.spd-xy-20 > *:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.spd-x-30 > * {
+  margin-right: 30px;
+}
+
+.spd-x-30 > *:last-child {
+  margin-right: 0;
+}
+
+.spd-y-30 > * {
+  margin-bottom: 30px;
+}
+
+.spd-y-30 > *:last-child {
+  margin-bottom: 0;
+}
+
+.spd-xy-30 > * {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.spd-xy-30 > *:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
 /**
  * Use this directive to control where Tailwind injects the responsive
  * variations of each utility.
@@ -15008,6 +14904,136 @@ table {
   .sm\:col-end-13 {
     grid-column-end: 13;
   }
+
+  .sm\:spd-x-5 > * {
+    margin-right: 5px;
+  }
+
+  .sm\:spd-x-5 > *:last-child {
+    margin-right: 0;
+  }
+
+  .sm\:spd-y-5 > * {
+    margin-bottom: 5px;
+  }
+
+  .sm\:spd-y-5 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-xy-5 > * {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .sm\:spd-xy-5 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-x-10 > * {
+    margin-right: 10px;
+  }
+
+  .sm\:spd-x-10 > *:last-child {
+    margin-right: 0;
+  }
+
+  .sm\:spd-y-10 > * {
+    margin-bottom: 10px;
+  }
+
+  .sm\:spd-y-10 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-xy-10 > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sm\:spd-xy-10 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-x-15 > * {
+    margin-right: 15px;
+  }
+
+  .sm\:spd-x-15 > *:last-child {
+    margin-right: 0;
+  }
+
+  .sm\:spd-y-15 > * {
+    margin-bottom: 15px;
+  }
+
+  .sm\:spd-y-15 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-xy-15 > * {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .sm\:spd-xy-15 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-x-20 > * {
+    margin-right: 20px;
+  }
+
+  .sm\:spd-x-20 > *:last-child {
+    margin-right: 0;
+  }
+
+  .sm\:spd-y-20 > * {
+    margin-bottom: 20px;
+  }
+
+  .sm\:spd-y-20 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-xy-20 > * {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sm\:spd-xy-20 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-x-30 > * {
+    margin-right: 30px;
+  }
+
+  .sm\:spd-x-30 > *:last-child {
+    margin-right: 0;
+  }
+
+  .sm\:spd-y-30 > * {
+    margin-bottom: 30px;
+  }
+
+  .sm\:spd-y-30 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .sm\:spd-xy-30 > * {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .sm\:spd-xy-30 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -21947,6 +21973,136 @@ table {
 
   .md\:col-end-13 {
     grid-column-end: 13;
+  }
+
+  .md\:spd-x-5 > * {
+    margin-right: 5px;
+  }
+
+  .md\:spd-x-5 > *:last-child {
+    margin-right: 0;
+  }
+
+  .md\:spd-y-5 > * {
+    margin-bottom: 5px;
+  }
+
+  .md\:spd-y-5 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:spd-xy-5 > * {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .md\:spd-xy-5 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .md\:spd-x-10 > * {
+    margin-right: 10px;
+  }
+
+  .md\:spd-x-10 > *:last-child {
+    margin-right: 0;
+  }
+
+  .md\:spd-y-10 > * {
+    margin-bottom: 10px;
+  }
+
+  .md\:spd-y-10 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:spd-xy-10 > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .md\:spd-xy-10 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .md\:spd-x-15 > * {
+    margin-right: 15px;
+  }
+
+  .md\:spd-x-15 > *:last-child {
+    margin-right: 0;
+  }
+
+  .md\:spd-y-15 > * {
+    margin-bottom: 15px;
+  }
+
+  .md\:spd-y-15 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:spd-xy-15 > * {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .md\:spd-xy-15 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .md\:spd-x-20 > * {
+    margin-right: 20px;
+  }
+
+  .md\:spd-x-20 > *:last-child {
+    margin-right: 0;
+  }
+
+  .md\:spd-y-20 > * {
+    margin-bottom: 20px;
+  }
+
+  .md\:spd-y-20 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:spd-xy-20 > * {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .md\:spd-xy-20 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .md\:spd-x-30 > * {
+    margin-right: 30px;
+  }
+
+  .md\:spd-x-30 > *:last-child {
+    margin-right: 0;
+  }
+
+  .md\:spd-y-30 > * {
+    margin-bottom: 30px;
+  }
+
+  .md\:spd-y-30 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .md\:spd-xy-30 > * {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .md\:spd-xy-30 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -28888,6 +29044,136 @@ table {
   .lg\:col-end-13 {
     grid-column-end: 13;
   }
+
+  .lg\:spd-x-5 > * {
+    margin-right: 5px;
+  }
+
+  .lg\:spd-x-5 > *:last-child {
+    margin-right: 0;
+  }
+
+  .lg\:spd-y-5 > * {
+    margin-bottom: 5px;
+  }
+
+  .lg\:spd-y-5 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-xy-5 > * {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .lg\:spd-xy-5 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-x-10 > * {
+    margin-right: 10px;
+  }
+
+  .lg\:spd-x-10 > *:last-child {
+    margin-right: 0;
+  }
+
+  .lg\:spd-y-10 > * {
+    margin-bottom: 10px;
+  }
+
+  .lg\:spd-y-10 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-xy-10 > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .lg\:spd-xy-10 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-x-15 > * {
+    margin-right: 15px;
+  }
+
+  .lg\:spd-x-15 > *:last-child {
+    margin-right: 0;
+  }
+
+  .lg\:spd-y-15 > * {
+    margin-bottom: 15px;
+  }
+
+  .lg\:spd-y-15 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-xy-15 > * {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .lg\:spd-xy-15 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-x-20 > * {
+    margin-right: 20px;
+  }
+
+  .lg\:spd-x-20 > *:last-child {
+    margin-right: 0;
+  }
+
+  .lg\:spd-y-20 > * {
+    margin-bottom: 20px;
+  }
+
+  .lg\:spd-y-20 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-xy-20 > * {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .lg\:spd-xy-20 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-x-30 > * {
+    margin-right: 30px;
+  }
+
+  .lg\:spd-x-30 > *:last-child {
+    margin-right: 0;
+  }
+
+  .lg\:spd-y-30 > * {
+    margin-bottom: 30px;
+  }
+
+  .lg\:spd-y-30 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .lg\:spd-xy-30 > * {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .lg\:spd-xy-30 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -35827,5 +36113,135 @@ table {
 
   .xl\:col-end-13 {
     grid-column-end: 13;
+  }
+
+  .xl\:spd-x-5 > * {
+    margin-right: 5px;
+  }
+
+  .xl\:spd-x-5 > *:last-child {
+    margin-right: 0;
+  }
+
+  .xl\:spd-y-5 > * {
+    margin-bottom: 5px;
+  }
+
+  .xl\:spd-y-5 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-xy-5 > * {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .xl\:spd-xy-5 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-x-10 > * {
+    margin-right: 10px;
+  }
+
+  .xl\:spd-x-10 > *:last-child {
+    margin-right: 0;
+  }
+
+  .xl\:spd-y-10 > * {
+    margin-bottom: 10px;
+  }
+
+  .xl\:spd-y-10 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-xy-10 > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .xl\:spd-xy-10 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-x-15 > * {
+    margin-right: 15px;
+  }
+
+  .xl\:spd-x-15 > *:last-child {
+    margin-right: 0;
+  }
+
+  .xl\:spd-y-15 > * {
+    margin-bottom: 15px;
+  }
+
+  .xl\:spd-y-15 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-xy-15 > * {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .xl\:spd-xy-15 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-x-20 > * {
+    margin-right: 20px;
+  }
+
+  .xl\:spd-x-20 > *:last-child {
+    margin-right: 0;
+  }
+
+  .xl\:spd-y-20 > * {
+    margin-bottom: 20px;
+  }
+
+  .xl\:spd-y-20 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-xy-20 > * {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .xl\:spd-xy-20 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-x-30 > * {
+    margin-right: 30px;
+  }
+
+  .xl\:spd-x-30 > *:last-child {
+    margin-right: 0;
+  }
+
+  .xl\:spd-y-30 > * {
+    margin-bottom: 30px;
+  }
+
+  .xl\:spd-y-30 > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .xl\:spd-xy-30 > * {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .xl\:spd-xy-30 > *:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
