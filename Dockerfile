@@ -1,6 +1,6 @@
 #
 # ---- Base Node ----
-FROM meio/pm2:11.3.0-alpine AS base
+FROM node:11.5.0-alpine AS base
 # install node
 RUN apk add --no-cache tini
 # set working directory
@@ -41,8 +41,10 @@ RUN yarn test
 FROM base AS release
 # copy production node_modules
 COPY --from=dependencies /home/node/app/prod_node_modules ./node_modules
+# Copy nextjs build folder
 COPY --from=build /home/node/app/dist ./dist
-COPY --from=build /home/node/app/server.build.js ./server.build.js
+# Copy nextjs server build folder
+COPY --from=build /home/node/app/app ./app
 # copy app sources
 COPY . .
 
@@ -50,3 +52,8 @@ USER node
 # expose port and define CMD
 EXPOSE 3000
 CMD yarn start
+
+# use as
+# docker build -t nextjs .
+# docker run -u 0 -p 4000:3000 --rm --name=nextjs -it nextjs
+
