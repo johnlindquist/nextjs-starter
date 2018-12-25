@@ -40,7 +40,7 @@ export class Favicons extends Component {
         <meta name="msapplication-TileImage" content="/static/favs/mstile-144x144.png"/>
         <meta name="msapplication-config" content="/static/favs/browserconfig.xml"/>
         <link rel="yandex-tableau-widget" href="/static/favs/yandex-browser-manifest.json"/>
-
+        
       </>
     );
   }

@@ -23,7 +23,7 @@ module.exports = {
   externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
   entry: {
     // This is our Express server for Dynamic universal
-    server: path.resolve(__dirname, 'next.server.es6.js'),
+    "next.server": path.resolve(__dirname, 'app/next.server.es6.js'),
   },
   resolve: { extensions: ['html', '.js', '.ts', 'jsx', 'css'] },
   output: {

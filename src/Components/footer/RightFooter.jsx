@@ -4,8 +4,7 @@ import { PureComponent } from '../framework';
 export class RightFooter extends PureComponent {
   render() {
     return (
-      <>
-      </>
+      <div/>
     );
   }
 }

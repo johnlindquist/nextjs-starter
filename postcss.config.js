@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'production') {
       preset: 'default',
     }),
     purgecss({
-      whitelistPatterns: [/^fa-/],
+      whitelistPatterns: [/^fa-/, /^fab-/],
       whitelistPatternsChildren: [/^markdown-body/],
       content: purgeCssPaths,
       extractors: [

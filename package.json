@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "local": "nodemon --exec \"API_URL=http://localhost:3500 NODE_ENV=development node ./app/entry.server.js\"",
-    "dev": "API_URL=http://api-dev.me.io NODE_ENV=development node next.server.js",
+    "local": "nodemon --exec \"API_URL=http://localhost:3500 NODE_ENV=development node ./app/next.server.js\"",
+    "dev": "API_URL=http://api-dev.website.com NODE_ENV=development node ./app/next.server.js",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "manage:translations": "node ./.scripts/translationRunner.js",
-    "favicon": "NODE_ENV=production node ./.scripts/favicon.js 'ME.IO' 'Developers Community' 'ME.IO Team' 'https://me.io/team'",
+    "favicon": "NODE_ENV=production node ./.scripts/favicon.js 'WEBSITE.COM' 'WEBSTIE_DESCRIPTION' 'WEBSITE.COM Team' 'https://website.com/team'",
     "build:css": "tailwind build ./styles/tailwind.src.css -c ./tailwind.config.js -o ./styles/tailwind.dist.css",
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
@@ -18,7 +18,7 @@
     "build:next": "next build",
     "build:server": "webpack --progress --colors --config webpack.server.config.js",
     "start": "yarn start:server",
-    "start:server": "NODE_LIVE=live NODE_ENV=production node ./server.build.js"
+    "start:server": "NODE_LIVE=live NODE_ENV=production node ./next.server.build.js"
   },
   "dependencies": {
     "@babel/runtime": "7.2.0",

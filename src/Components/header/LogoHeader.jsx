@@ -9,7 +9,7 @@ export class LogoHeader extends PureComponent {
     return (
       <div className="flex items-stretch justify-start mr-2">
         <Link prefetch route='home' params={ {} } className='navbar-brand'>
-          <Image alt='logo' style={ { height: '25px' } } src={ require('static/logo-original.png') }/>
+          <Image alt='logo' style={ { height: '25px' } } src={ require('static/logo-o.png') }/>
         </Link>
       </div>
     );

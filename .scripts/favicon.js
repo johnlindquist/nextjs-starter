@@ -84,7 +84,7 @@ export class Favicons extends Component {
   }
 }
 `;
-    fs.writeFileSync(`${dist}/../components/head/Favicons.jsx`, rcTemp);
+    fs.writeFileSync(`${dist}/../src/Components/html/Favicons.jsx`, rcTemp);
     fs.writeFileSync(`${dist}/favs/index.html`, html);
   };
 

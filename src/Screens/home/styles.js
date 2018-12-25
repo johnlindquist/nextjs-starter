@@ -7,7 +7,7 @@ export const stylesRow2 = css.global`
 `;
 
 /* language=SCSS */
-export const stylesRow4 = css.global`
+export const stylesRow4 = css`
   div.row4 {
   }
 `;
