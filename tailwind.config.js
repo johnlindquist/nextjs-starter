@@ -1002,8 +1002,7 @@ const {
   buttons,
   card,
   form,
-  cssGrid,
-  negativePadding
+  cssGrid
 } = require('tailwindcss-js-plugins');
 
 tailwindConfig.plugins.push(
@@ -1013,7 +1012,9 @@ tailwindConfig.plugins.push(
   form()
 );
 tailwindConfig.plugins.push(
-  card()
+  card({
+    boxShadow: 'none'
+  })
 );
 tailwindConfig.plugins.push(
   cssGrid({
