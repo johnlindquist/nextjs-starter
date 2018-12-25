@@ -1,21 +1,11 @@
-import fetch from 'isomorphic-unfetch';
-import { API_URL, IS_DEV } from './../config';
+import { IS_DEV } from './../config';
 import { isApiUrl, isInternalUrl } from './../helper/url';
 
 const ssDate = new Date().toJSON();
 
 const getAppConfig = async (req) => {
-  // todo if file exist / replace with sync
-  let rs = {};
 
-  await fetch(`${ API_URL }/api/setting?hostname=${ req.hostname }`)
-    .then(r => r.json())
-    .then(data => {
-      rs = data;
-    }).catch(e => {
-      rs = {};
-    });
-  return rs;
+  return {};
 };
 
 const configMw = async (req, res, next) => {

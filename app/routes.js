@@ -11,7 +11,6 @@ const routesAll = [
 const router = nextRoutes();
 routesAll.map(r => {
   r.pattern = `${ r.pattern }`;
-  // r.page += ;
   router.add(r);
 });
 
