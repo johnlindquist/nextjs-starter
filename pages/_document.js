@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
     return (
       <html lang={this.locale}>
       <Head />
-      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" lazyload="true" />
       <script async src={this.getGoogleTags(`${this.props.gaId}`)[0]} />
       <script dangerouslySetInnerHTML={this.getGoogleTags(`${this.props.gaId}`)[1]} />
       <Body>
