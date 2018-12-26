@@ -2,16 +2,16 @@
 <img src="https://github.com/me-io/nextjs-starter/blob/master/banner.jpg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." align="center" />
 
 <br/>
-<div align="center" >Performance oriented Next.js application boilerplate with Redux, Typescript, Express.js and Sass.</div>
+<div align="center" >Performance oriented Next.js application boilerplate</div>
 <br/>
 
 <div align="center">
   <!-- Dependency Status -->
-  <a href="https://david-dm.org/flexdinesh/react-redux-boilerplate">
+  <a href="https://david-dm.org/me-io/nextjs-starter">
     <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
   </a>
   <!-- devDependency Status -->
-  <a href="https://david-dm.org/me-io/nextjs-starter#info=devDependencies"> 
+  <a href="https://david-dm.org/me-io/nextjs-starter?type=dev"> 
     <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg" alt="devDependency Status" />
   </a>
   <!-- Build Status -->
