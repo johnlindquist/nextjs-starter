@@ -126,7 +126,7 @@ const colors = {
   'pink-lightest': '#ffebef',
 
   // extra
-  'primary-darkest': '#1b476f',
+  'primary-darkest': '#152845',
   'primary-darker': '#1b476f',
   'primary-dark': '#0057A6',
   'primary': '#2b79c1',
@@ -134,12 +134,12 @@ const colors = {
   'primary-lighter': '#e8eef9',
   'primary-lightest': '#f3f6f9',
 
-  'secondary-darkest': '#5a7897',
-  'secondary-darker': '#5a7897',
+  'secondary-darkest': '#203245',
+  'secondary-darker': '#41586f',
   'secondary-dark': '#5a7897',
   'secondary': '#96a5b8',
   'secondary-light': '#d2d5da',
-  'secondary-lighter': '#f3f6fa',
+  'secondary-lighter': '#e1e4e9',
   'secondary-lightest': '#f3f6fa',
 
   'info-light': '#a9f8ff',
