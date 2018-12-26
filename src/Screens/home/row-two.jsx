@@ -1,14 +1,15 @@
 import React from "react";
 import { Component } from "@Components/framework";
 import { Image } from "@Components/image";
-import { stylesRow2 } from "./styles";
-import { Row2Item } from "../../Components/example/row2-item";
+import { stylesRow2, stylesRow2Css } from "./styles";
+import { Row2Item } from "@Components/example/row2-item";
 
 export class RowTwo extends Component {
   render() {
     return (
       <div className='w-full bg-grey-lighter'>
         <style jsx>{stylesRow2}</style>
+        <style>{stylesRow2Css}</style>
         <div className="max-w-2xl mx-auto py-10">
           <div className="row2 md:max-w-2xl mb-6 grid md:grid-gap-4 md:grid-columns-2 lg:grid-columns-3">
             <Row2Item Image={<Image src={"static/img/example/img_1.jpg"} alt={"Organic Dragon Fruit"} />} heading={"Organic Dragon Fruit"} />
