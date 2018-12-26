@@ -25,9 +25,9 @@ class App extends NextApp {
     }
 
     const { req } = ctx;
-    const { appConfig, appUser, ssDate } = req || window.__NEXT_DATA__.props;
+    const { appConfig, appUser } = req || window.__NEXT_DATA__.props;
 
-    return { pageProps, appConfig, appUser, ssDate };
+    return { pageProps, appConfig, appUser };
   }
 
   // GA page view

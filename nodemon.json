@@ -10,6 +10,6 @@
   "watch": [
     "app/**/*"
   ],
-  "delay": "2500",
+  "delay": "1800",
   "ext": "js json"
 }

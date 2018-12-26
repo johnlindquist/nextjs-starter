@@ -3,10 +3,7 @@ import { isApiUrl, isInternalUrl } from "./../helper/url";
 
 const serverStartDate = new Date().toJSON();
 
-const getAppConfig = async () => {
-
-  return { serverTime: new Date().toJSON() };
-};
+const getAppConfig = async () => ({ serverTime: new Date().toJSON(), serverStartDate: serverStartDate });
 
 // ssr state rendering example 
 const configMw = async (req, res, next) => {
@@ -15,8 +12,6 @@ const configMw = async (req, res, next) => {
     return;
   }
 
-  req.ssDate = serverStartDate;
-  // to implement
   req.appConfig = await getAppConfig(req);
   req.appConfig.isDev = IS_DEV;
 
