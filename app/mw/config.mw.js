@@ -1,5 +1,5 @@
-import { IS_DEV } from './../config';
-import { isApiUrl, isInternalUrl } from './../helper/url';
+import { IS_DEV } from "./../config";
+import { isApiUrl, isInternalUrl } from "./../helper/url";
 
 const ssDate = new Date().toJSON();
 
@@ -9,9 +9,6 @@ const getAppConfig = async (req) => {
 };
 
 const configMw = async (req, res, next) => {
-  // set the www url of current website serving the frontend
-  //process.env.NODE_SERVER_URL = 'http://localhost:' + process.env.PORT; // todo the frontend url incase of serving from multiple frontends
-  // todo cache based on request md5
   if (isInternalUrl(req.url) || isApiUrl(req.url)) {
     next();
     return;

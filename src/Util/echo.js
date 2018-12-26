@@ -1,11 +1,11 @@
-import { getAppConfig } from './config';
+import { getAppConfig } from "./config";
 
 export const echo = (...params) => {
 
-  const isDev = getAppConfig('isDev');
+  const isDev = getAppConfig("isDev");
 
   if (isDev) {
-    let callerName = '';
+    let callerName = "";
     try {
       throw new Error();
     } catch (e) {
@@ -15,14 +15,14 @@ export const echo = (...params) => {
       re.exec(st);
       m = re.exec(st);
       if (m === null) {
-        m = { 1: 'null' };
+        m = { 1: "null" };
       }
       callerName = m[1] || m[2];
     }
     console.log(callerName, ...params);
   } else {
     // log only if cookie exist
-    if (typeof document !== 'undefined' && document.cookie.indexOf('__echo=') > -1) {
+    if (typeof document !== "undefined" && document.cookie.indexOf("__echo=") > -1) {
       console.log(...params);
     }
   }

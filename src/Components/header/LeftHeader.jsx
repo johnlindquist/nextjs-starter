@@ -1,5 +1,5 @@
-import React from 'react';
-import { PureComponent } from '../framework';
+import React from "react";
+import { PureComponent } from "../framework";
 
 export class LeftHeader extends PureComponent {
 

@@ -1,17 +1,17 @@
-import NextApp, { Container } from 'next/app';
-import React, { Fragment } from 'react';
+import NextApp, { Container } from "next/app";
+import React, { Fragment } from "react";
 
-import '@styles/default.scss';
-import './global.scss';
-import { OneColumnLayout } from '@Layout/one-column-layout';
-import { storeLastPageUrl } from '@Util/url';
-import { trackPageView } from '@Util/ga';
-import { router } from '@app/routes';
-import { Head } from '@Components/html/Head';
-import { Provider as LayoutProvider } from 'reactjs-layout-slot';
+import "@styles/default.scss";
+import "./global.scss";
+import { OneColumnLayout } from "@Layout/one-column-layout";
+import { storeLastPageUrl } from "@Util/url";
+import { trackPageView } from "@Util/ga";
+import { router } from "@app/routes";
+import { Head } from "@Components/html/Head";
+import { Provider as LayoutProvider } from "reactjs-layout-slot";
 
 const layouts = {
-  OneColumn: OneColumnLayout,
+  OneColumn: OneColumnLayout
 };
 
 class App extends NextApp {
@@ -43,10 +43,10 @@ class App extends NextApp {
 
     return (
       <Container>
-        <LayoutProvider layouts={ layouts }>
+        <LayoutProvider layouts={layouts}>
           <Fragment>
-            <Head/>
-            <Component { ...pageProps } />
+            <Head />
+            <Component {...pageProps} />
           </Fragment>
         </LayoutProvider>
       </Container>

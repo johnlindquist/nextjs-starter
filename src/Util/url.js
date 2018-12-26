@@ -1,15 +1,15 @@
 // internal
-import { ContainsAny } from './string';
-import { echo } from './echo';
-import { isClient, isServer } from './cmn';
+import { ContainsAny } from "./string";
+import { echo } from "./echo";
+import { isClient, isServer } from "./cmn";
 
 // return url without query and hash etc..
 export const getWindowPathname = (onlyUrl) => {
   if (isClient) {
     const url = window.location.pathname;
-    return onlyUrl === true ? url.split('?')[0] : url;
+    return onlyUrl === true ? url.split("?")[0] : url;
   }
-  return `${ process.env.NODE_SERVER_URL }`;
+  return `${process.env.NODE_SERVER_URL}`;
 };
 
 // return url which the application is running on for calling internal ajax
@@ -17,13 +17,13 @@ export const getWindowPathname = (onlyUrl) => {
 export const getWindowBaseUrl = () => {
 
   if (isClient) {
-    return window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+    return window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
   }
 
   if (isServer) {
     // todo get from env
-    echo(`${ process.env.NODE_SERVER_URL }`);
-    return `${ process.env.NODE_SERVER_URL }`;
+    echo(`${process.env.NODE_SERVER_URL}`);
+    return `${process.env.NODE_SERVER_URL}`;
   }
 
 };
@@ -39,7 +39,7 @@ export const storeLastPageUrl = (exclude = []) => {
   }
   echo(url);
 
-  sessionStorage.setItem('last_page_url', url);
+  sessionStorage.setItem("last_page_url", url);
 };
 
 // only client side
@@ -49,10 +49,10 @@ export const getParameterByName = (name, url) => {
     return;
   }
   if (!url) url = window.location.href;
-  name = name.replace(/[[]]/g, '\\$&');
-  const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+  name = name.replace(/[[]]/g, "\\$&");
+  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
     results = regex.exec(url);
   if (!results) return undefined;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 };

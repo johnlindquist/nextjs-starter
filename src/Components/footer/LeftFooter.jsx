@@ -1,6 +1,6 @@
-import React from 'react';
-import { PureComponent } from '../framework';
-import { Link } from '../link';
+import React from "react";
+import { PureComponent } from "../framework";
+import { Link } from "../link";
 
 export class LeftFooter extends PureComponent {
   render() {

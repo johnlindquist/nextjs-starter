@@ -1,5 +1,5 @@
-import React from 'react';
-import { PropTypes, PureComponent } from '../framework';
+import React from "react";
+import { PropTypes, PureComponent } from "../framework";
 
 export class Image extends PureComponent {
   static propTypes = {
@@ -11,8 +11,8 @@ export class Image extends PureComponent {
   render() {
     return (
       <>
-        <img { ...this.props } src={ this.props.src }>
-          { this.props.children }
+        <img {...this.props} src={this.props.src}>
+          {this.props.children}
         </img>
       </>
     );

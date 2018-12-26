@@ -1,4 +1,4 @@
-import { isApiUrl, isInternalUrl } from './../helper/url';
+import { isApiUrl, isInternalUrl } from "./../helper/url";
 
 const statsMw = async (req, res, next) => {
   // set the www url of current website serving the frontend
@@ -9,7 +9,7 @@ const statsMw = async (req, res, next) => {
 
   res.json({
     headers: req.headers,
-    env: process.env,
+    env: process.env
     // cpu: os.cpus(),
     // totalMem: os.totalmem(),
     // freeMem: os.freemem()

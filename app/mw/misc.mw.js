@@ -1,4 +1,4 @@
-import { isApiUrl, isInternalUrl } from './../helper/url';
+import { isApiUrl, isInternalUrl } from "./../helper/url";
 
 
 const miscMw = async (req, res, next) => {

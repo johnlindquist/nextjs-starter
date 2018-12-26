@@ -1,5 +1,5 @@
 //
-import { isClient } from './cmn';
+import { isClient } from "./cmn";
 
 export const getAppConfig = (key) => {
   if (!isClient) {

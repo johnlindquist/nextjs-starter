@@ -1,3 +1,3 @@
-test('get query params by name from url', () => {
+test("get query params by name from url", () => {
 
 });

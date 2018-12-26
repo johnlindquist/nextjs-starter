@@ -1,16 +1,16 @@
-const nextRoutes = require('next-routes');
+const nextRoutes = require("next-routes");
 
 const routesAll = [
-  { name: 'home', pattern: '/', page: 'example/home' },
-  { name: 'contact-us', pattern: '/contact-us', page: 'example/contact-us' },
-  { name: 'about-us', pattern: '/about-us', page: 'example/about-us' },
+  { name: "home", pattern: "/", page: "example/home" },
+  { name: "contact-us", pattern: "/contact-us", page: "example/contact-us" },
+  { name: "about-us", pattern: "/about-us", page: "example/about-us" },
 
-  { name: 'page', pattern: '/page/:slug', page: 'dynamic/index' },
+  { name: "page", pattern: "/page/:slug", page: "dynamic/index" }
 ];
 
 const router = nextRoutes();
 routesAll.map(r => {
-  r.pattern = `${ r.pattern }`;
+  r.pattern = `${r.pattern}`;
   router.add(r);
 });
 

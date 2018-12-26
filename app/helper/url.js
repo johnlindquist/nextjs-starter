@@ -11,4 +11,4 @@ export const isInternalUrl = (url) => {
   return false;
 };
 
-export const isApiUrl = (url) => url.startsWith('/api') || url.startsWith('/service-worker.js');
+export const isApiUrl = (url) => url.startsWith("/api") || url.startsWith("/service-worker.js");

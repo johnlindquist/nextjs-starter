@@ -1,5 +1,5 @@
-import React from 'react';
-import { PureComponent } from '../framework';
+import React from "react";
+import { PureComponent } from "../framework";
 
 export class Body extends PureComponent {
 
@@ -7,7 +7,7 @@ export class Body extends PureComponent {
     return (
       <body>
       <div className='text-base text-primary-darkest font-normal relative'>
-        { this.props.children }
+        {this.props.children}
       </div>
       </body>
     );

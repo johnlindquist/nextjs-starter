@@ -1,20 +1,20 @@
-import { echo } from './echo';
+import { echo } from "./echo";
 
 export const trackPageView = (url, gaId) => {
-  let lastPageUrl = sessionStorage.getItem('last_page_url');
+  let lastPageUrl = sessionStorage.getItem("last_page_url");
   if (lastPageUrl === url) {
-    echo('no trackPageView as url has not changed');
+    echo("no trackPageView as url has not changed");
     return;
   }
   echo(url);
   try {
     if (gaId) {
-      echo('config', gaId);
-      window.gtag('config', gaId, {
+      echo("config", gaId);
+      window.gtag("config", gaId, {
         page_location: url
       });
     } else {
-      window.gtag('event', 'page_view', {
+      window.gtag("event", "page_view", {
         page_location: url
       });
     }

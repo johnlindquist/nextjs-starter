@@ -41,6 +41,8 @@ By the end of setup, you'll have a Next.js project and features which is specifi
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+[Code it on codesandbox](https://codesandbox.io/s/github/me-io/nextjs-starter/tree/master/)
+
 ## Features
 
 This nextjs starter app includes the latest powerful tools.

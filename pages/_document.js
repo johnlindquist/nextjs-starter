@@ -2,9 +2,9 @@
 // Event handlers like onClick can't be added to this file
 
 // ./pages/_document.js
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { Body } from '@Components/html/Body';
+import React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
+import { Body } from "@Components/html/Body";
 
 export default class MyDocument extends Document {
   static async getInitialProps(context) {
@@ -23,9 +23,9 @@ export default class MyDocument extends Document {
   // script contents onto page
   getGoogleTags(id) {
     return [
-      `https://www.googletagmanager.com/gtag/js?id=${ id }`,
+      `https://www.googletagmanager.com/gtag/js?id=${id}`,
       {
-        __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${ id }');`
+        __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${id}');`
       }
     ];
   }
@@ -34,13 +34,13 @@ export default class MyDocument extends Document {
 
     return (
       <html>
-      <Head/>
-      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
-      <script async src={ this.getGoogleTags(`${ this.props.gaId }`)[0] }/>
-      <script dangerouslySetInnerHTML={ this.getGoogleTags(`${ this.props.gaId }`)[1] }/>
+      <Head />
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
+      <script async src={this.getGoogleTags(`${this.props.gaId}`)[0]} />
+      <script dangerouslySetInnerHTML={this.getGoogleTags(`${this.props.gaId}`)[1]} />
       <Body>
-      <Main/>
-      <NextScript/>
+      <Main />
+      <NextScript />
       </Body>
       </html>
     );

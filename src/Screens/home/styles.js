@@ -1,4 +1,4 @@
-import css from 'styled-jsx/css';
+import css from "styled-jsx/css";
 
 /* language=SCSS */
 export const stylesRow2 = css.global`

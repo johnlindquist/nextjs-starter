@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Error from 'next/error';
+import React, { Component } from "react";
+import Error from "next/error";
 
 export default class Page extends Component {
   static async getInitialProps() {
@@ -8,7 +8,7 @@ export default class Page extends Component {
 
   render() {
     if (this.props.statusCode) {
-      return <Error statusCode={ this.props.statusCode }/>;
+      return <Error statusCode={this.props.statusCode} />;
     }
 
     return (

@@ -1,5 +1,5 @@
 /* global document */
-import cookie from 'cookie';
+import cookie from "cookie";
 
 export function parseCookies(ctx = {}, options = {}) {
   if (ctx.req && ctx.req.headers.cookie) {
@@ -15,7 +15,7 @@ export function parseCookies(ctx = {}, options = {}) {
 
 export function setCookie(ctx = {}, name, value, options = {}) {
   if (ctx && ctx.res) {
-    ctx.res.setHeader('Set-Cookie', cookie.serialize(name, value, options));
+    ctx.res.setHeader("Set-Cookie", cookie.serialize(name, value, options));
   }
 
   if (process.browser) {
@@ -29,20 +29,20 @@ export function destroyCookie(ctx = {}, name) {
 
   if (ctx && ctx.res) {
     ctx.res.setHeader(
-      'Set-Cookie',
-      cookie.serialize(name, '', {
+      "Set-Cookie",
+      cookie.serialize(name, "", {
         maxAge: 0,
-        path: '/',
-        expires: new Date(1970, 1, 1),
-      }),
+        path: "/",
+        expires: new Date(1970, 1, 1)
+      })
     );
   }
 
   if (process.browser) {
-    document.cookie = cookie.serialize(name, '', {
+    document.cookie = cookie.serialize(name, "", {
       maxAge: 0,
-      path: '/',
-      expires: new Date(1970, 1, 1),
+      path: "/",
+      expires: new Date(1970, 1, 1)
     });
   }
 
@@ -54,5 +54,5 @@ export const Cookie = {
     setCookie(ctx, name, value, options);
   },
   get: (ctx, options) => parseCookies(ctx, options),
-  destroy: (ctx, name) => destroyCookie(ctx, name),
+  destroy: (ctx, name) => destroyCookie(ctx, name)
 };
