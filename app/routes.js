@@ -1,11 +1,14 @@
 const nextRoutes = require("next-routes");
 
 const routesAll = [
+  // routes for the started example
+  // todo replace in production
   { name: "home", pattern: "/", page: "example/home" },
-  { name: "contact-us", pattern: "/contact-us", page: "example/contact-us" },
-  { name: "about-us", pattern: "/about-us", page: "example/about-us" },
-
-  { name: "page", pattern: "/page/:slug", page: "dynamic/index" }
+  { name: "contact-us", pattern: "/example/contact-us", page: "example/contact-us" },
+  { name: "about-us", pattern: "/example/about-us", page: "example/about-us" },
+  { name: "ssr", pattern: "/example/ssr", page: "example/ssr" },
+  { name: "no-ssr", pattern: "/example/no-ssr", page: "example/no-ssr" },
+  { name: "github-readme", pattern: "/example/github-readme", page: "example/github-readme" }
 ];
 
 const router = nextRoutes();

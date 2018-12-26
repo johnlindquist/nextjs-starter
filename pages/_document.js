@@ -15,20 +15,25 @@ export default class MyDocument extends Document {
 
     return {
       ...props,
-      gaId: appConfig && appConfig.gaId ? appConfig.gaId : null
+      gaId: appConfig && appConfig.gaId ? appConfig.gaId : ""
     };
   }
 
   // Function will be called below to inject
   // script contents onto page
-  getGoogleTags(id) {
-    return [
-      `https://www.googletagmanager.com/gtag/js?id=${id}`,
-      {
-        __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${id}');`
-      }
-    ];
-  }
+  getGoogleTags = (id) => {
+    if (!id) {
+      return ["", { __html: "" }];
+    } else {
+      return [
+        `https://www.googletagmanager.com/gtag/js?id=${id}`,
+        {
+          __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${id}');`
+        }
+      ];
+
+    }
+  };
 
   render() {
 
