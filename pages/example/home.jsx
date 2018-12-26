@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Component } from '@Components/framework';
-import { Page, Section } from 'react-layout-slot';
+import { Page, Section } from 'reactjs-layout-slot';
 import { RowHero } from '@Screens/home/row-hero';
 import { RowTwo } from '@Screens/home/row-two';
 import { RowThree } from '@Screens/home/row-three';

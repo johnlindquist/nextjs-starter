@@ -9853,13 +9853,6 @@ react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
   integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
 
-react-layout-slot@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-layout-slot/-/react-layout-slot-0.0.1.tgz#4a512771effd0e1a2b11d8cc101b4e9519f6a1c5"
-  integrity sha512-u0KypW9b6sAC4Zj+orTd3mMMN47+5sH0wL1/a/LT0zyxEe1j9LgGBWip+bEsYYgHL3tRNL86nZBE6OuYsOGZ0Q==
-  dependencies:
-    lodash.isplainobject "4.0.6"
-
 react-test-renderer@^16.0.0-0:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.6.3.tgz#5f3a1a7d5c3379d46f7052b848b4b72e47c89f38"
@@ -9889,6 +9882,13 @@ react@^16.7.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.12.0"
+
+reactjs-layout-slot@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/reactjs-layout-slot/-/reactjs-layout-slot-0.0.2.tgz#4a5d0df9f0dd739deb794f5d228053f17f2341ec"
+  integrity sha512-kkbz/OghwtUKZGJA1sIb9KaJEAXjCHU4WwJRVVpY5g3z60xaNR5VhbFnRz9IRepbuC3WvxZmlsWGM4EZbTFi0A==
+  dependencies:
+    lodash.isplainobject "4.0.6"
 
 read-all-stream@^3.0.0:
   version "3.1.0"

@@ -8,7 +8,7 @@ import { storeLastPageUrl } from '@Util/url';
 import { trackPageView } from '@Util/ga';
 import { router } from '@app/routes';
 import { Head } from '@Components/html/Head';
-import { Provider as LayoutProvider } from 'react-layout-slot';
+import { Provider as LayoutProvider } from 'reactjs-layout-slot';
 
 const layouts = {
   OneColumn: OneColumnLayout,
