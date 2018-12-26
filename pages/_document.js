@@ -34,11 +34,12 @@ export default class MyDocument extends Document {
 
     }
   };
+  locale = "en";
 
   render() {
 
     return (
-      <html lang={"en"}>
+      <html lang={this.locale}>
       <Head />
       <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
       <script async src={this.getGoogleTags(`${this.props.gaId}`)[0]} />
