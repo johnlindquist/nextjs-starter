@@ -9,7 +9,7 @@ export class LogoFooter extends PureComponent {
     return (
       <div className="mt-5 w-full md:w-1/6 inline-block text-left">
         <Link prefetch route='home' params={{}} className='navbar-footer'>
-          <Image alt="logo" style={{ height: "25px" }} src={"static/logo-w.png"} className="mb-4" />
+          <Image alt="logo" style={{ height: "25px" }} src={require("@static/logo-w.png")} className="mb-4" />
         </Link>
       </div>
     );

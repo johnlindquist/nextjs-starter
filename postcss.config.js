@@ -1,12 +1,12 @@
 let pluginArr = [];
-const tailwindcss = require('tailwindcss');
-const purgecss = require('@fullhuman/postcss-purgecss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
+const tailwindcss = require("tailwindcss");
+const purgecss = require("@fullhuman/postcss-purgecss");
+const cssnano = require("cssnano");
+const autoprefixer = require("autoprefixer");
 
 let purgeCssPaths = [];
-['pages', 'src', 'components', 'services', 'layout', 'lib', 'screen'].map((i) => {
-  purgeCssPaths = purgeCssPaths.concat([`${ i }/**/*.js`, `${ i }/**/*.jsx`, `${ i }/**/*.html`, `${ i }/**/*.ts`, `${ i }/**/*.tsx`]);
+["pages", "src", "components", "services", "layout", "lib", "screen"].map((i) => {
+  purgeCssPaths = purgeCssPaths.concat([`${i}/**/*.js`, `${i}/**/*.jsx`, `${i}/**/*.html`, `${i}/**/*.ts`, `${i}/**/*.tsx`]);
 });
 
 class TailwindExtractor {
@@ -19,11 +19,11 @@ class TailwindExtractor {
   }
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   pluginArr = [
-    tailwindcss('./tailwind.config.js'),
+    tailwindcss("./tailwind.config.js"),
     cssnano({
-      preset: 'default',
+      preset: "default"
     }),
     purgecss({
       whitelistPatterns: [/^fa-/, /^fab-/],
@@ -32,11 +32,11 @@ if (process.env.NODE_ENV === 'production') {
       extractors: [
         {
           extractor: TailwindExtractor,
-          extensions: ['js', 'jsx', 'html'],
+          extensions: ["js", "jsx", "html"]
         }
-      ],
+      ]
     }),
-    autoprefixer({ browsers: 'last 2 versions' }),
+    autoprefixer({ browsers: "last 2 versions" })
   ];
 }
 

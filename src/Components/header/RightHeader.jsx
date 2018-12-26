@@ -8,7 +8,7 @@ export class RightHeader extends PureComponent {
     return (
       <div className="flex justify-end">
         <div className='spd-x-30 md:block hidden'>
-          <Link route='https://www.meetup.com/ME-IO-DXB/' className='text-red hover:underline hover:text-red' target='_blank'>
+          <Link route='home' className='text-red hover:underline hover:text-red'>
             <i className='fa fa-institution mr-2' /> Home
           </Link>
           <Link route='https://github.com/me-io/community' className='text-black hover:underline' target='_blank'>

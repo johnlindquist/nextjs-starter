@@ -1,44 +1,45 @@
-const isProd = process.env.NODE_ENV === 'production';
-const isLive = process.env.NODE_LIVE === 'live';
+const isProd = process.env.NODE_ENV === "production";
+const isLive = process.env.NODE_LIVE === "live";
+let withImages = require("next-images");
 let withBundleAnalyzer;
 
 if (!isLive) {
-  withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
+  withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 }
 
-const withCSS = require('@zeit/next-css');
-const withSass = require('@zeit/next-sass');
-const withOffline = require('next-offline');
+const withCSS = require("@zeit/next-css");
+const withSass = require("@zeit/next-sass");
+const withOffline = require("next-offline");
 
 let opts = {
   useFileSystemPublicRoutes: false,
   poweredByHeader: false,
   // analyzer @ https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer
-  analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
-  analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
+  analyzeServer: ["server", "both"].includes(process.env.BUNDLE_ANALYZE),
+  analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),
   bundleAnalyzerConfig: {
     server: {
-      analyzerMode: 'static',
-      reportFilename: '../../static/.analyze/server.html'
+      analyzerMode: "static",
+      reportFilename: "../../static/.analyze/server.html"
     },
     browser: {
-      analyzerMode: 'static',
-      reportFilename: '../static/.analyze/client.html'
+      analyzerMode: "static",
+      reportFilename: "../static/.analyze/client.html"
     }
   }
 };
 
 // build
-opts.distDir = 'dist';
+opts.distDir = "dist";
 
 
 // css @ https://github.com/zeit/next-plugins/tree/master/packages/next-css
 opts.cssModules = false;
 opts.cssLoaderOptions = {
   importLoaders: 1,
-  localIdentName: '[local]___[hash:base64:5]',
+  localIdentName: "[local]___[hash:base64:5]",
   minimize: true,
-  modules: false,
+  modules: false
 };
 
 // @ https://github.com/hanford/next-offline
@@ -49,75 +50,75 @@ opts.workboxOpts = {
   // modifyUrlPrefix: {
   // 'dist': '/_next',
   // },
-  globDirectory: '.',
-  globPatterns: ['static/favs/manifest.json', 'static/favs/favicon*', 'static/favs/coast*', 'static/commons/*'],
-  globIgnores: ['static/robots.txt'],
+  globDirectory: ".",
+  globPatterns: ["static/favs/manifest.json", "static/favs/favicon*", "static/favs/coast*", "static/commons/*"],
+  globIgnores: ["static/robots.txt"],
   // offlineGoogleAnalytics: true,
   runtimeCaching: [
     {
-      urlPattern: '/',
-      handler: 'networkFirst',
+      urlPattern: "/",
+      handler: "networkFirst",
       options: {
-        cacheName: 'html-cache',
-      },
+        cacheName: "html-cache"
+      }
     },
     {
-      urlPattern: '"/?homescreen=1"',
-      handler: 'staleWhileRevalidate',
+      urlPattern: "\"/?homescreen=1\"",
+      handler: "staleWhileRevalidate",
       options: {
-        cacheName: 'start-url-cache',
-      },
+        cacheName: "start-url-cache"
+      }
     },
     {
       urlPattern: /\.(?:png|gif|jpg|jpeg|svg)$/,
-      handler: 'cacheFirst',
+      handler: "cacheFirst",
       options: {
-        cacheName: 'images-cache',
+        cacheName: "images-cache"
       }
     },
     {
       urlPattern: /\.(?:js|css)$/,
-      handler: 'staleWhileRevalidate',
+      handler: "staleWhileRevalidate",
       options: {
-        cacheName: 'static-resources',
+        cacheName: "static-resources"
       }
     },
     {
       urlPattern: /.*(?:googleapis)\.com.*$/,
-      handler: 'staleWhileRevalidate',
+      handler: "staleWhileRevalidate",
       options: {
-        cacheName: 'googleapis-cache',
+        cacheName: "googleapis-cache"
       }
     },
     {
       urlPattern: /.*(?:gstatic)\.com.*$/,
-      handler: 'staleWhileRevalidate',
+      handler: "staleWhileRevalidate",
       options: {
-        cacheName: 'gstatic-cache',
+        cacheName: "gstatic-cache"
       }
     },
     {
       urlPattern: /api\/.*(auth|signup|login).*/,
-      handler: 'networkOnly',
+      handler: "networkOnly"
     },
     {
       urlPattern: /api/,
-      handler: 'networkFirst',
+      handler: "networkFirst",
       options: {
-        cacheName: 'api-cache',
+        cacheName: "api-cache",
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 5 * 60, // 5 minutes
+          maxAgeSeconds: 5 * 60 // 5 minutes
         },
         cacheableResponse: {
           statuses: [0, 200, 404],
           headers: {
-            'X-Is-Cacheable': 'true',
+            "X-Is-Cacheable": "true"
           }
         },
         fetchOptions: {
-          mode: 'no-cors',
-        },
+          mode: "no-cors"
+        }
       }
     }
   ]
@@ -128,25 +129,27 @@ opts.onDemandEntries = {
   // period (in ms) where the server will keep pages in the buffer
   maxInactiveAge: 25 * 1000 * 1000,
   // number of pages that should be kept simultaneously without being disposed
-  pagesBufferLength: 50,
+  pagesBufferLength: 50
 };
 
 opts.serverRuntimeConfig = { // Will only be available on the server side
-  mySecret: 'secret'
+  mySecret: "secret"
 };
 
 opts.publicRuntimeConfig = { // Will be available on both server and client
-  staticFolder: '/static',
-  nodeEnv: process.env.NODE_ENV, // Pass through env variables
+  staticFolder: "/static",
+  nodeEnv: process.env.NODE_ENV // Pass through env variables
 };
 
 // You may only need to add assetPrefix in the production.
-opts.assetPrefix = isProd ? '' : '';
+opts.assetPrefix = isProd ? "" : "";
+
+opts.inlineImageLimit = 6384;
 
 opts.webpack = (webpackConfig) => {
   // Fixes npm packages that depend on `fs` module
   webpackConfig.node = {
-    fs: 'empty'
+    fs: "empty"
   };
 
   return webpackConfig;
@@ -157,6 +160,7 @@ opts.webpack = (webpackConfig) => {
 let exportsObj = withOffline(opts);
 exportsObj = withCSS(exportsObj);
 exportsObj = withSass(exportsObj);
+exportsObj = withImages(exportsObj);
 
 if (!isLive) {
   exportsObj = withBundleAnalyzer(exportsObj);
