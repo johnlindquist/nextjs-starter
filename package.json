@@ -19,7 +19,8 @@
     "build:next": "next build",
     "build:server": "webpack --progress --colors --config webpack.server.config.js",
     "start": "yarn start:server",
-    "start:server": "NODE_LIVE=live NODE_ENV=production node ./app/next.server.build.js"
+    "start:server": "NODE_LIVE=live NODE_ENV=production node ./app/next.server.build.js -p $PORT",
+    "heroku-postbuild": "yarn build:next"
   },
   "dependencies": {
     "@babel/runtime": "7.2.0",
