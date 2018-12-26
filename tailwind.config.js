@@ -126,21 +126,23 @@ const colors = {
   'pink-lightest': '#ffebef',
 
   // extra
-  'primary-darkest': '#152845',
-  'primary-darker': '#1b476f',
-  'primary-dark': '#0057A6',
-  'primary': '#2b79c1',
-  'primary-light': '#71a8db',
-  'primary-lighter': '#e8eef9',
-  'primary-lightest': '#f3f6f9',
+  // https://superdevresources.com/tools/color-shades#2b79c1
+  'primary-darkest': '#0e273f', // #9 in gen
+  'primary-darker': '#174168', // #8 in gen
+  'primary-dark': '#215c92', // #7 in gen
+  'primary': '#2a76bc', // #6 in gen
+  'primary-light': '#97c1e8', // #3 in gen
+  'primary-lighter': '#c0daf1', // #2 in gen
+  'primary-lightest': '#eaf3fa', // #1 in gen
 
-  'secondary-darkest': '#203245',
-  'secondary-darker': '#41586f',
-  'secondary-dark': '#5a7897',
-  'secondary': '#96a5b8',
-  'secondary-light': '#d2d5da',
-  'secondary-lighter': '#e1e4e9',
-  'secondary-lightest': '#f3f6fa',
+  // https://superdevresources.com/tools/color-shades#96a5b8
+  'secondary-darkest': '#1f252e',
+  'secondary-darker': '#333e4c',
+  'secondary-dark': '#48576a',
+  'secondary': '#5d7089',
+  'secondary-light': '#b3becc',
+  'secondary-lighter': '#d1d8e0',
+  'secondary-lightest': '#f0f2f5',
 
   'info-light': '#a9f8ff',
   'info': '#4cc8f9',
