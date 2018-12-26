@@ -30,7 +30,7 @@ export class Row2Item extends Component {
           <p className=''>{this.props.desc2}</p>
         </div>
         <div className="px-6 pb-6 flex-grow">
-          <Link route={"https://google.com"} className='btn btn-green' target={"_blank"}>
+          <Link route={"https://google.com"} className='btn btn-green font-bold' target={"_blank"} rel="noopener">
             View Details
           </Link>
         </div>

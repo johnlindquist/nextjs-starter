@@ -11,6 +11,7 @@ export class Link extends PureComponent {
     params: PropTypes.object,
     className: PropTypes.string,
     target: PropTypes.string,
+    rel: PropTypes.string,
     title: PropTypes.string
   };
 
@@ -18,7 +19,7 @@ export class Link extends PureComponent {
     return (
       <>
         <RouterLink params={this.props.params} route={this.props.route}>
-          <a target={this.props.target} title={this.props.title}>
+          <a target={this.props.target} title={this.props.title} rel={this.props.rel}>
             <span className={this.props.className}>
             {this.props.children}
             </span>

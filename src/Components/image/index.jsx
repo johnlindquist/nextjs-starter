@@ -4,6 +4,7 @@ import { PropTypes, PureComponent } from "../framework";
 export class Image extends PureComponent {
   static propTypes = {
     src: PropTypes.any.isRequired,
+    alt: PropTypes.string.isRequired,
     children: PropTypes.element,
     className: PropTypes.string
   };
