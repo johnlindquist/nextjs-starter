@@ -33,11 +33,11 @@ app.use("/app/stats", statsMw);
 app.get("/service-worker.js", (req, res) => {
   const parsedUrl = parse(req.url, true);
   const { pathname } = parsedUrl;
-  const filePath = path.join(__dirname, "dist", pathname);
+  const filePath = path.join(__dirname, ".", "..", "dist", pathname);
   return nextApp.serveStatic(req, res, filePath);
 });
 
-app.get("*.*", express.static(path.join(__dirname, ".", "static")));
+app.get("*.*", express.static(path.join(__dirname, ".", "..", "static")));
 
 // Force trailing slash on language subpaths
 app.get("*", (req, res) => handle(req, res));
