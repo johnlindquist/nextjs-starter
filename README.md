@@ -37,6 +37,8 @@ By the end of setup, you'll have a Next.js project and features which is specifi
 
 <br/>
 
+[Check out Heroku auto depoyed version](https://nextjs-starter-app.herokuapp.com/)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Features
