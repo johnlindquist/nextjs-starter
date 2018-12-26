@@ -17,11 +17,9 @@
   <a href="https://travis-ci.org/me-io/nextjs-starter">
     <img src="https://travis-ci.org/me-io/nextjs-starter.svg?branch=master" alt="Build Status" />
   </a>
-</div>
-
-<br/>
-<div align="center">
-  <sub>Created by <a href="https://www.me.io">me.io</a></sub>
+    <a href="https://twitter.com/meabed">
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="Twitter Meabed" />
+    </a>
 </div>
 
 ## About
