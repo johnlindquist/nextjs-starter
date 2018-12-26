@@ -1,6 +1,5 @@
 
 <img src="https://github.com/me-io/nextjs-starter/blob/master/banner.jpg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." align="center" />
-
 <br/>
 <div align="center" >Performance oriented Next.js application boilerplate</div>
 <br/>
@@ -113,18 +112,15 @@ yarn install
 3. Once the installation is done, you can run the following command:
 
  ```
- npm run start:dev
+ yarn local
+ // or
+ npm run local
  ```
  <br/>
 
 Then open http://localhost:3000/ to see your app.
 
 <br/>
-
- ***At this point, your project layout should look like this:***
- 
- <br/>
-
 
 ## Contribution
 
