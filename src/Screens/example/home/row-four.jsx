@@ -1,7 +1,7 @@
 import React from "react";
-import { Component } from "@Components/framework";
+import { Component } from "../../../Components/framework";
 import { stylesRow4 } from "./styles";
-import { Row4Item } from "@Components/example/row4-item";
+import { Row4Item } from "../../../Components/example/home/row4-item";
 
 export class RowFour extends Component {
   render() {

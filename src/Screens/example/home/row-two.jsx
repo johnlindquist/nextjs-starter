@@ -1,8 +1,8 @@
 import React from "react";
-import { Component } from "@Components/framework";
-import { Image } from "@Components/image";
+import { Component } from "../../../Components/framework";
+import { Image } from "../../../Components/image";
 import { stylesRow2, stylesRow2Css } from "./styles";
-import { Row2Item } from "@Components/example/row2-item";
+import { Row2Item } from "../../../Components/example/home/row2-item";
 
 export class RowTwo extends Component {
   render() {

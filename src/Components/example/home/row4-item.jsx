@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { PropTypes } from "../framework";
-import { Link } from "../link";
+import { PropTypes } from "../../framework";
 
-export class Row2Item extends Component {
+export class Row4Item extends Component {
   static propTypes = {
-    Image: PropTypes.element,
     heading: PropTypes.string,
     desc1: PropTypes.string,
     desc2: PropTypes.string,
@@ -18,10 +16,9 @@ export class Row2Item extends Component {
 
   render() {
     return (
-      <div className="card rounded-lg h-full">
-        {this.props.Image}
+      <div className="card rounded-lg">
         <div className="px-6 p-6 leading-tight text-center">
-          <div className="text-2xl tracking-wide mb-2 font-bold">{this.props.heading}</div>
+          <div className="text-2xl tracking-wide mb-2 font-bold"><i className={"fa text-green" + ` ${this.props.faIcon}`} /> {this.props.heading}</div>
         </div>
         <div className="px-6 flex-grow">
           <p className='mb-3'>{this.props.desc1}</p>
@@ -29,12 +26,8 @@ export class Row2Item extends Component {
         <div className="px-6 pb-6 flex-grow">
           <p className=''>{this.props.desc2}</p>
         </div>
-        <div className="px-6 pb-6 flex-grow">
-          <Link route={"https://google.com"} className='btn btn-green font-bold' target={"_blank"} rel="noopener">
-            View Details
-          </Link>
-        </div>
       </div>
+
     );
   }
 }

@@ -3,6 +3,7 @@
   "description": "Universal web app built on React.js, server-rendered with Node.js",
   "scripts": {
   },
+  "stack": "Heroku-18",
   "env": {
   },
   "formation": {

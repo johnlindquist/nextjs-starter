@@ -9,8 +9,11 @@ export default class ContactUs extends Component {
       <>
         <Page layout={"OneColumn"}>
           <Section slot="content">
-            <div className=''>
-              Contact US
+            <div className='w-full max-w-2xl mx-auto'>
+              <div className="bg-white shadow p-8">
+                <h2 className='text-center text-xl mb-3 uppercase font-thin'>GET IN TOUCH</h2>
+                <h3 className='text-center text-3xl mb-2'>Let{"'"}s Chat</h3>
+              </div>
             </div>
           </Section>
         </Page>

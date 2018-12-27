@@ -1,6 +1,6 @@
 #
 # ---- Base Node ----
-FROM node:11.5.0-alpine AS base
+FROM node:11.6.0-alpine AS base
 # install node
 RUN apk add --no-cache tini
 # set working directory

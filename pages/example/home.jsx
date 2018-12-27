@@ -2,10 +2,10 @@ import React from "react";
 
 import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
-import { RowHero } from "@Screens/home/row-hero";
-import { RowTwo } from "@Screens/home/row-two";
-import { RowThree } from "@Screens/home/row-three";
-import { RowFour } from "../../src/Screens/home/row-four";
+import { RowHero } from "@Screens/example/home/row-hero";
+import { RowTwo } from "@Screens/example/home/row-two";
+import { RowThree } from "@Screens/example/home/row-three";
+import { RowFour } from "@Screens/example/home/row-four";
 
 class Home extends Component {
   render() {

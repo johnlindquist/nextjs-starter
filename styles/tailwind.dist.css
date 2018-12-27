@@ -7652,6 +7652,10 @@ table {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid-columns-5 {
   grid-template-columns: repeat(5, 1fr);
 }
@@ -14733,6 +14737,10 @@ table {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .sm\:grid-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .sm\:grid-columns-5 {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -21801,6 +21809,10 @@ table {
 
   .md\:grid-columns-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .md\:grid-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .md\:grid-columns-5 {
@@ -28873,6 +28885,10 @@ table {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .lg\:grid-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .lg\:grid-columns-5 {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -35941,6 +35957,10 @@ table {
 
   .xl\:grid-columns-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .xl\:grid-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .xl\:grid-columns-5 {
