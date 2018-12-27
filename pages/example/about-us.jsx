@@ -24,8 +24,8 @@ export default class AboutUs extends Component {
                 <div className='pt-16' />
                 <h3 className='text-center text-3xl mb-2 font-thin'>Useful link</h3>
                 <div className='spd-xy-15 text-center'>
-                  <Link route={"github-readme"} className='btn btn-sm btn-blue font-bold'>
-                    Github readme viewer
+                  <Link route={"github-md"} className='btn btn-sm btn-blue font-bold'>
+                    Github Markdown viewer
                   </Link>
 
                   <Link route={"ssr"} className='btn btn-sm btn-blue font-bold'>
