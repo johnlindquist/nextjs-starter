@@ -2,9 +2,9 @@ import React from "react";
 
 import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
-import { RowOne } from "../../src/Screens/example/about/row-one";
-import { RowTwo } from "../../src/Screens/example/about/row-two";
-import { Link } from "../../src/Components/link";
+import { RowOne } from "@Screens/example/about/row-one";
+import { RowTwo } from "@Screens/example/about/row-two";
+import { Link } from "@Components/link";
 
 export default class AboutUs extends Component {
   render() {
