@@ -70,6 +70,7 @@
       }
     ],
     "no-unreachable": 1,
+    "prefer-arrow-callback": "error",
     "react/jsx-filename-extension": [
       1,
       {
