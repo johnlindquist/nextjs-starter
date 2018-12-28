@@ -4,3 +4,5 @@ out
 .scripts
 .vscode
 .next
+tailwind.config.js
+_intiliji.js

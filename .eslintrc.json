@@ -36,6 +36,25 @@
     "process": true
   },
   "rules": {
+    "max-len": [
+      "error",
+      240
+    ],
+    "no-mixed-operators": "off",
+    "quote-props": [
+      "error",
+      "as-needed"
+    ],
+    "no-undef": 1,
+    "no-extra-semi": 1,
+    "no-trailing-spaces": [
+      1,
+      {
+        "skipBlankLines": true
+      }
+    ],
+    "no-unreachable": 1,
+    "prefer-arrow-callback": "error",
     "react/jsx-filename-extension": [
       1,
       {
@@ -57,6 +76,7 @@
     "no-else-return": "off",
     "no-unused-vars": "error",
     "dot-notation": "off",
+    "prefer-template": 1,
     "indent": [
       "error",
       2,

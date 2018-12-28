@@ -1,7 +1,15 @@
 {
   "name": "nextsj-starter",
+  "description": "Performance oriented Next.js application boilerplate",
   "version": "1.0.0",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "webpack",
+    "starter-kit",
+    "boilerplate"
+  ],
   "scripts": {
     "local": "nodemon --exec \"API_URL=http://localhost:3500 NODE_ENV=development node ./app/next.server.js\"",
     "dev": "API_URL=http://api-dev.website.com NODE_ENV=development node ./app/next.server.js",
@@ -9,8 +17,8 @@
     "manage:translations": "node ./.scripts/translationRunner.js",
     "favicon": "NODE_ENV=production node ./.scripts/favicon.js 'WEBSITE.COM' 'WEBSTIE_DESCRIPTION' 'WEBSITE.COM Team' 'https://website.com/team'",
     "build:css": "tailwind build ./styles/tailwind.src.css -c ./tailwind.config.js -o ./styles/tailwind.dist.css",
-    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.jsx --ignore-path .eslintignore .",
+    "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .eslintignore .",
     "test": "jest",
     "deploy:dev": "./.scripts/build.sh -dev",
     "deploy:live": "./.scripts/build.sh -live",
@@ -20,8 +28,17 @@
     "build:server": "webpack --progress --colors --config webpack.server.config.js",
     "start": "yarn start:server",
     "start:server": "NODE_LIVE=live NODE_ENV=production node ./app/next.server.build.js -p $PORT",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "prettier": "prettier --write src/**/*.js app/**/*.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/me-io/nextjs-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/me-io/nextjs-starter/issues"
+  },
+  "homepage": "https://github.com/me-io/nextjs-starter#readme",
   "engines": {
     "node": "11.x",
     "npm": "6.x",
@@ -92,6 +109,7 @@
     "favicons": "^5.3.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.9",
+    "prettier": "1.15.3",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.7.0",
     "svg-sprite-loader": "^4.1.3",
