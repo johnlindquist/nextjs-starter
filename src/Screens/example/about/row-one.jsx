@@ -1,6 +1,6 @@
-import React from 'react';
-import { Image } from '@Components/image';
-import { Component } from '@Components/framework';
+import React from "react";
+import { Image } from "@Components/image";
+import { Component } from "@Components/framework";
 
 export class RowOne extends Component {
   render() {
@@ -9,7 +9,7 @@ export class RowOne extends Component {
         <h1 className='text-center text-xl mb-3 uppercase font-thin'>About</h1>
         <h3 className='text-center text-3xl mb-2'>Our Company History</h3>
         <div className='mb-3'>
-          <Image src={require('@static/img/example/slider_4.jpg')} alt={'about us'} className='rounded rounded-lg'/>
+          <Image src={require("@static/img/example/slider_4.jpg")} alt={"about us"} className='rounded rounded-lg' />
         </div>
         <div className='text-xl leading-normal'>
           <p className='mb-3'>

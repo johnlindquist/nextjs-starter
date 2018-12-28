@@ -22,7 +22,7 @@ export default class AboutUs extends Component {
               </div>
               <div className="bg-white shadow p-8">
                 <div className='pt-16' />
-                <h3 className='text-center text-3xl mb-2 font-thin'>Useful link</h3>
+                <h3 className='text-center text-3xl mb-2 font-thin'>Useful links</h3>
                 <div className='spd-xy-15 text-center'>
                   <Link route={"github-md-js"} className='btn btn-sm btn-blue font-bold'>
                     Github Markdown viewer ( remote js )
