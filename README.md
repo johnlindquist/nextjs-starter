@@ -2,7 +2,7 @@
   <div>
     <img src="https://cdn-images-1.medium.com/max/1600/1*OA9c8CovXaqjwbzi_qYKsA.jpeg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." width="392" />
   </div>
-  <hr />
+  <br/>
   <p>Performance oriented Next.js application boilerplate <a href="https://nextjs-starter-app.herokuapp.com/">View Demo</a></p>
   <div>
     <a href="https://david-dm.org/me-io/nextjs-starter">
