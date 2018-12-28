@@ -2,8 +2,8 @@
   <div>
     <img src="https://cdn-images-1.medium.com/max/1600/1*OA9c8CovXaqjwbzi_qYKsA.jpeg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." width="392" />
   </div>
-  <br/><br/>
-  <p>Performance oriented Next.js application boilerplate</p>
+  <br/>
+  <p>Performance oriented Next.js application boilerplate <a href="https://nextjs-starter-app.herokuapp.com/">View Demo</a></p>
   <div>
     <a href="https://david-dm.org/me-io/nextjs-starter">
       <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
@@ -18,25 +18,26 @@
       <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="Twitter Meabed" />
     </a>
   </div>
+  <br/>
+  <div>
+    <a href="https://heroku.com/deploy">
+      <img src="https://www.herokucdn.com/deploy/button.svg" alt="">
+    </a>
+    <a href="https://codesandbox.io/s/github/me-io/nextjs-starter/tree/master/">
+      <img src="https://i.imgur.com/aM38khO.png" alt="" width="196">
+    </a>
+  </div>
 </div>
 
 ## About
 
 Next.js is a minimalistic React framework that runs in the browser and the server. It offers developers an easy way to get started, and as it uses React.js for templating it is also a straightforward way for developers with React experience to get productive fast.
 
-The advantages of this approach is to be able to create Rich User experiences in a uniform way, without compromising Search Engine Optimisation (SEO) factors that are key to good ranking on Google and other search engines. 
+The advantages of this approach is to be able to create Rich User experiences in a uniform way, without compromising Search Engine Optimisation (SEO) factors that are key to good ranking on Google and other search engines.
 
 This boilerplate make it easier to get started with a well-structured Next.js and Mobx application.
 
 By the end of setup, you'll have a Next.js project and features which is specified at the below.
-
-<br/>
-
-[Check out Heroku auto depoyed version](https://nextjs-starter-app.herokuapp.com/)
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-[Code it on codesandbox](https://codesandbox.io/s/github/me-io/nextjs-starter/tree/master/)
 
 ## Features
 
