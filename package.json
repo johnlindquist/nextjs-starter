@@ -17,7 +17,7 @@
     "manage:translations": "node ./.scripts/translationRunner.js",
     "favicon": "NODE_ENV=production node ./.scripts/favicon.js 'WEBSITE.COM' 'WEBSTIE_DESCRIPTION' 'WEBSITE.COM Team' 'https://website.com/team'",
     "build:css": "tailwind build ./styles/tailwind.src.css -c ./tailwind.config.js -o ./styles/tailwind.dist.css",
-    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.jsx --ignore-path .eslintignore .",
     "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
     "test": "jest",
     "deploy:dev": "./.scripts/build.sh -dev",

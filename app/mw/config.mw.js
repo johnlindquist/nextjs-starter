@@ -5,7 +5,7 @@ const serverStartDate = new Date().toJSON();
 
 const getAppConfig = async () => ({ serverTime: new Date().toJSON(), serverStartDate: serverStartDate });
 
-// ssr state rendering example 
+// ssr state rendering example
 const configMw = async (req, res, next) => {
   if (isInternalUrl(req.url) || isApiUrl(req.url)) {
     next();
