@@ -4,7 +4,7 @@ import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
 import { ReadmeRenderClientSide } from "@Screens/example/github-readme/readme-render-client-side";
 
-export default class GithubMd extends Component {
+export default class GithubMdJs extends Component {
   render() {
     return (
       <>
