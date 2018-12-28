@@ -3,7 +3,7 @@
     <img src="https://cdn-images-1.medium.com/max/1600/1*OA9c8CovXaqjwbzi_qYKsA.jpeg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." width="392" />
   </div>
   <br/>
-  <p>Performance oriented Next.js application boilerplate <a href="https://nextjs-starter-app.herokuapp.com/">View Demo</a></p>
+  <p>Performance oriented Next.js application boilerplate</p>
   <div>
     <a href="https://david-dm.org/me-io/nextjs-starter">
       <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
@@ -20,6 +20,9 @@
   </div>
   <br/>
   <div>
+    <a href="https://nextjs-starter-app.herokuapp.com/">
+      <img src="https://i.imgur.com/HuzhV03.png" alt="Demo" width="146">
+    </a>
     <a href="https://heroku.com/deploy">
       <img src="https://www.herokucdn.com/deploy/button.svg" alt="">
     </a>
@@ -39,6 +42,12 @@ This boilerplate make it easier to get started with a well-structured Next.js an
 
 By the end of setup, you'll have a Next.js project and features which is specified at the below.
 
+<div>
+  <a href="https://nextjs-starter-app.herokuapp.com/">
+    <img src="https://i.imgur.com/fFLwulo.png" alt="image-1">
+  </a>
+</div>
+
 ## Features
 
 This nextjs starter app includes the latest powerful tools.
@@ -47,39 +56,41 @@ This nextjs starter app includes the latest powerful tools.
 |:---:|---|---|
 | ✓ | Next.js | Minimalistic framework for server-rendered React applications |
 | ✓ | Express.js | Handles server-side rendering and integrated with Express.js |
-| ✓ | Tailwind css | |
-| ✓ | mobx | State management |
-| ✓ | PWA ~99% Lighthouse | |
-| ✓ | Dynamic routing - next-routes | |
-| ✓ | SEO - next-seo | |
-| ✓ | Image optimization - next-optimized-images | |
+| ✓ | Tailwind CSS | A Utility-First CSS Framework for Rapid UI Development |
+| ✓ | MobX | Simple, scalable state management |
+| ✓ | PWA | **99%** score on Lighthouse |
+| ✓ | Routing - next-routes | Easy to use universal dynamic routes for Next.js |
+| ✓ | SEO - next-seo | Next SEO is a plug in that makes managing your SEO easier in Next.js projects |
+| ✓ | Image optimization - next-optimized-images | Automatically optimizes images used in next.js projects |
 | ✓ | Babel | ES6 The compiler for next generation JavaScript |
-| ✓ | Babel Plugins | |
-| ✓ | Sass/Scss/Jsx/ fontawesome 5 | |
-| ✓ | Favicon Generator | |
-| ✓ | Google Analytics | |
-| ✓ | dotenv .config | Expose environment variables to the runtime config of Next.js |
-| ✓ | Webpack server bundle | |
-| ✓ | Postcss - Purgecss / Nanocss | |
-| ✓ | Jest | |
-| ✓ | Enzyme test | |
-| ✓ | Eslint | |
-| ✓ | Docker production ready image build | |
-| ✓ | Heroku | |
-| ✓ | Now.sh | |
+| ✓ | Babel Plugins | Pre added babel plugins for parsing, transforming, and printing JS code |
+| ✓ | Sass/Scss/JSX/ Fontawesome 5 | Icon font and libraries to make the development easy |
+| ✓ | Favicon Generator | Small tool to generate the favicon |
+| ✓ | Google Analytics | Pre integrated Google analytics feature |
+| ✓ | Dotenv .config | Expose environment variables to the runtime config of Next.js |
+| ✓ | Webpack server bundle | Pre integrated creation of a bundle of your server code |
+| ✓ | Postcss - Purgecss / Nanocss | Pre integrated CSS transformation tools |
+| ✓ | Jest | Delightful JavaScript Testing |
+| ✓ | Enzyme test | JavaScript Testing utilities using enzyme |
+| ✓ | Eslint | Pre imtegrated a fully pluggable tool for identifying and reporting on patterns in JavaScript |
+| ✓ | Docker | Production ready image build |
+| ✓ | Heroku | Deploy and run the app on Heroku |
+| ✓ | Now.sh | Global Serverless Deployments |
 | ✓ | Bundler Analyzer | Visualize size of webpack output files with an interactive zoomable treemap |
 
 ## Other features
 
 The starter app will come in multiple flavors.
 
-* **Default** - branch master
-* **With Mobx** - branch mobx-master
-* **With Redux** - branch redux-master
-* **Mobx With JWT Auth / Passport JS** - branch mobx-master-jwt
-* **Redux With JWT Auth / Passport JS** - branch redux-master-jwt
-* **With themes** - branch master-theme
-* **With i18n react-intl** - branch master-react-intl
+| Status | Feature | Branch |
+|:---:|---|---|
+| ✓ | Default | master |
+| ✓ | Mobx | mobx-master |
+| ✓ | Redux | redux-master |
+| ✓ | Mobx With JWT Auth / Passport JS | mobx-master-jwt |
+| ✓ | Redux With JWT Auth / Passport JS | redux-master-jwt |
+| ✓ | Themes | master-theme |
+| ✓ | i18n react-intl | master-react-intl |
 
 ## Getting Started
 
@@ -106,6 +117,17 @@ The starter app will come in multiple flavors.
   ```bash
   http://localhost:3000/
   ```
+
+## Screenshots
+
+<div>
+  <a href="https://nextjs-starter-app.herokuapp.com/example/about-us">
+    <img src="https://i.imgur.com/BjGvYRA.png" alt="image-2">
+  </a>
+  <a href="https://nextjs-starter-app.herokuapp.com/example/contact-us">
+    <img src="https://i.imgur.com/iXhj8tI.png" alt="image-3">
+  </a>
+</div>
 
 ## Contribution
 
