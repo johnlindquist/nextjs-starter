@@ -82,6 +82,7 @@
     "no-else-return": "off",
     "no-unused-vars": "error",
     "dot-notation": "off",
+    "prefer-template": 1,
     "indent": [
       "error",
       2,
