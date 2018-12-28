@@ -6,16 +6,16 @@
   <p>Performance oriented Next.js application boilerplate</p>
   <div>
     <a href="https://david-dm.org/me-io/nextjs-starter">
-      <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
+      <img src="https://david-dm.org/me-io/nextjs-starter.svg?style=flat-square" alt="dependency status" />
     </a>
     <a href="https://david-dm.org/me-io/nextjs-starter?type=dev">
-      <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg" alt="devDependency Status" />
+      <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg?style=flat-square" alt="dev dependency Status" />
     </a>
     <a href="https://travis-ci.org/me-io/nextjs-starter">
-      <img src="https://travis-ci.org/me-io/nextjs-starter.svg?branch=master" alt="Build Status" />
+      <img src="https://img.shields.io/travis/me-io/nextjs-starter/master.svg?style=flat-square" alt="build status" />
     </a>
     <a href="https://twitter.com/meabed">
-      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="Twitter Meabed" />
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="twitter" />
     </a>
   </div>
   <br/>
