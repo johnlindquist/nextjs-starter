@@ -43,31 +43,36 @@ By the end of setup, you'll have a Next.js project and features which is specifi
 
 This nextjs starter app includes the latest powerful tools.
 
-* **Next.js** - Minimalistic framework for server-rendered React applications.
-* **Express.js**- Handles server-side rendering and integrated with Express.js.
-* **Tailwind css** - .
-* **mobx** - State management.
-* **PAW ~99% Lighthouse** - .
-* **Dynamic routing - next-routes** - .
-* **SEO - next-seo** - .
-* **Image optimization - next-optimized-images** - .
-* **Babel** - ES6 The compiler for next generation JavaScript.
-* **Babel Plugins** - . 
-* **Sass/Scss/Jsx/ fontawesome 5** - .
-* **Favicon Generator** - .
-* **Google Analytics** - .
-* **dotenv .config** - Expose environment variables to the runtime config of Next.js
-* **Webpack server bundle** - .
-* **Postcss - Purgecss / Nanocss** - .
-* **Jest test** - .
-* **Enzyme test** - .
-* **Eslint** - .
-* **Docker production ready image build** - .
-* **Heroku** - .
-* **Now.sh** - .
-* **Bundler Analyzer** - Visualize size of webpack output files with an interactive zoomable treemap.
+| Status | Library | Description |
+|:---:|---|---|
+| ✓ | Next.js | Minimalistic framework for server-rendered React applications |
+| ✓ | Express.js | Handles server-side rendering and integrated with Express.js |
+| ✓ | Tailwind css | |
+| ✓ | mobx | State management |
+| ✓ | PWA ~99% Lighthouse | |
+| ✓ | Dynamic routing - next-routes | |
+| ✓ | SEO - next-seo | |
+| ✓ | Image optimization - next-optimized-images | |
+| ✓ | Babel | ES6 The compiler for next generation JavaScript |
+| ✓ | Babel Plugins | |
+| ✓ | Sass/Scss/Jsx/ fontawesome 5 | |
+| ✓ | Favicon Generator | |
+| ✓ | Google Analytics | |
+| ✓ | dotenv .config | Expose environment variables to the runtime config of Next.js |
+| ✓ | Webpack server bundle | |
+| ✓ | Postcss - Purgecss / Nanocss | |
+| ✓ | Jest | |
+| ✓ | Enzyme test | |
+| ✓ | Eslint | |
+| ✓ | Docker production ready image build | |
+| ✓ | Heroku | |
+| ✓ | Now.sh | |
+| ✓ | Bundler Analyzer | Visualize size of webpack output files with an interactive zoomable treemap |
 
-The starter app will come in multiple flavors
+## Other features
+
+The starter app will come in multiple flavors.
+
 * **Default** - branch master
 * **With Mobx** - branch mobx-master
 * **With Redux** - branch redux-master
