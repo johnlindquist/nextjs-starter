@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export class ReadmeRender extends Component {
   handleSubmit = async () => {
     event.preventDefault();
   };
 
-  state = { makrdownBody: "" };
+  state = { makrdownBody: '' };
   convertor = null;
 
   handleChange = (event) => {
-    const stateKey = event.target.getAttribute("id");
+    const stateKey = event.target.getAttribute('id');
     const val = event.target.value;
     const st = {};
     st[stateKey] = val;
@@ -24,16 +24,17 @@ export class ReadmeRender extends Component {
   }
 
   convertHtml = () => {
-    const markDownBody = this.convertor.makeHtml("<h1>H1 title</h1>");
+    const markDownBody = this.convertor.makeHtml('<h1>H1 title</h1>');
     this.setState({ makrdownBody: markDownBody });
 
   };
 
-  getShowdownScriptSrc = () => {
-    // ssr render example
-    // https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md
-    return "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
-  };
+  /**
+   * SSR render example
+   * @link https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md
+   * @return {string}
+   */
+  getShowdownScriptSrc = () => 'https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js';
 
   render() {
     return (
@@ -44,15 +45,15 @@ export class ReadmeRender extends Component {
               <label className='uppercase block mb-1' htmlFor="email">
                 Github readme url
               </label>
-              <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="github_link" onChange={this.handleChange} required={true} />
+              <input className='form-input w-4/5 inline-block' placeholder={'meabed/logstash-testing-e2e/master/README.md'} type="text" id="github_link" onChange={this.handleChange} required={true}/>
               <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
             </div>
           </form>
         </div>
 
-        <script async src={this.getShowdownScriptSrc()} />
+        <script async src={this.getShowdownScriptSrc()}/>
 
-        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.makrdownBody }} />
+        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.makrdownBody }}/>
       </>
     );
   }
