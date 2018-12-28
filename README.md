@@ -1,25 +1,23 @@
-
-<img src="https://github.com/me-io/nextjs-starter/blob/master/banner.jpg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." align="center" />
-<br/>
-<div align="center" >Performance oriented Next.js application boilerplate</div>
-<br/>
-
 <div align="center">
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/me-io/nextjs-starter">
-    <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
-  </a>
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/me-io/nextjs-starter?type=dev"> 
-    <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg" alt="devDependency Status" />
-  </a>
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/me-io/nextjs-starter">
-    <img src="https://travis-ci.org/me-io/nextjs-starter.svg?branch=master" alt="Build Status" />
-  </a>
+  <div>
+    <img src="https://cdn-images-1.medium.com/max/1600/1*OA9c8CovXaqjwbzi_qYKsA.jpeg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." width="392" />
+  </div>
+  <br/><br/>
+  <p>Performance oriented Next.js application boilerplate</p>
+  <div>
+    <a href="https://david-dm.org/me-io/nextjs-starter">
+      <img src="https://david-dm.org/me-io/nextjs-starter.svg" alt="Dependency Status" />
+    </a>
+    <a href="https://david-dm.org/me-io/nextjs-starter?type=dev">
+      <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg" alt="devDependency Status" />
+    </a>
+    <a href="https://travis-ci.org/me-io/nextjs-starter">
+      <img src="https://travis-ci.org/me-io/nextjs-starter.svg?branch=master" alt="Build Status" />
+    </a>
     <a href="https://twitter.com/meabed">
       <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="Twitter Meabed" />
     </a>
+  </div>
 </div>
 
 ## About
