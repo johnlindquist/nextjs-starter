@@ -20,7 +20,8 @@
     "build:server": "webpack --progress --colors --config webpack.server.config.js",
     "start": "yarn start:server",
     "start:server": "NODE_LIVE=live NODE_ENV=production node ./app/next.server.build.js -p $PORT",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "prettier": "prettier --write src/**/*.js app/**/*.js"
   },
   "engines": {
     "node": "11.x",
@@ -92,6 +93,7 @@
     "favicons": "^5.3.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.9",
+    "prettier": "1.15.3",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.7.0",
     "svg-sprite-loader": "^4.1.3",
