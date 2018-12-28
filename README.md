@@ -21,7 +21,7 @@
   <br/>
   <div>
     <a href="https://nextjs-starter-app.herokuapp.com/">
-      <img src="https://i.imgur.com/HuzhV03.png" alt="Demo" width="146">
+      <img src="https://i.imgur.com/HuzhV03.png" alt="Demo" width="148">
     </a>
     <a href="https://heroku.com/deploy">
       <img src="https://www.herokucdn.com/deploy/button.svg" alt="">
