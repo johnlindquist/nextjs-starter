@@ -1,7 +1,15 @@
 {
   "name": "nextsj-starter",
+  "description": "Performance oriented Next.js application boilerplate",
   "version": "1.0.0",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "webpack",
+    "starter-kit",
+    "boilerplate"
+  ],
   "scripts": {
     "local": "nodemon --exec \"API_URL=http://localhost:3500 NODE_ENV=development node ./app/next.server.js\"",
     "dev": "API_URL=http://api-dev.website.com NODE_ENV=development node ./app/next.server.js",
@@ -23,6 +31,14 @@
     "heroku-postbuild": "yarn build",
     "prettier": "prettier --write src/**/*.js app/**/*.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/me-io/nextjs-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/me-io/nextjs-starter/issues"
+  },
+  "homepage": "https://github.com/me-io/nextjs-starter#readme",
   "engines": {
     "node": "11.x",
     "npm": "6.x",
