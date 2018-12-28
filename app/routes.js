@@ -8,7 +8,9 @@ const routesAll = [
   { name: "about-us", pattern: "/example/about-us", page: "example/about-us" },
   { name: "ssr", pattern: "/example/ssr", page: "example/ssr" },
   { name: "no-ssr", pattern: "/example/no-ssr", page: "example/no-ssr" },
-  { name: "github-md", pattern: "/example/github-md", page: "example/github-md" }
+  { name: "github-md-js", pattern: "/example/github-md-js", page: "example/github-md-js" },
+  { name: "github-md-no-ssr", pattern: "/example/github-md-no-ssr", page: "example/github-md-no-ssr" },
+  { name: "github-md-ssr", pattern: "/example/github-md-ssr", page: "example/github-md-ssr" }
 ];
 
 const router = nextRoutes();

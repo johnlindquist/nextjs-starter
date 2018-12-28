@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-export class ReadmeRender extends Component {
+import { echo } from '../../../Util/echo';
+
+export class ReadmeRenderClientSide extends Component {
   handleSubmit = async () => {
     event.preventDefault();
-  };
+  }
 
-  state = { makrdownBody: '' };
+  state = { markdownBody: '' }
   convertor = null;
 
   handleChange = (event) => {
@@ -14,23 +16,35 @@ export class ReadmeRender extends Component {
     const st = {};
     st[stateKey] = val;
     this.setState(st);
-  };
+  }
 
 
   componentDidMount() {
     // no-ssr
-    this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-    this.convertHtml();
+    this.requireJs(this.getShowdownScriptSrc(), () => {
+      echo('Loaded');
+      this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+      this.convertHtml();
+    });
+
+  }
+
+  requireJs = (url, callback) => {
+    let e = document.createElement('script');
+    e.src = url;
+    e.type = 'text/javascript';
+    e.addEventListener('load', callback);
+    document.getElementsByTagName('head')[0].appendChild(e);
   }
 
   convertHtml = () => {
     const markDownBody = this.convertor.makeHtml('<h1>H1 title</h1>');
-    this.setState({ makrdownBody: markDownBody });
-
-  };
+    this.setState({ markdownBody: markDownBody });
+  }
 
   /**
    * SSR render example
+   *
    * @link https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md
    * @return {string}
    */
@@ -50,10 +64,7 @@ export class ReadmeRender extends Component {
             </div>
           </form>
         </div>
-
-        <script async src={this.getShowdownScriptSrc()}/>
-
-        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.makrdownBody }}/>
+        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.markdownBody }}/>
       </>
     );
   }
