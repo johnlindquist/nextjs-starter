@@ -2,7 +2,7 @@
   <div>
     <img src="https://cdn-images-1.medium.com/max/1600/1*OA9c8CovXaqjwbzi_qYKsA.jpeg" alt="Performance oriented Next.js application boilerplate with Mobx, Express.js and Sass." width="392" />
   </div>
-  <br/>
+  <hr />
   <p>Performance oriented Next.js application boilerplate <a href="https://nextjs-starter-app.herokuapp.com/">View Demo</a></p>
   <div>
     <a href="https://david-dm.org/me-io/nextjs-starter">
@@ -29,7 +29,7 @@
   </div>
 </div>
 
-## About
+## Introduction
 
 Next.js is a minimalistic React framework that runs in the browser and the server. It offers developers an easy way to get started, and as it uses React.js for templating it is also a straightforward way for developers with React experience to get productive fast.
 
@@ -76,48 +76,31 @@ The starter app will come in multiple flavors
 * **With themes** - branch master-theme
 * **With i18n react-intl** - branch master-react-intl
 
-
-<br/>
-
-## Screens
-
-<img src="https://i.ibb.co/Nxptv7v/WEBSTIE-TITLE-WEBSITE-COM.jpg" />
-
 ## Getting Started
 
+1. Clone this repository by running the following command:
+  ```bash
+  git clone https://github.com/me-io/nextjs-starter.git
+  ```
 
-1. Clone the repository and install the dependencies:
+2. Install the dependencies:
+  ```bash
+  yarn install
+  # or you may use yarn
+  npm install
+  ```
 
-```
-git clone https://github.com/me-io/nextjs-starter.git
-```
+3. Run the server by running the following command:
+  ```bash
+  yarn run local
+  # or you may use yarn
+  npm run local
+  ```
 
-
-2. To create a new app, go to the choosen app directory on the CLI then run one of the following methods:
-
-**npm**
-
-```sh
-npm install
-```
-**yarn**
-
-```sh
-yarn install
-```
-
-3. Once the installation is done, you can run the following command:
-
- ```
- yarn local
- // or
- npm run local
- ```
- <br/>
-
-Then open http://localhost:3000/ to see your app.
-
-<br/>
+4. Open the following link inside your browser:
+  ```bash
+  http://localhost:3000/
+  ```
 
 ## Contribution
 
@@ -128,4 +111,6 @@ Then open http://localhost:3000/ to see your app.
 
 ## License
 
-<img src="https://img.shields.io/badge/license-GNU-brightgreen.svg?style=flat-square" alt="MIT">
+<div>
+  <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="MIT">
+</div>
