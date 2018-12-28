@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { echo } from "../../../Util/echo";
 
-export class ReadmeRender extends Component {
+export class ReadmeRenderClientSide extends Component {
   handleSubmit = async () => {
     event.preventDefault();
   };
@@ -19,9 +20,21 @@ export class ReadmeRender extends Component {
 
   componentDidMount() {
     // no-ssr
-    this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-    this.convertHtml();
+    this.requireJs(this.getShowdownScriptSrc(), () => {
+      echo("Loaded");
+      this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+      this.convertHtml();
+    });
+
   }
+
+  requireJs = (url, callback) => {
+    let e = document.createElement("script");
+    e.src = url;
+    e.type = "text/javascript";
+    e.addEventListener("load", callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  };
 
   convertHtml = () => {
     const markDownBody = this.convertor.makeHtml("<h1>H1 title</h1>");
@@ -50,7 +63,6 @@ export class ReadmeRender extends Component {
           </form>
         </div>
 
-        <script async src={this.getShowdownScriptSrc()} />
 
         <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.makrdownBody }} />
       </>
