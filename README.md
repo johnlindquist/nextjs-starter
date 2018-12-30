@@ -5,18 +5,23 @@
   <br/>
   <p>Performance oriented Next.js application boilerplate</p>
   <div>
+    <a href="https://travis-ci.org/me-io/nextjs-starter">
+      <img src="https://img.shields.io/travis/me-io/nextjs-starter/master.svg?style=flat-square" alt="build status" />
+    </a>
+    <a href="https://github.com/me-io/nextjs-starter/releases"><img src="https://img.shields.io/github/release/me-io/nextjs-starter.svg" alt="GitHub release" />
+    </a>
     <a href="https://david-dm.org/me-io/nextjs-starter">
       <img src="https://david-dm.org/me-io/nextjs-starter.svg?style=flat-square" alt="dependency status" />
     </a>
     <a href="https://david-dm.org/me-io/nextjs-starter?type=dev">
       <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg?style=flat-square" alt="dev dependency Status" />
     </a>
-    <a href="https://travis-ci.org/me-io/nextjs-starter">
-      <img src="https://img.shields.io/travis/me-io/nextjs-starter/master.svg?style=flat-square" alt="build status" />
-    </a>
     <a href="https://twitter.com/meabed">
-      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed" alt="twitter" />
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=@meabed" alt="twitter" />
     </a>
+    <a href="https://microbadger.com/images/meio/nextjs-starter"><img src="https://images.microbadger.com/badges/commit/meio/nextjs-starter.svg" alt="COMMIT" /></a>
+    <a href="https://microbadger.com/images/meio/nextjs-starter"><img src="https://images.microbadger.com/badges/image/meio/nextjs-starter.svg" alt="SIZE-LAYERS" /></a>
+    <a href="https://hub.docker.com/r/meio/nextjs-starter"><img src="https://shields.beevelop.com/docker/pulls/meio/nextjs-starter.svg?style=flat-square" alt="Pulls" /></a>
   </div>
   <br/>
   <div>

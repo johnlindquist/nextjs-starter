@@ -57,4 +57,4 @@ docker push ${REPO_NAME}:latest
 echo "${REPO_NAME}:latest pushed successfully"
 
 # update microbadger.com
-curl -XPOST "https://hooks.microbadger.com/images/meio/nextjs-starter/TOoBKgNqzCZH6dNBlAopouqsLF0="
+curl -XPOST "https://hooks.microbadger.com/images/meio/nextjs-starter/nfOnP1OlZaeTfaLR4k-sTYiBsh4="
