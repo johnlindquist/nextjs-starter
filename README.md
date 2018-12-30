@@ -16,12 +16,13 @@
     <a href="https://david-dm.org/me-io/nextjs-starter?type=dev">
       <img src="https://david-dm.org/me-io/nextjs-starter/dev-status.svg?style=flat-square" alt="dev dependency Status" />
     </a>
-    <a href="https://twitter.com/meabed">
-      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=@meabed" alt="twitter" />
-    </a>
+    <br>
     <a href="https://microbadger.com/images/meio/nextjs-starter"><img src="https://images.microbadger.com/badges/commit/meio/nextjs-starter.svg" alt="COMMIT" /></a>
     <a href="https://microbadger.com/images/meio/nextjs-starter"><img src="https://images.microbadger.com/badges/image/meio/nextjs-starter.svg" alt="SIZE-LAYERS" /></a>
     <a href="https://hub.docker.com/r/meio/nextjs-starter"><img src="https://shields.beevelop.com/docker/pulls/meio/nextjs-starter.svg?style=flat-square" alt="Pulls" /></a>
+    <a href="https://twitter.com/meabed">
+      <img src="https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=@meabed" alt="twitter" />
+    </a>
   </div>
   <br/>
   <div>
