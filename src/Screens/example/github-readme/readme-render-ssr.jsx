@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { echo } from "@Util/echo";
 import { httpGet } from "@Util/http";
 
-export class ReadmeRenderClientSide extends Component {
+export class ReadmeRenderSsr extends Component {
   handleSubmit = async () => {
     event.preventDefault();
   };
