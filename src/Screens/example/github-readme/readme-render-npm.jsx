@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { httpGet } from "@Util/http";
+import { getParameterByName, getWindowPathname, goToUrl } from "../../../Util/url";
 
 export class ReadmeRenderNpm extends Component {
   handleSubmit = async () => {
     event.preventDefault();
+    goToUrl({ path: getWindowPathname(), queryParams: { github_link: this.state.github_link }, opt: { shallow: true } });
   };
 
-  state = { markdownBody: "" };
+  state = { markdownBody: "", github_link: "" };
   convertor = null;
 
   handleChange = (event) => {
@@ -28,11 +30,14 @@ export class ReadmeRenderNpm extends Component {
     import("showdown").then(async (showdown) => {
       this.convertor = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
-      const rs = await httpGet({ url: "https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md" });
+      const url = getParameterByName("github_link");
+      if (!url) {
+        return;
+      }
+
+      const rs = await httpGet({ url: url });
       const markDownBody = this.convertor.makeHtml(rs.json.text);
       this.setState({ markdownBody: markDownBody });
-
-      console.log(showdown);
     });
   };
 

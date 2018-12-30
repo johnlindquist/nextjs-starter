@@ -6,7 +6,7 @@ import { echo } from "./echo";
 const fetch = require("isomorphic-unfetch");
 
 // window host
-const getQP = (queryParams) => {
+export const getMergedQueryParams = (queryParams) => {
 
   queryParams["__o"] = isServer ? "server" : "client";
   queryParams["__t"] = Date.now();
@@ -68,7 +68,7 @@ export const httpPost = async ({ url, host, path, queryParams = {}, opt = {}, po
     url = buildUrl(
       host, {
         path: path,
-        queryParams: getQP(queryParams)
+        queryParams: getMergedQueryParams(queryParams)
       }
     );
   }
@@ -86,10 +86,10 @@ export const httpGet = async ({ url, host, path, queryParams = {}, opt = {} }) =
     url = buildUrl(
       host, {
         path: path,
-        queryParams: getQP(queryParams)
+        queryParams: getMergedQueryParams(queryParams)
       }
     );
   }
-  
+
   return doFetch({ url, opt });
 };

@@ -2,6 +2,9 @@
 import { ContainsAny } from "./string";
 import { echo } from "./echo";
 import { isClient, isServer } from "./cmn";
+import { router } from "@app/routes";
+import { getMergedQueryParams } from "./http";
+import buildUrl from "build-url";
 
 // return url without query and hash etc..
 export const getWindowPathname = (onlyUrl) => {
@@ -55,4 +58,19 @@ export const getParameterByName = (name, url) => {
   if (!results) return undefined;
   if (!results[2]) return "";
   return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
+export const goToUrl = ({ url, host = "", path = "", queryParams = {}, params = {}, opt = {} }) => {
+
+  if (!url) {
+    url = buildUrl(
+      host, {
+        path: path,
+        queryParams: getMergedQueryParams(queryParams)
+      }
+    );
+  }
+  echo(url);
+
+  router.Router.pushRoute(url, params, opt);
 };
