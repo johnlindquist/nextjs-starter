@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { echo } from "@Util/echo";
+import { httpGet } from "@Util/http";
 
 export class ReadmeRenderClientSide extends Component {
   handleSubmit = async () => {
@@ -19,15 +20,14 @@ export class ReadmeRenderClientSide extends Component {
   };
 
 
-  componentDidMount() {
+  componentDidMount = async () => {
     // no-ssr
     this.requireJs(this.getShowdownScriptSrc(), () => {
       echo("Loaded");
       this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
       this.convertHtml();
     });
-
-  }
+  };
 
   requireJs = (url, callback) => {
     let e = document.createElement("script");
@@ -37,8 +37,10 @@ export class ReadmeRenderClientSide extends Component {
     document.getElementsByTagName("head")[0].appendChild(e);
   };
 
-  convertHtml = () => {
-    const markDownBody = this.convertor.makeHtml("<h1>H1 title</h1>");
+  convertHtml = async () => {
+    const rs = await httpGet({ url: "https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md" });
+
+    const markDownBody = this.convertor.makeHtml(rs.json.text);
     this.setState({ markdownBody: markDownBody });
   };
 
