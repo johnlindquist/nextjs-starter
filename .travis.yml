@@ -1,11 +1,24 @@
 language: node_js
 node_js:
-  - 11
+- 11
+services:
+- docker
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - yarn
-  - yarn lint
-  - yarn build
-  - yarn test
+- yarn
+- yarn lint
+- yarn build
+- yarn test
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: "./scripts/build-docker.sh"
+  on:
+    tags: true
+    condition: "$TRAVIS_OS_NAME = linux"
+env:
+  global:
+  - secure: WVpT1QY1oPivgnbi6bxUhp5OssDs371xLDWPweZgT6w7N6b2px53fK31c8dqPVgT+ZP2ByNwqOxj+ssKSPPlVE6gBWr3Q8KX0XJFq64WDVMt7z9OJyGFIdDu5OL06WpluA2lbKJtzPHpk575I9BkULr6c+JLy7gnrhBpiAnLSKiuBaUCnCxBz8tztRE3oVkCGn5zozd8UuJ8bl55Skd3CfgjYp2nZZTeUiBM/9PR7JW4EcHA3LQ0hkVBOz+6qUSBI51NOQv/YdPjAvjjujuZckwOQ5bQuR9fZjn4dP5LljxNHCJ5CMN5tcw200k5C6dejagWNubtDwsi8phFvX9wOGEZ/Z6PJHWRg9Dh0NXAnuhaP/82IeNk73nBXPVJNPHWqtoBh9UxVLzqYM5n97UTaBGYsJUvKxqnJ8ju0U8By88pmwzJLZ4JZPxwtFBk2OL9qBytMmRsqOlEhjxkbu4J33MAHxn6QZCmoOaAoUtlP8xkZA2pHP5hnmyleQZJg7kLSVcz3ersPpfgZTU7VlRcS4QHNS9n49LvhDgRXFocZELjEWxT8XKfA122ZsDW5gfpD7Em5OaB52xlVDwk1xejFkUUkiltM1YQs0l7rjtT0LEWGZkNJHDO9qlFC1VYQZXbKM1zG/dIUeUmWTbrSh4QevEhQyCJeYsVhLK+ZG5KAlw=
+  - secure: ImCOFc9QQWx+oJtL0Mv1n1Z1tZLMY9a5lsdfqkZqLqKMOUIUibG92rMSzqEIqLvQUxs7KlPrUPwj9MQoYl/6VETVvLsqL4nBBsbPgCDiYjrVbaco+H2sx0u+8gwrwYR6mGup4E5ypt6OEU15LAEL+RI5I80E3Dj+ZAzlcNQmqYnlpueqB3xmW+rR1nJHO+ZJojoFcWOrrvX9dxRIycaPFmetf+vuorBULk6beGJDnjqmz1p0F+b/CYC0b++yHf8/uMyscRthrtE96NwzrF9TL5xkM+tSaH5hq48QYOEfY42OOfWpiKGe5wPSDBhwrsXzby6kAhMKw9teO0GmPg4+eGBeFl+TG/fiTzjW6cDluS5+8RsXT8M/F+WKIKn7S+lXrh5rmtVUZL9bQeQ5lxzI9AWDWZZfJHb9vi69FSSEEMgocIswRNy9et3YwLR1EM1yyghmD6RzzbBHr+1/0HrHs0jWHG33UCRpIRWsmI2DFj1Pfa8FYZNpAclAl4Hq2Lo6EgfmVZ60ov+vEdsdq6EDVu/aa4y4XX/38AI9gD5hKAaj1O5gskLy5pZZPeDNbcwTK7WGukEK7ZzZ1DpPu7+2rsKUS3koh6WkRzAbRauTIhydWrsu1cWnlgDSsCqG53+PFkgJxbbf3G3s+0M9+279PgE/5Nn8smAmD5n1N1AFF4Q=
