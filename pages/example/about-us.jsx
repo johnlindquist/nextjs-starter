@@ -24,17 +24,19 @@ export default class AboutUs extends Component {
                 <div className='pt-16' />
                 <h3 className='text-center text-3xl mb-2 font-thin'>Useful links</h3>
                 <div className='spd-xy-15 text-center'>
+
                   <Link route={"github-md-js"} className='btn btn-sm btn-blue font-bold'>
                     Github Markdown viewer ( remote js )
+                  </Link>
+
+                  <Link route={"github-md-no-ssr"} className='btn btn-sm btn-blue font-bold'>
+                    Github Markdown viewer ( npm )
                   </Link>
 
                   <Link route={"github-md-ssr"} className='btn btn-sm btn-blue font-bold'>
                     Github Markdown viewer ( ssr )
                   </Link>
 
-                  <Link route={"github-md-no-ssr"} className='btn btn-sm btn-blue font-bold'>
-                    Github Markdown viewer ( npm )
-                  </Link>
                 </div>
 
               </div>
