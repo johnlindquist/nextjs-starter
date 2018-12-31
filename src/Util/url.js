@@ -45,21 +45,6 @@ export const storeLastPageUrl = (exclude = []) => {
   sessionStorage.setItem("last_page_url", url);
 };
 
-// only client side
-// todo test
-export const getParameterByName = (name, url) => {
-  if (!isClient) {
-    return;
-  }
-  if (!url) url = window.location.href;
-  name = name.replace(/[[]]/g, "\\$&");
-  const regex = new RegExp(`[?&]${name}(=([^&#]*)|&|#|$)`),
-    results = regex.exec(url);
-  if (!results) return undefined;
-  if (!results[2]) return "";
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-};
-
 export const goToUrl = ({ url, host = "", path = "", queryParams = {}, params = {}, opt = {} }) => {
 
   if (!url) {

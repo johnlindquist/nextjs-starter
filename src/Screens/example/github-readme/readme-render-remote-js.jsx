@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import { echo } from "@Util/echo";
 import { httpGet } from "@Util/http";
-import { getParameterByName, getWindowPathname, goToUrl } from "../../../Util/url";
+import { getWindowPathname, goToUrl } from "../../../Util/url";
+import { getQueryByName } from "../../../Util/query-param";
 
 export class ReadmeRenderRemoteJs extends Component {
   handleSubmit = async () => {
@@ -31,7 +32,7 @@ export class ReadmeRenderRemoteJs extends Component {
   getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
 
   componentDidMount = async () => {
-    const url = getParameterByName("github_link") || "";
+    const url = getQueryByName("github_link") || "";
     this.setState({ github_link: url });
     // no-ssr
     this.requireJs(this.getShowdownScriptSrc(), () => {

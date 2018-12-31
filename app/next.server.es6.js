@@ -11,6 +11,7 @@ import { configMw } from "./mw/config.mw";
 import { PORT } from "./config";
 import { statsMw } from "./mw/stats.mw";
 import { miscMw } from "./mw/misc.mw";
+import { dataMw } from "./mw/data.mw";
 
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
@@ -27,6 +28,9 @@ app.use(miscMw);
 
 // fetch config
 app.use(configMw);
+
+// data mw
+app.use(dataMw);
 
 app.use("/app/stats", statsMw);
 

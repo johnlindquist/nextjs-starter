@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { httpGet } from "@Util/http";
-import { getParameterByName, getWindowPathname, goToUrl } from "../../../Util/url";
+import { getWindowPathname, goToUrl } from "../../../Util/url";
+import { getQueryByName } from "../../../Util/query-param";
 
 export class ReadmeRenderNpm extends Component {
   handleSubmit = async () => {
@@ -22,7 +23,7 @@ export class ReadmeRenderNpm extends Component {
 
   componentDidMount = async () => {
     // no-ssr
-    const url = getParameterByName("github_link") || "";
+    const url = getQueryByName("github_link") || "";
     this.setState({ github_link: url });
     this.convertHtml();
   };
@@ -32,7 +33,7 @@ export class ReadmeRenderNpm extends Component {
     import("showdown").then(async (showdown) => {
       this.convertor = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
-      const url = getParameterByName("github_link");
+      const url = getQueryByName("github_link");
       if (!url) {
         return;
       }

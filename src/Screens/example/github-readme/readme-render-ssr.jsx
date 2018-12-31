@@ -1,14 +1,24 @@
 import React, { Component } from "react";
-import { getParameterByName } from "../../../Util/url";
 import showdown from "showdown";
+import { getWindowPathname, goToUrl } from "../../../Util/url";
+import { PropTypes } from "../../../Components/framework";
 
 export class ReadmeRenderSsr extends Component {
-  handleSubmit = async () => {
-    event.preventDefault();
+
+  static propTypes = {
+    githubLink: PropTypes.string,
+    markdownRes: PropTypes.object
   };
 
-  state = { markdownBody: "", github_link: "" };
+  handleSubmit = async () => {
+    event.preventDefault();
+    goToUrl({ path: getWindowPathname(), queryParams: { github_link: this.state.github_link }, opt: { shallow: true } });
+
+  };
+
   convertor = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+
+  state = { github_link: "" };
 
   handleChange = (event) => {
     const stateKey = event.target.getAttribute("id");
@@ -20,8 +30,15 @@ export class ReadmeRenderSsr extends Component {
 
 
   componentDidMount = async () => {
-    const url = getParameterByName("github_link") || "";
-    this.setState({ github_link: url });
+  };
+
+  convertHtml = () => {
+    const text = this.props.markdownRes.json ? this.props.markdownRes.json.text : "";
+    if (!text) {
+      return;
+    }
+
+    return this.convertor.makeHtml(text);
   };
 
 
@@ -39,7 +56,7 @@ export class ReadmeRenderSsr extends Component {
             </div>
           </form>
         </div>
-        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.markdownBody }} />
+        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.convertHtml() }} />
       </>
     );
   };
