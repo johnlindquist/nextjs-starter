@@ -157,5 +157,3 @@ A huge thanks to all of our contributors:
 | [<img src="https://avatars0.githubusercontent.com/u/45731?v=3" width="100px;"/><br /><sub><b>Mohamed Meabed</b></sub>](https://github.com/Meabed)<br />[💻](https://github.com/me-io/nextjs-starter/commits?author=Meabed "Code") [📢](#talk-Meabed "Talks") | [<img src="https://avatars2.githubusercontent.com/u/16267321?v=3" width="100px;"/><br /><sub><b>Zeeshan Ahmad</b></sub>](https://github.com/ziishaned)<br />[💻](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Code") [🐛](https://github.com/me-io/nextjs-starter/issues?q=author%3Aziishaned "Bug reports") [⚠️](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Tests") [📖](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Documentation") |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
