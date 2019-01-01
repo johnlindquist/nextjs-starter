@@ -25,7 +25,9 @@
     "start": "yarn start:server",
     "start:server": "NODE_LIVE=live NODE_ENV=production node ./app/next.server.build.js -p $PORT",
     "heroku-postbuild": "yarn build",
-    "prettier": "prettier --write src/**/*.js app/**/*.js"
+    "prettier": "prettier --write src/**/*.js app/**/*.js",
+    "contributors:add": "./node_modules/.bin/all-contributors add",
+    "contributors:generate": "./node_modules/.bin/all-contributors generate"
   },
   "repository": {
     "type": "git",
