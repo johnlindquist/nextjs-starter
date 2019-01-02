@@ -12,7 +12,7 @@ export class ReadmeRenderRemoteJs extends Component {
   };
 
   state = { markdownBody: "", github_link: "" };
-  convertor = null;
+  converter = null;
 
   handleChange = (event) => {
     const stateKey = event.target.getAttribute("id");
@@ -37,7 +37,7 @@ export class ReadmeRenderRemoteJs extends Component {
     // no-ssr
     this.requireJs(this.getShowdownScriptSrc(), () => {
       echo("Remote script loaded");
-      this.convertor = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+      this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
       this.convertHtml();
     });
   };
@@ -57,7 +57,7 @@ export class ReadmeRenderRemoteJs extends Component {
     }
 
     const rs = await httpGet({ url: url });
-    const markDownBody = this.convertor.makeHtml(rs.json.text);
+    const markDownBody = this.converter.makeHtml(rs.json.text);
     this.setState({ markdownBody: markDownBody });
   };
 
