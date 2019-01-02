@@ -1,6 +1,6 @@
 import buildUrl from "build-url";
 import { getWindowBaseUrl } from "./url";
-import { isServer } from "./cmn";
+import { isBrowser } from "./cmn";
 import { echo } from "./echo";
 
 const fetch = require("isomorphic-unfetch");
@@ -8,7 +8,7 @@ const fetch = require("isomorphic-unfetch");
 // window host
 export const getMergedQueryParams = (queryParams) => {
 
-  queryParams["__o"] = isServer ? "server" : "client";
+  queryParams["__o"] = !isBrowser ? "server" : "client";
   queryParams["__t"] = Date.now();
   queryParams["__wh"] = getWindowBaseUrl();
   return queryParams;

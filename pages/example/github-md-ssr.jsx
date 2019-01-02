@@ -6,9 +6,8 @@ import { ReadmeRenderSsr } from "../../src/Screens/example/github-readme/readme-
 import { httpGet } from "../../src/Util/http";
 import showdown from "showdown";
 import { getWindowPathname, goToUrl } from "../../src/Util/url";
-import { isClient } from "../../src/Util/cmn";
+import { isBrowser } from "../../src/Util/cmn";
 import { getQueryByName } from "../../src/Util/query-param";
-import { router } from "../../app/routes";
 
 export default class GithubMdSsr extends Component {
 
@@ -18,7 +17,7 @@ export default class GithubMdSsr extends Component {
     let githubLink = "";
 
     // ssr
-    if (!isClient) {
+    if (!isBrowser) {
       githubLink = req.query["github_link"] || "";
 
       const markdownRes = await httpGet({ url: githubLink });
@@ -33,21 +32,18 @@ export default class GithubMdSsr extends Component {
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
   state = { markdownBody: this.props.markdownBody, github_link: this.props.github_link };
+  
+  componentWillReceiveProps = async (props) => {
+    const githubLink = getQueryByName("github_link") || "";
+    let markdownBody = "";
+    if (githubLink) {
+      const markdownRes = await httpGet({ url: githubLink });
+      markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
+    }
+    this.setState({ github_link: githubLink, markdownBody: markdownBody });
 
-  // client side
-  componentDidMount = async () => {
-    router.Router.onRouteChangeComplete = async (url) => {
-      const githubLink = getQueryByName("github_link") || "";
-      let markdownBody = "";
-      if (githubLink) {
-        const markdownRes = await httpGet({ url: githubLink });
-        markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
-      }
-      this.setState({ github_link: githubLink, markdownBody: markdownBody });
-    };
   };
-
-
+  
   handleChange = (event) => {
     const stateKey = event.target.getAttribute("id");
     const val = event.target.value;
@@ -78,6 +74,8 @@ export default class GithubMdSsr extends Component {
                       <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="github_link" onChange={this.handleChange} required={true} value={this.state.github_link} />
                       <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
                     </div>
+                    {this.state.github_link}
+
                   </form>
                 </div>
 

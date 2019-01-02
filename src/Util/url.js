@@ -1,14 +1,14 @@
 // internal
 import { ContainsAny } from "./string";
 import { echo } from "./echo";
-import { isClient, isServer } from "./cmn";
+import { isBrowser } from "./cmn";
 import { router } from "@app/routes";
 import { getMergedQueryParams } from "./http";
 import buildUrl from "build-url";
 
 // return url without query and hash etc..
 export const getWindowPathname = (onlyUrl) => {
-  if (isClient) {
+  if (isBrowser) {
     const url = window.location.pathname;
     return onlyUrl === true ? url.split("?")[0] : url;
   }
@@ -19,11 +19,11 @@ export const getWindowPathname = (onlyUrl) => {
 // or return current API URL in SSR to it proxy calls to the api server
 export const getWindowBaseUrl = () => {
 
-  if (isClient) {
+  if (isBrowser) {
     return `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ""}`;
   }
 
-  if (isServer) {
+  if (!isBrowser) {
     // todo get from env
     echo(`${process.env.NODE_SERVER_URL}`);
     return `${process.env.NODE_SERVER_URL}`;
@@ -33,7 +33,7 @@ export const getWindowBaseUrl = () => {
 
 // for ga don't fire GA analytics if user click same route without update
 export const storeLastPageUrl = (exclude = []) => {
-  if (!isClient) {
+  if (!isBrowser) {
     return;
   }
   const url = getWindowPathname();
@@ -45,7 +45,7 @@ export const storeLastPageUrl = (exclude = []) => {
   sessionStorage.setItem("last_page_url", url);
 };
 
-export const goToUrl = ({ url, host = "", path = "", queryParams = {}, params = {}, opt = {} }) => {
+export const goToUrl = ({ url, host = "", path = "", queryParams = {}, params = {}, opt = {}, replace = false }) => {
 
   if (!url) {
     url = buildUrl(
@@ -57,5 +57,9 @@ export const goToUrl = ({ url, host = "", path = "", queryParams = {}, params = 
   }
   echo(url);
 
-  router.Router.pushRoute(url, params, opt);
+  if (replace) {
+    router.Router.replaceRoute(url, params, opt);
+  } else {
+    router.Router.pushRoute(url, params, opt);
+  }
 };
