@@ -102,7 +102,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.11.1",
-    "eslint-plugin-react": "^7.12.1",
+    "eslint-plugin-react": "^7.12.2",
     "favicons": "^5.3.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.9",
@@ -113,7 +113,7 @@
     "tailwindcss": "^0.7.3",
     "tailwindcss-js-plugins": "0.0.11",
     "webp-loader": "^0.4.0",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.2.0",
     "webpack-node-externals": "^1.7.2"
   }
 }
