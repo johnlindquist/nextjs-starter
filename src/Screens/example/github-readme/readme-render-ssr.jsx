@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PropTypes } from "../../../Components/framework";
+import { PropTypes } from "@Components/framework";
 
 export class ReadmeRenderSsr extends Component {
 

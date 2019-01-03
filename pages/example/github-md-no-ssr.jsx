@@ -2,7 +2,7 @@ import React from "react";
 
 import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
-import { ReadmeRenderNpm } from "../../src/Screens/example/github-readme/readme-render-npm";
+import { ReadmeRenderNpm } from "@Screens/example/github-readme/readme-render-npm";
 
 export default class GithubMdNoSsr extends Component {
   render() {

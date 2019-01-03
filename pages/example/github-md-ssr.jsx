@@ -2,48 +2,48 @@ import React from "react";
 
 import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
-import { ReadmeRenderSsr } from "../../src/Screens/example/github-readme/readme-render-ssr";
-import { httpGet } from "../../src/Util/http";
+import { ReadmeRenderSsr } from "@Screens/example/github-readme/readme-render-ssr";
+import { httpGet } from "@Util/http";
 import showdown from "showdown";
-import { getWindowPathname, goToUrl } from "../../src/Util/url";
-import { isBrowser } from "../../src/Util/cmn";
-import { getQueryByName } from "../../src/Util/query-param";
+import { getWindowPathname, goToUrl } from "@Util/url";
+import { isBrowser } from "@Util/cmn";
+import { getQueryByName } from "@Util/query-param";
 
 export default class GithubMdSsr extends Component {
 
   static async getInitialProps({ req }) {
 
     let markdownBody = "";
-    let githubLink = "";
+    let github_link = "";
 
     // ssr
     if (!isBrowser) {
-      githubLink = req.query["github_link"] || "";
+      github_link = req.query["github_link"] || "";
 
-      const markdownRes = await httpGet({ url: githubLink });
-      if (githubLink) {
+      const markdownRes = await httpGet({ url: github_link });
+      if (github_link) {
         markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
       }
     }
 
-    return { github_link: githubLink, markdownBody };
+    return { github_link: github_link, markdownBody };
   }
 
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
   state = { markdownBody: this.props.markdownBody, github_link: this.props.github_link };
-  
+
   componentWillReceiveProps = async (props) => {
-    const githubLink = getQueryByName("github_link") || "";
+    const github_link = getQueryByName("github_link") || "";
     let markdownBody = "";
-    if (githubLink) {
-      const markdownRes = await httpGet({ url: githubLink });
+    if (github_link) {
+      const markdownRes = await httpGet({ url: github_link });
       markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
     }
-    this.setState({ github_link: githubLink, markdownBody: markdownBody });
+    this.setState({ github_link: github_link, markdownBody: markdownBody });
 
   };
-  
+
   handleChange = (event) => {
     const stateKey = event.target.getAttribute("id");
     const val = event.target.value;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { httpGet } from "@Util/http";
-import { getWindowPathname, goToUrl } from "../../../Util/url";
-import { getQueryByName } from "../../../Util/query-param";
+import { getWindowPathname, goToUrl } from "@Util/url";
+import { getQueryByName } from "@Util/query-param";
 
 export class ReadmeRenderNpm extends Component {
   handleSubmit = async () => {
