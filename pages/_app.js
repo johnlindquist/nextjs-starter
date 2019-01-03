@@ -31,12 +31,12 @@ class App extends NextApp {
   }
 
   // GA page view
-  async componentDidMount() {
+  componentDidMount = async () => {
     // fire GA
     router.Router.onRouteChangeComplete = url => {
       trackPageView(url);
     };
-  }
+  };
 
   render() {
     const { Component, pageProps } = this.props;
