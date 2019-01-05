@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { httpGet } from "@Util/http";
-import { getWindowPathname, goToUrl } from "../../../Util/url";
-import { getQueryByName } from "../../../Util/query-param";
+import { getWindowPathname, goToUrl } from "@Util/url";
+import { getQueryByName } from "@Util/query-param";
 
 export class ReadmeRenderNpm extends Component {
   handleSubmit = async () => {
@@ -10,7 +10,7 @@ export class ReadmeRenderNpm extends Component {
   };
 
   state = { markdownBody: "", github_link: "" };
-  convertor = null;
+  converter = null;
 
   handleChange = (event) => {
     const stateKey = event.target.getAttribute("id");
@@ -31,7 +31,7 @@ export class ReadmeRenderNpm extends Component {
   convertHtml = async () => {
     // lazy loading trick
     import("showdown").then(async (showdown) => {
-      this.convertor = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+      this.converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
       const url = getQueryByName("github_link");
       if (!url) {
@@ -39,7 +39,7 @@ export class ReadmeRenderNpm extends Component {
       }
 
       const rs = await httpGet({ url: url });
-      const markDownBody = this.convertor.makeHtml(rs.json.text);
+      const markDownBody = this.converter.makeHtml(rs.json.text);
       this.setState({ markdownBody: markDownBody });
     });
   };

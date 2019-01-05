@@ -1,8 +1,8 @@
 //
-import { isClient } from "./cmn";
+import { isBrowser } from "./cmn";
 
 export const getAppData = (key, defaultValue) => {
-  if (!isClient) {
+  if (!isBrowser) {
     return undefined;
   }
   const appData = window.__NEXT_DATA__.props.appData;

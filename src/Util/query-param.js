@@ -1,15 +1,11 @@
 //
-import { isClient } from "./cmn";
+import { isBrowser } from "./cmn";
 
 export const getQueryByName = (name, url) => {
-  if (!isClient) {
+  if (!isBrowser) {
     return;
   }
-
-  // if (window && window.__NEXT_DATA__) {
-  // return getQueryParamFromNextData(name);
-  // }
-
+  
   if (!url) url = window.location.href;
   name = name.replace(/[[]]/g, "\\$&");
   const regex = new RegExp(`[?&]${name}(=([^&#]*)|&|#|$)`),
@@ -20,7 +16,7 @@ export const getQueryByName = (name, url) => {
 };
 
 export const getQueryParamFromNextData = (key, defaultValue) => {
-  if (!isClient) {
+  if (!isBrowser) {
     return undefined;
   }
   const reqData = window.__NEXT_DATA__.query;
