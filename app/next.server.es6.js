@@ -12,10 +12,11 @@ import { PORT } from "./config";
 import { statsMw } from "./mw/stats.mw";
 import { miscMw } from "./mw/misc.mw";
 import { dataMw } from "./mw/data.mw";
-
+import * as mobxReact from "mobx-react";
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const handle = getRequestHandler(nextApp);
+mobxReact.useStaticRendering(true);
 
 const app = express();
 // app.set('trust proxy', '127.0.0.1');
