@@ -6,10 +6,10 @@ import { getQueryByName } from "@Util/query-param";
 export class ReadmeRenderNpm extends Component {
   handleSubmit = async () => {
     event.preventDefault();
-    goToUrl({ path: getWindowPathname(), queryParams: { github_link: this.state.github_link }, opt: { shallow: true } });
+    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
   };
 
-  state = { markdownBody: "", github_link: "" };
+  state = { markdownBody: "", githubLink: "" };
   converter = null;
 
   handleChange = (event) => {
@@ -23,8 +23,8 @@ export class ReadmeRenderNpm extends Component {
 
   componentDidMount = async () => {
     // no-ssr
-    const url = getQueryByName("github_link") || "";
-    this.setState({ github_link: url });
+    const url = getQueryByName("githubLink") || "";
+    this.setState({ githubLink: url });
     this.convertHtml();
   };
 
@@ -33,14 +33,14 @@ export class ReadmeRenderNpm extends Component {
     import("showdown").then(async (showdown) => {
       this.converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
-      const url = getQueryByName("github_link");
+      const url = getQueryByName("githubLink");
       if (!url) {
         return;
       }
 
       const rs = await httpGet({ url: url });
-      const markDownBody = this.converter.makeHtml(rs.json.text);
-      this.setState({ markdownBody: markDownBody });
+      const markdownBody = this.converter.makeHtml(rs.json.text);
+      this.setState({ markdownBody: markdownBody });
     });
   };
 
@@ -53,7 +53,7 @@ export class ReadmeRenderNpm extends Component {
               <label className='uppercase block mb-1' htmlFor="email">
                 Github readme url
               </label>
-              <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="github_link" onChange={this.handleChange} required={true} value={this.state.github_link} />
+              <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} required={true} value={this.state.githubLink} />
               <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
             </div>
           </form>

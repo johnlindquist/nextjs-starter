@@ -9,6 +9,8 @@ import { trackPageView } from "@Util/ga";
 import { router } from "@app/routes";
 import { Head } from "@Components/html/Head";
 import { Provider as LayoutProvider } from "reactjs-layout-slot";
+import { withMobxStore } from "@Lib/with-mobx.store";
+import { Provider as MobxProvider } from "mobx-react";
 
 const layouts = {
   OneColumn: OneColumnLayout
@@ -39,19 +41,21 @@ class App extends NextApp {
   };
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, mobxStore } = this.props;
 
     return (
       <Container>
-        <LayoutProvider layouts={layouts}>
-          <Fragment>
-            <Head />
-            <Component {...pageProps} />
-          </Fragment>
-        </LayoutProvider>
+        <MobxProvider store={mobxStore}>
+          <LayoutProvider layouts={layouts}>
+            <Fragment>
+              <Head />
+              <Component {...pageProps} />
+            </Fragment>
+          </LayoutProvider>
+        </MobxProvider>
       </Container>
     );
   }
 }
 
-export default App;
+export default withMobxStore(App);
