@@ -142,6 +142,16 @@ The starter app will come in multiple flavors.
 - Spread the word
 - Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/meabed.svg?style=social&label=Follow%20%40meabed)](https://twitter.com/meabed)
 
+## Contributors
+
+A huge thanks to all of our contributors:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/45731?v=3" width="100px;"/><br /><sub><b>Mohamed Meabed</b></sub>](https://github.com/Meabed)<br />[💻](https://github.com/me-io/nextjs-starter/commits?author=Meabed "Code") [📢](#talk-Meabed "Talks") | [<img src="https://avatars2.githubusercontent.com/u/16267321?v=3" width="100px;"/><br /><sub><b>Zeeshan Ahmad</b></sub>](https://github.com/ziishaned)<br />[💻](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Code") [🐛](https://github.com/me-io/nextjs-starter/issues?q=author%3Aziishaned "Bug reports") [⚠️](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Tests") [📖](https://github.com/me-io/nextjs-starter/commits?author=ziishaned "Documentation") |
+| :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## License
 
 <div>
