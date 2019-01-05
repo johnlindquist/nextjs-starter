@@ -14,33 +14,33 @@ export default class GithubMdSsr extends Component {
   static async getInitialProps({ req }) {
 
     let markdownBody = "";
-    let github_link = "";
+    let githubLink = "";
 
     // ssr
     if (!isBrowser) {
-      github_link = req.query["github_link"] || "";
+      githubLink = req.query["githubLink"] || "";
 
-      const markdownRes = await httpGet({ url: github_link });
-      if (github_link) {
+      const markdownRes = await httpGet({ url: githubLink });
+      if (githubLink) {
         markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
       }
     }
 
-    return { github_link: github_link, markdownBody };
+    return { githubLink: githubLink, markdownBody };
   }
 
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
 
-  state = { markdownBody: this.props.markdownBody, github_link: this.props.github_link };
+  state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink };
 
   componentWillReceiveProps = async (props) => {
-    const github_link = getQueryByName("github_link") || "";
+    const githubLink = getQueryByName("githubLink") || "";
     let markdownBody = "";
-    if (github_link) {
-      const markdownRes = await httpGet({ url: github_link });
+    if (githubLink) {
+      const markdownRes = await httpGet({ url: githubLink });
       markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
     }
-    this.setState({ github_link: github_link, markdownBody: markdownBody });
+    this.setState({ githubLink: githubLink, markdownBody: markdownBody });
 
   };
 
@@ -54,7 +54,7 @@ export default class GithubMdSsr extends Component {
 
   handleSubmit = async () => {
     event.preventDefault();
-    goToUrl({ path: getWindowPathname(), queryParams: { github_link: this.state.github_link }, opt: { shallow: false } });
+    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: false } });
   };
 
   render() {
@@ -71,10 +71,10 @@ export default class GithubMdSsr extends Component {
                       <label className='uppercase block mb-1' htmlFor="email">
                         Github readme url
                       </label>
-                      <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="github_link" onChange={this.handleChange} required={true} value={this.state.github_link} />
+                      <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} required={true} value={this.state.githubLink} />
                       <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
                     </div>
-                    {this.state.github_link}
+                    {this.state.githubLink}
 
                   </form>
                 </div>
