@@ -74,11 +74,8 @@ export default class GithubMdSsr extends Component {
                       <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} required={true} value={this.state.githubLink} />
                       <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
                     </div>
-                    {this.state.githubLink}
-
                   </form>
                 </div>
-
                 <ReadmeRenderSsr key={Math.random()} markdownBody={this.state.markdownBody} />
               </div>
             </div>
