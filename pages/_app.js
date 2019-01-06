@@ -16,8 +16,6 @@ const layouts = {
 
 class App extends NextApp {
   static async getInitialProps({ Component, ctx }) {
-    // store last visited to no track google analytics twice.
-    storeLastPageUrl();
 
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -32,9 +30,15 @@ class App extends NextApp {
 
   // GA page view
   componentDidMount = async () => {
-    // fire GA
+    // initial rendering
+    // store last visited to no track google analytics twice.
+    storeLastPageUrl();
     router.Router.onRouteChangeComplete = url => {
+      // on state or route change
+      // fire GA
       trackPageView(url);
+      // store last visited to no track google analytics twice.
+      storeLastPageUrl();
     };
   };
 

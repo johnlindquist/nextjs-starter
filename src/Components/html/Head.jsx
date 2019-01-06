@@ -13,7 +13,7 @@ export class Head extends Component {
     SEO.templateTitle = "%s | WEBSITE.COM";
 
     // title for pages
-    SEO.title = "WEBSTIE_TITLE";
+    SEO.title = "WEBSITE_TITLE";
     SEO.openGraph.url = "https://website.com";
     SEO.openGraph.title = SEO.title;
     SEO.noindex = this.props.noindex;
