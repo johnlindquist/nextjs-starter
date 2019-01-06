@@ -28,7 +28,6 @@ class App extends NextApp {
     return { pageProps, appData, appConfig, appUser };
   }
 
-  // GA page view
   componentDidMount = async () => {
     // initial rendering
     // store last visited to no track google analytics twice.
@@ -36,6 +35,7 @@ class App extends NextApp {
     router.Router.onRouteChangeComplete = url => {
       // on state or route change
       // fire GA
+      // GA page view
       trackPageView(url);
       // store last visited to no track google analytics twice.
       storeLastPageUrl();
