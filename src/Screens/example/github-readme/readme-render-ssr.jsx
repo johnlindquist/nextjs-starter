@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-import { getWindowPathname, goToUrl } from "../../../Util/url";
+import { getWindowPathname, goToUrl } from "@Util/url";
 
 @inject("store") @observer
 

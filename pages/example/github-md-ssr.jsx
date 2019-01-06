@@ -7,7 +7,7 @@ import { httpGet } from "@Util/http";
 import showdown from "showdown";
 import { isBrowser } from "@Util/cmn";
 import { inject, observer } from "mobx-react";
-import { getQueryByName } from "../../src/Util/query-param";
+import { getQueryByName } from "@Util/query-param";
 
 @inject("store") @observer
 export default class GithubMdSsr extends Component {
