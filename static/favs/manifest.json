@@ -1,7 +1,7 @@
 {
   "name": "WEBSITE.COM",
   "short_name": "WEBSITE.COM",
-  "description": "WEBSTIE_DESCRIPTION",
+  "description": "WEBSITE_DESCRIPTION",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

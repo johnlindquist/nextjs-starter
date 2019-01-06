@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "WEBSITE.COM",
-  "description": "WEBSTIE_DESCRIPTION",
+  "description": "WEBSITE_DESCRIPTION",
   "icons": {
     "60": "/static/favs/firefox_app_60x60.png",
     "128": "/static/favs/firefox_app_128x128.png",
