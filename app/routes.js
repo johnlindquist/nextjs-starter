@@ -6,10 +6,8 @@ const routesAll = [
   { name: "home", pattern: "/", page: "example/home" },
   { name: "contact-us", pattern: "/example/contact-us", page: "example/contact-us" },
   { name: "about-us", pattern: "/example/about-us", page: "example/about-us" },
-  { name: "ssr", pattern: "/example/ssr", page: "example/ssr" },
-  { name: "no-ssr", pattern: "/example/no-ssr", page: "example/no-ssr" },
   { name: "github-md-js", pattern: "/example/github-md-js", page: "example/github-md-js" },
-  { name: "github-md-no-ssr", pattern: "/example/github-md-no-ssr", page: "example/github-md-no-ssr" },
+  { name: "github-md-npm", pattern: "/example/github-md-npm", page: "example/github-md-npm" },
   { name: "github-md-ssr", pattern: "/example/github-md-ssr", page: "example/github-md-ssr" }
 ];
 
