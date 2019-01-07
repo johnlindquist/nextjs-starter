@@ -15,7 +15,7 @@ export default class AboutUs extends Component {
             <div className='w-full max-w-2xl mx-auto'>
               <div className="bg-white shadow p-8">
                 <div className='pt-16' />
-                <h3 className='text-center text-3xl mb-2 font-thin'>Demo links</h3>
+                <h3 className='text-center text-3xl mb-2 font-thin'>Example Demo links</h3>
                 <div className='spd-xy-15 text-center'>
 
                   <Link route={"github-md-js"} className='btn btn-sm btn-blue font-bold'>
