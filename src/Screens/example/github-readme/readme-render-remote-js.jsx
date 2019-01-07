@@ -11,7 +11,7 @@ export class ReadmeRenderRemoteJs extends Component {
     goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
   };
 
-  state = { markdownBody: "", githubLink: "" };
+  state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
   converter = null;
 
   handleChange = (event) => {
@@ -23,17 +23,13 @@ export class ReadmeRenderRemoteJs extends Component {
   };
 
 
-  /**
-   * SSR render example
-   *
+  /***
    * @link https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md
    * @return {string}
    */
   getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
 
   componentDidMount = async () => {
-    const url = getQueryByName("githubLink") || "";
-    this.setState({ githubLink: url });
     // no-ssr
     this.requireJs(this.getShowdownScriptSrc(), () => {
       echo("Remote script loaded");
@@ -43,6 +39,12 @@ export class ReadmeRenderRemoteJs extends Component {
   };
 
   requireJs = (url, callback) => {
+    if (typeof window.showdown !== "undefined") {
+      echo("JS already loaded");
+      callback();
+      return;
+    }
+
     let e = document.createElement("script");
     e.src = url;
     e.type = "text/javascript";
@@ -52,6 +54,7 @@ export class ReadmeRenderRemoteJs extends Component {
 
   convertHtml = async () => {
     const url = this.state.githubLink;
+
     if (!url) {
       return;
     }
@@ -64,7 +67,7 @@ export class ReadmeRenderRemoteJs extends Component {
   render() {
     return (
       <>
-        <div className='w-full mx-auto md:w-3/5'>
+        <div className='w-full mx-auto'>
           <form onSubmit={this.handleSubmit}>
             <div className='mb-4'>
               <label className='uppercase block mb-1' htmlFor="email">
@@ -75,7 +78,7 @@ export class ReadmeRenderRemoteJs extends Component {
             </div>
           </form>
         </div>
-        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.store.markdownBody }} />
+        <div className='markdown-body' dangerouslySetInnerHTML={{ __html: this.state.markdownBody }} />
       </>
     );
   }

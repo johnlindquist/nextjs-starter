@@ -9,7 +9,7 @@ export class ReadmeRenderNpm extends Component {
     goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
   };
 
-  state = { markdownBody: "", githubLink: "" };
+  state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
   converter = null;
 
   handleChange = (event) => {
@@ -22,9 +22,6 @@ export class ReadmeRenderNpm extends Component {
 
 
   componentDidMount = async () => {
-    // no-ssr
-    const url = getQueryByName("githubLink") || "";
-    this.setState({ githubLink: url });
     this.convertHtml();
   };
 
