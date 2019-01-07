@@ -22,7 +22,7 @@ export default class AboutUs extends Component {
                     Github Markdown viewer ( remote js )
                   </Link>
 
-                  <Link route={"github-md-no-ssr"} className='btn btn-sm btn-blue font-bold'>
+                  <Link route={"github-md-npm"} className='btn btn-sm btn-blue font-bold'>
                     Github Markdown viewer ( npm )
                   </Link>
 

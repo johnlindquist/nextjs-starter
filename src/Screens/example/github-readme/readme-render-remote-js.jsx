@@ -30,7 +30,6 @@ export class ReadmeRenderRemoteJs extends Component {
   getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
 
   componentDidMount = async () => {
-    // no-ssr
     this.requireJs(this.getShowdownScriptSrc(), () => {
       echo("Remote script loaded");
       this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });

@@ -44,7 +44,7 @@ export class ReadmeRenderNpm extends Component {
   render() {
     return (
       <>
-        <div className='w-full mx-auto md:w-3/5'>
+        <div className='w-full mx-auto'>
           <form onSubmit={this.handleSubmit}>
             <div className='mb-4'>
               <label className='uppercase block mb-1' htmlFor="email">

@@ -4,7 +4,7 @@ import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
 import { ReadmeRenderNpm } from "@Screens/example/github-readme/readme-render-npm";
 
-export default class GithubMdNoSsr extends Component {
+export default class GithubMdNpm extends Component {
   render() {
     return (
       <>
