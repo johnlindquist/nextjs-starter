@@ -38,8 +38,16 @@ export class ReadmeRenderRemoteJs extends Component {
   };
 
   requireJs = (url, callback) => {
+    const id = "showdown-ext-js";
+    // you can use this
+    if (document.getElementById(id)) {
+      echo("showdown js element id already exist");
+      callback();
+      return;
+    }
+    // or this
     if (typeof window.showdown !== "undefined") {
-      echo("JS already loaded");
+      echo("showdown js window variable already defined");
       callback();
       return;
     }
@@ -47,13 +55,14 @@ export class ReadmeRenderRemoteJs extends Component {
     let e = document.createElement("script");
     e.src = url;
     e.type = "text/javascript";
+    e.id = id;
     e.addEventListener("load", callback);
     document.getElementsByTagName("head")[0].appendChild(e);
   };
 
   convertHtml = async () => {
     const url = this.state.githubLink;
-    
+
     if (!url) {
       return;
     }
