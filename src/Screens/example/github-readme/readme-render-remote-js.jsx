@@ -22,11 +22,6 @@ export class ReadmeRenderRemoteJs extends Component {
     this.setState(st);
   };
 
-
-  /***
-   * @link https://raw.githubusercontent.com/meabed/logstash-testing-e2e/master/README.md
-   * @return {string}
-   */
   getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
 
   componentDidMount = async () => {
