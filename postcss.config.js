@@ -5,7 +5,7 @@ const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 
 let purgeCssPaths = [];
-["pages", "src", "components", "services", "layout", "lib", "screen"].map((i) => {
+["pages", "src"].map((i) => {
   purgeCssPaths = purgeCssPaths.concat([`${i}/**/*.js`, `${i}/**/*.jsx`, `${i}/**/*.html`, `${i}/**/*.ts`, `${i}/**/*.tsx`]);
 });
 
