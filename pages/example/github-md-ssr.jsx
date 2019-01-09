@@ -33,7 +33,7 @@ export default class GithubMdSsr extends Component {
 
   state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink };
 
-  componentWillReceiveProps = async (props) => {
+  componentWillReceiveProps = async () => {
     const githubLink = getQueryByName("githubLink") || "";
     let markdownBody = "";
     if (githubLink) {
