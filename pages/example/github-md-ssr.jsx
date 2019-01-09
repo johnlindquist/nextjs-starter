@@ -12,8 +12,6 @@ import { getQueryByName } from "@Util/query-param";
 export default class GithubMdSsr extends Component {
 
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-  state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink };
-
   // Handle server side rendering
   // ES6 destruct nested object
   static async getInitialProps({ req: { query: { githubLink } } = { query: {} } }) {
@@ -26,9 +24,9 @@ export default class GithubMdSsr extends Component {
       const { json: { text } } = await httpGet({ url: githubLink });
       markdownBody = GithubMdSsr.converter.makeHtml(text);
     }
-    return { githubLink, markdownBody };
+    return { githubLink, markdownBody }; // init default props from server
   }
-
+  state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink }; // init state from state => from props => from server
   // ignore input state change if form button is not clicked
   // handle browser state transition (back-forward)
   // handle form submit
