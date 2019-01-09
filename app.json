@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter-app",
-  "description": "Universal web app built on React.js, server-rendered with Node.js",
+  "description": "Next.js  web app built on React JS, server-rendered with Node.js",
   "scripts": {
   },
   "stack": "Heroku-18",
