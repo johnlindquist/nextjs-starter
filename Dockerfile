@@ -53,7 +53,6 @@ USER node
 EXPOSE 3000
 CMD yarn start
 
-# use as
+# build and run
 # docker build -t nextjs .
-# docker run -u 0 -p 4000:3000 --rm --name=nextjs -it nextjs
-
+# docker run -p 3000:3000 --rm --name=nextjs -it nextjs
