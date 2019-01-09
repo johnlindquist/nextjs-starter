@@ -6,31 +6,10 @@ import { getWindowPathname, goToUrl } from "@Util/url";
 import { getQueryByName } from "@Util/query-param";
 
 export class ReadmeRenderRemoteJs extends Component {
-  handleSubmit = async () => {
-    event.preventDefault();
-    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
-  };
-
   state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
   converter = null;
 
-  handleChange = (event) => {
-    const stateKey = event.target.getAttribute("id");
-    const val = event.target.value;
-    const st = {};
-    st[stateKey] = val;
-    this.setState(st);
-  };
-
   getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
-
-  componentDidMount = async () => {
-    this.requireJs(this.getShowdownScriptSrc(), () => {
-      echo("Remote script loaded");
-      this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-      this.convertHtml();
-    });
-  };
 
   requireJs = (url, callback) => {
     const id = "showdown-ext-js";
@@ -65,6 +44,25 @@ export class ReadmeRenderRemoteJs extends Component {
     const rs = await httpGet({ url: url });
     const markdownBody = this.converter.makeHtml(rs.json.text);
     this.setState({ markdownBody: markdownBody });
+  };
+
+  componentDidMount = async () => {
+    this.requireJs(this.getShowdownScriptSrc(), () => {
+      echo("Remote script loaded");
+      this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+      this.convertHtml();
+    });
+  };
+
+  // ES6
+  handleChange = event => {
+    const { id: stateKey, value: stateVal } = event.target;
+    this.setState({ [stateKey]: stateVal });
+  };
+
+  handleSubmit = async () => {
+    event.preventDefault();
+    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
   };
 
   render() {

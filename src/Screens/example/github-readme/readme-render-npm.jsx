@@ -13,6 +13,7 @@ export class ReadmeRenderNpm extends Component {
   converter = null;
 
   handleChange = (event) => {
+    // ES5
     const stateKey = event.target.getAttribute("id");
     const val = event.target.value;
     const st = {};
