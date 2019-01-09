@@ -6,7 +6,7 @@ import { getWindowPathname, goToUrl } from "@Util/url";
 import { getQueryByName } from "@Util/query-param";
 
 export class ReadmeRenderRemoteJs extends Component {
-  state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
+  state = { markdownBody: "", githubLink: getQueryByName("githubLink") };
   converter = null;
 
   showdownScriptSrc = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
@@ -64,7 +64,7 @@ export class ReadmeRenderRemoteJs extends Component {
 
   handleSubmit = async () => {
     event.preventDefault();
-    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
+    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink } });
   };
 
   render() {
@@ -76,7 +76,7 @@ export class ReadmeRenderRemoteJs extends Component {
               <label className='uppercase block mb-1' htmlFor="email">
                 Github readme url
               </label>
-              <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} required={true} value={this.state.githubLink} />
+              <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} value={this.state.githubLink || ""} />
               <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
             </div>
           </form>

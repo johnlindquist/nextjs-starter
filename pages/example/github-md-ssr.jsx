@@ -1,5 +1,6 @@
 import React from "react";
 
+import { withRouter } from "next/router";
 import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
 import { ReadmeRenderSsr } from "@Screens/example/github-readme/readme-render-ssr";
@@ -9,14 +10,14 @@ import { getWindowPathname, goToUrl } from "@Util/url";
 import { isBrowser } from "@Util/cmn";
 import { getQueryByName } from "@Util/query-param";
 
-export default class GithubMdSsr extends Component {
+class GithubMdSsr extends Component {
 
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
   // Handle server side rendering
   // ES6 destruct nested object
   static async getInitialProps({ req: { query: { githubLink } } = { query: {} } }) {
     if (isBrowser) {
-      return { githubLink: "", markdownBody: "" };
+      return { githubLink: getQueryByName("githubLink"), markdownBody: "" };
     }
     // server side rendering
     let markdownBody = "";
@@ -26,38 +27,33 @@ export default class GithubMdSsr extends Component {
     }
     return { githubLink, markdownBody }; // init default props from server
   }
+
   state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink }; // init state from state => from props => from server
-  // ignore input state change if form button is not clicked
-  // handle browser history state (back-forward)
-  // handle form submit
-  componentDidUpdate = async (prevProps, prevState) => {
-    // if component updates coming from input changes do nothing
-    if (this.state.fromChangeHandle === true) {
-      return;
-    }
-    // get githubLink from url query
-    const githubLink = getQueryByName("githubLink");
-    // if state if different from url or submit button clicked
-    if (githubLink !== prevState.githubLink || this.state.doUpdate === true) {
+
+  // access previous props router
+  // to check if current router query params changed and do updates
+  componentDidUpdate = async (prevProps) => {
+    const { query: { githubLink } } = this.props.router;
+    // verify props have changed to avoid an infinite loop
+    if (githubLink !== prevProps.router.query.githubLink) {
       let markdownBody = "";
       if (githubLink) {
         const { json: { text } } = await httpGet({ url: githubLink });
         markdownBody = GithubMdSsr.converter.makeHtml(text);
       }
-      this.setState({ githubLink, markdownBody, doUpdate: false });
+      this.setState({ githubLink, markdownBody });
     }
   };
 
   // ES6
   handleChange = event => {
     const { id: stateKey, value: stateVal } = event.target;
-    this.setState({ [stateKey]: stateVal, fromChangeHandle: true });
+    this.setState({ [stateKey]: stateVal });
   };
 
   handleSubmit = async () => {
     event.preventDefault();
-    this.setState({ doUpdate: true, fromChangeHandle: false });
-    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: false } });
+    goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink } });
   };
 
   render() {
@@ -74,7 +70,7 @@ export default class GithubMdSsr extends Component {
                       <label className='uppercase block mb-1' htmlFor="email">
                         Github readme url
                       </label>
-                      <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} required={true} value={this.state.githubLink} />
+                      <input className='form-input w-4/5 inline-block' placeholder={"meabed/logstash-testing-e2e/master/README.md"} type="text" id="githubLink" onChange={this.handleChange} value={this.state.githubLink || ""} />
                       <button className="btn btn-blue font-bold w-1/5 inline-block" type="submit">Display</button>
                     </div>
                   </form>
@@ -88,3 +84,6 @@ export default class GithubMdSsr extends Component {
     );
   }
 }
+
+// withRouter Higher Order Component to access 
+export default withRouter(GithubMdSsr);
