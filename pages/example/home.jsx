@@ -6,7 +6,7 @@ import { RowHero } from "@Screens/example/home/row-hero";
 import { RowTwo } from "@Screens/example/home/row-two";
 import { RowThree } from "@Screens/example/home/row-three";
 import { RowFour } from "@Screens/example/home/row-four";
-import { DemoLinks } from "../../src/Components/example/about/demo-links";
+import { DemoLinks } from "@Components/example/about/demo-links";
 
 class Home extends Component {
   render() {

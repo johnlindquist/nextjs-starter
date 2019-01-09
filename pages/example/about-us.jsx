@@ -4,7 +4,7 @@ import { Component } from "@Components/framework";
 import { Page, Section } from "reactjs-layout-slot";
 import { RowOne } from "@Screens/example/about/row-one";
 import { RowTwo } from "@Screens/example/about/row-two";
-import { DemoLinks } from "../../src/Components/example/about/demo-links";
+import { DemoLinks } from "@Components/example/about/demo-links";
 
 export default class AboutUs extends Component {
   render() {
