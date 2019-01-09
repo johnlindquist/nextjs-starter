@@ -85,5 +85,5 @@ class GithubMdSsr extends Component {
   }
 }
 
-// withRouter Higher Order Component to access 
+// withRouter Higher Order Component to access
 export default withRouter(GithubMdSsr);
