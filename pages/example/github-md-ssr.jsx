@@ -28,7 +28,7 @@ export default class GithubMdSsr extends Component {
   }
   state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink }; // init state from state => from props => from server
   // ignore input state change if form button is not clicked
-  // handle browser state transition (back-forward)
+  // handle browser history state (back-forward)
   // handle form submit
   componentDidUpdate = async (prevProps, prevState) => {
     // if component updates coming from input changes do nothing
