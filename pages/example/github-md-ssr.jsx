@@ -14,6 +14,7 @@ export default class GithubMdSsr extends Component {
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
   state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink };
 
+  // Handle server side rendering
   // ES6 destruct nested object
   static async getInitialProps({ req: { query: { githubLink } } = { query: {} } }) {
     if (isBrowser) {
@@ -28,6 +29,9 @@ export default class GithubMdSsr extends Component {
     return { githubLink, markdownBody };
   }
 
+  // ignore input state change if form button is not clicked
+  // handle browser state transition (back-forward)
+  // handle form submit
   componentDidUpdate = async (prevProps, prevState) => {
     // if component updates coming from input changes do nothing
     if (this.state.fromChangeHandle === true) {
