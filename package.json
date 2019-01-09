@@ -58,7 +58,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "next-images": "1.0.4",
-    "next-offline": "^3.3.1",
+    "next-offline": "^3.3.2",
     "next-routes": "^1.4.2",
     "next-seo": "^1.8.0",
     "node-sass": "^4.11.0",
@@ -93,7 +93,7 @@
     "@fortawesome/fontawesome-free": "5.6.3",
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "@zeit/next-bundle-analyzer": "^0.1.2",
-    "all-contributors-cli": "5.6.0",
+    "all-contributors-cli": "5.6.1",
     "autoprefixer": "^9.4.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
@@ -118,7 +118,7 @@
     "tailwindcss": "^0.7.3",
     "tailwindcss-js-plugins": "0.0.12",
     "webp-loader": "^0.4.0",
-    "webpack-cli": "^3.2.0",
+    "webpack-cli": "^3.2.1",
     "webpack-node-externals": "^1.7.2"
   }
 }

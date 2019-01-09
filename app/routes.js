@@ -1,6 +1,6 @@
-const nextRoutes = require("next-routes");
+import nextRoutes from "next-routes";
 
-const routesAll = [
+const routesCollection = [
   // routes for the started example
   // todo replace in production
   { name: "home", pattern: "/", page: "example/home" },
@@ -12,10 +12,11 @@ const routesAll = [
 ];
 
 const router = nextRoutes();
-routesAll.map(r => {
+routesCollection.map(r => {
   r.pattern = `${r.pattern}`;
   router.add(r);
 });
 
 export const getRequestHandler = (nextApp) => router.getRequestHandler(nextApp);
+// named export ES6 enhanced object literal
 export { router };
