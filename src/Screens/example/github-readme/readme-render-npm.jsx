@@ -4,42 +4,37 @@ import { getWindowPathname, goToUrl } from "@Util/url";
 import { getQueryByName } from "@Util/query-param";
 
 export class ReadmeRenderNpm extends Component {
+  state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
+  converter = null;
+
+  loadJs = async (callback) => {
+    // lazy loading, webpack will bundle it separately
+    import("showdown").then(callback);
+  };
+
+  loadJsCallback = async showdown => {
+    const url = getQueryByName("githubLink");
+    if (!url) {
+      return;
+    }
+    this.converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+    const { json: { text } } = await httpGet({ url });
+    const markdownBody = this.converter.makeHtml(text);
+    this.setState({ markdownBody });
+  };
+
+  componentDidMount = async () => {
+    this.loadJs(this.loadJsCallback);
+  };
+
   handleSubmit = async () => {
     event.preventDefault();
     goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: true } });
   };
 
-  state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
-  converter = null;
-
-  handleChange = (event) => {
-    // ES5
-    const stateKey = event.target.getAttribute("id");
-    const val = event.target.value;
-    const st = {};
-    st[stateKey] = val;
-    this.setState(st);
-  };
-
-
-  componentDidMount = async () => {
-    this.convertHtml();
-  };
-
-  convertHtml = async () => {
-    // lazy loading trick
-    import("showdown").then(async (showdown) => {
-      this.converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-
-      const url = getQueryByName("githubLink");
-      if (!url) {
-        return;
-      }
-
-      const rs = await httpGet({ url: url });
-      const markdownBody = this.converter.makeHtml(rs.json.text);
-      this.setState({ markdownBody: markdownBody });
-    });
+  handleChange = event => {
+    const { id: stateKey, value: stateVal } = event.target;
+    this.setState({ [stateKey]: stateVal });
   };
 
   render() {

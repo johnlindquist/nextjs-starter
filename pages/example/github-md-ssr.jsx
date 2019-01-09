@@ -11,49 +11,50 @@ import { getQueryByName } from "@Util/query-param";
 
 export default class GithubMdSsr extends Component {
 
-  static async getInitialProps({ req }) {
-
-    let markdownBody = "";
-    let githubLink = "";
-
-    // ssr
-    if (!isBrowser) {
-      githubLink = req.query["githubLink"] || "";
-
-      const markdownRes = await httpGet({ url: githubLink });
-      if (githubLink) {
-        markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
-      }
-    }
-
-    return { githubLink: githubLink, markdownBody };
-  }
-
   static converter = new showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-
   state = { markdownBody: this.props.markdownBody, githubLink: this.props.githubLink };
 
-  componentWillReceiveProps = async () => {
-    const githubLink = getQueryByName("githubLink") || "";
+  // ES6 destruct nested object
+  static async getInitialProps({ req: { query: { githubLink } } = { query: {} } }) {
+    if (isBrowser) {
+      return { githubLink: "", markdownBody: "" };
+    }
+    // server side rendering
     let markdownBody = "";
     if (githubLink) {
-      const markdownRes = await httpGet({ url: githubLink });
-      markdownBody = GithubMdSsr.converter.makeHtml(markdownRes.json.text);
+      const { json: { text } } = await httpGet({ url: githubLink });
+      markdownBody = GithubMdSsr.converter.makeHtml(text);
     }
-    this.setState({ githubLink: githubLink, markdownBody: markdownBody });
+    return { githubLink, markdownBody };
+  }
 
+  componentDidUpdate = async (prevProps, prevState) => {
+    // if component updates coming from input changes do nothing
+    if (this.state.fromChangeHandle === true) {
+      return;
+    }
+    // get githubLink from url query
+    const githubLink = getQueryByName("githubLink");
+    // if state if different from url or submit button clicked
+    if (githubLink !== prevState.githubLink || this.state.doUpdate === true) {
+      let markdownBody = "";
+      if (githubLink) {
+        const { json: { text } } = await httpGet({ url: githubLink });
+        markdownBody = GithubMdSsr.converter.makeHtml(text);
+      }
+      this.setState({ githubLink, markdownBody, doUpdate: false });
+    }
   };
 
-  handleChange = (event) => {
-    const stateKey = event.target.getAttribute("id");
-    const val = event.target.value;
-    const st = {};
-    st[stateKey] = val;
-    this.setState(st);
+  // ES6
+  handleChange = event => {
+    const { id: stateKey, value: stateVal } = event.target;
+    this.setState({ [stateKey]: stateVal, fromChangeHandle: true });
   };
 
   handleSubmit = async () => {
     event.preventDefault();
+    this.setState({ doUpdate: true, fromChangeHandle: false });
     goToUrl({ path: getWindowPathname(), queryParams: { githubLink: this.state.githubLink }, opt: { shallow: false } });
   };
 

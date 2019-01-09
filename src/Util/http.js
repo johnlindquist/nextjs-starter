@@ -16,7 +16,7 @@ export const getMergedQueryParams = (queryParams) => {
 
 const doFetch = async ({ url, opt }) => {
 
-  echo(url);
+  echo(`fetch ${url}`);
   const response = await fetch(url, opt);
   const contentType = response.headers.get("content-type");
   const isJson = contentType && contentType.indexOf("application/json") !== -1;

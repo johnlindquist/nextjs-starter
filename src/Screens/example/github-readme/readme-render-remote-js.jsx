@@ -42,15 +42,17 @@ export class ReadmeRenderRemoteJs extends Component {
     document.getElementsByTagName("head")[0].appendChild(e);
   };
 
+  loadJsCallback = () => {
+    echo("Remote script loaded");
+    this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+    this.convertHtml();
+  };
+
   componentDidMount = async () => {
     this.loadJs({
       src: this.showdownScriptSrc,
       id: "showdown-ext-js",
-      callback: () => {
-        echo("Remote script loaded");
-        this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-        this.convertHtml();
-      }
+      callback: this.loadJsCallback
     });
   };
 
