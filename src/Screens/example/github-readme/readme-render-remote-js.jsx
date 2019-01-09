@@ -9,30 +9,7 @@ export class ReadmeRenderRemoteJs extends Component {
   state = { markdownBody: "", githubLink: getQueryByName("githubLink") || "" };
   converter = null;
 
-  getShowdownScriptSrc = () => "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
-
-  requireJs = (url, callback) => {
-    const id = "showdown-ext-js";
-    // you can use this
-    if (document.getElementById(id)) {
-      echo("showdown js element id already exist");
-      callback();
-      return;
-    }
-    // or this
-    if (typeof window.showdown !== "undefined") {
-      echo("showdown js window variable already defined");
-      callback();
-      return;
-    }
-
-    let e = document.createElement("script");
-    e.src = url;
-    e.type = "text/javascript";
-    e.id = id;
-    e.addEventListener("load", callback);
-    document.getElementsByTagName("head")[0].appendChild(e);
-  };
+  showdownScriptSrc = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js";
 
   convertHtml = async () => {
     const url = this.state.githubLink;
@@ -46,11 +23,34 @@ export class ReadmeRenderRemoteJs extends Component {
     this.setState({ markdownBody: markdownBody });
   };
 
+  loadJs = ({ src, id, callback }) => {
+    // if script exist do callback
+    if (document.getElementById(id)) {
+      echo(`${id} js element id already exist`);
+      callback();
+      return;
+    }
+
+    let e = document.createElement("script");
+    // ES6
+    Object.assign(e, { src, type: "text/javascript", id });
+    // ES5
+    // e.src = src;
+    // e.type = "text/javascript";
+    // e.id = id;
+    e.addEventListener("load", callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  };
+
   componentDidMount = async () => {
-    this.requireJs(this.getShowdownScriptSrc(), () => {
-      echo("Remote script loaded");
-      this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
-      this.convertHtml();
+    this.loadJs({
+      src: this.showdownScriptSrc,
+      id: "showdown-ext-js",
+      callback: () => {
+        echo("Remote script loaded");
+        this.converter = new window.showdown.Converter({ tasklists: true, simpleLineBreaks: true, ghMentions: true, openLinksInNewWindow: true, emoji: true });
+        this.convertHtml();
+      }
     });
   };
 
