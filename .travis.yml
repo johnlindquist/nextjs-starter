@@ -11,13 +11,7 @@ script:
 - yarn lint
 - yarn build
 - yarn test
-deploy:
-- provider: script
-  skip_cleanup: true
-  script: "./.scripts/build-docker.sh"
-  on:
-    tags: true
-    condition: "$TRAVIS_OS_NAME = linux"
+- ./.scripts/build-docker.sh
 env:
   global:
   - secure: WVpT1QY1oPivgnbi6bxUhp5OssDs371xLDWPweZgT6w7N6b2px53fK31c8dqPVgT+ZP2ByNwqOxj+ssKSPPlVE6gBWr3Q8KX0XJFq64WDVMt7z9OJyGFIdDu5OL06WpluA2lbKJtzPHpk575I9BkULr6c+JLy7gnrhBpiAnLSKiuBaUCnCxBz8tztRE3oVkCGn5zozd8UuJ8bl55Skd3CfgjYp2nZZTeUiBM/9PR7JW4EcHA3LQ0hkVBOz+6qUSBI51NOQv/YdPjAvjjujuZckwOQ5bQuR9fZjn4dP5LljxNHCJ5CMN5tcw200k5C6dejagWNubtDwsi8phFvX9wOGEZ/Z6PJHWRg9Dh0NXAnuhaP/82IeNk73nBXPVJNPHWqtoBh9UxVLzqYM5n97UTaBGYsJUvKxqnJ8ju0U8By88pmwzJLZ4JZPxwtFBk2OL9qBytMmRsqOlEhjxkbu4J33MAHxn6QZCmoOaAoUtlP8xkZA2pHP5hnmyleQZJg7kLSVcz3ersPpfgZTU7VlRcS4QHNS9n49LvhDgRXFocZELjEWxT8XKfA122ZsDW5gfpD7Em5OaB52xlVDwk1xejFkUUkiltM1YQs0l7rjtT0LEWGZkNJHDO9qlFC1VYQZXbKM1zG/dIUeUmWTbrSh4QevEhQyCJeYsVhLK+ZG5KAlw=
