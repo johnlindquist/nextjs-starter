@@ -6,3 +6,4 @@ out
 .next
 tailwind.config.js
 _intiliji.js
+app/next.server.build.js
