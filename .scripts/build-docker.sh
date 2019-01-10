@@ -10,6 +10,8 @@ if [[ ${GIT_TAG} =~ ^[[:digit:].[:digit:].[:digit:]]+$ ]]; then
     echo "TAG: ${GIT_TAG} - start build"
 else
     echo "TAG: ${GIT_TAG} - skip build"
+    echo "git status"
+    git status
     exit 0
 fi
 
