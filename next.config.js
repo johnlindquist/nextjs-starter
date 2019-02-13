@@ -50,9 +50,9 @@ opts.workboxOpts = {
   // modifyUrlPrefix: {
   // 'dist': '/_next',
   // },
-  globDirectory: ".",
-  globPatterns: ["static/favs/manifest.json", "static/favs/favicon*", "static/favs/coast*", "static/commons/*"],
-  globIgnores: ["static/robots.txt"],
+  // globDirectory: ".",
+  // globPatterns: ["static/favs/manifest.json", "static/favs/favicon*", "static/favs/coast*", "static/commons/*"],
+  // globIgnores: ["static/robots.txt"],
   // offlineGoogleAnalytics: true,
   runtimeCaching: [
     {
