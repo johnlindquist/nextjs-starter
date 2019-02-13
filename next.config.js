@@ -34,7 +34,7 @@ opts.distDir = "dist";
 
 
 // css @ https://github.com/zeit/next-plugins/tree/master/packages/next-css
-opts.cssModules = false;
+opts.cssModules = true;
 opts.cssLoaderOptions = {
   importLoaders: 1,
   localIdentName: "[local]___[hash:base64:5]",
@@ -43,7 +43,7 @@ opts.cssLoaderOptions = {
 };
 
 // @ https://github.com/hanford/next-offline
-// opts.dontAutoRegisterSw = true;
+opts.dontAutoRegisterSw = !isProd;
 opts.workboxOpts = {
   clientsClaim: true,
   skipWaiting: true,
@@ -157,10 +157,10 @@ opts.webpack = (webpackConfig) => {
 
 
 // HOC
-let exportsObj = withOffline(opts);
+let exportsObj = withImages(opts);
 exportsObj = withCSS(exportsObj);
 exportsObj = withSass(exportsObj);
-exportsObj = withImages(exportsObj);
+exportsObj = withOffline(exportsObj);
 
 if (!isLive) {
   exportsObj = withBundleAnalyzer(exportsObj);
